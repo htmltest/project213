@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {outline:none; box-sizing:border-box}
+
+html {min-width:480px; height:100%}
+
+@media screen and (max-width:1199px) {
+    html {height:auto}
+}
+
+body {min-width:480px; height:100%; margin:0; padding:0; font:300 16px/32px Roboto, sans-serif; color:#000; background:#fff; -webkit-text-size-adjust:100%}
+
+@media screen and (max-width:1199px) {
+    body {font-size:18px; height:auto}
+}
+
+a {outline:none; color:#004e96; text-decoration:none; transition:all 0.2s}
+@media screen and (min-width:1200px) {
+    a:hover {color:#ff6200}
+    a:active {color:#ff8a00}
+}
+
+img {border:none; width:auto; height:auto; max-width:100%; max-height:100%}
+
+::-ms-clear {display:none}
+
+strong {font-weight:bold}
+
+h2 {margin:68px 0 19px 0; padding:0; font-weight:normal; font-size:28px; line-height:42px}
+
+.btn-border {display:inline-block; border-radius:3px; background:transparent; margin:0; padding:0 20px; outline:none; overflow:visible; border:1px solid #e6e6e6; text-decoration:none; height:65px; box-sizing:border-box; color:#004e96; text-align:center; text-transform:none; font:500 18px/63px Roboto, sans-serif; letter-spacing:0; -webkit-appearance:none; cursor:pointer; transition:all 0.2s}
+@media screen and (min-width:1200px) {
+    .btn-border:hover {border-color:#004e96; color:#004e96}
+    .btn-border:active {border-color:#ff6200; color:#ff6200}
+}
+.btn-border:disabled {cursor:default; opacity:0.5}
+@media screen and (min-width:1200px) {
+    .btn-border:disabled:hover {background:#ff6200}
+}
+.btn-border img {display:inline-block; vertical-align:middle; margin:-2px 7px 0 0}
+
+.btn-mini {border-width:0; height:40px; line-height:40px; border-radius:0; font-size:14px}
+
+.btn-border.btn-mini {border-width:1px; height:38px; line-height:36px; border-radius:3px}
+
+.container {max-width:1200px; margin:0 auto; padding:0 15px}
+.container::after {content:""; display:block; clear:both}
+
+@media screen and (max-width:1199px) {
+    .container {background:none !important}
+}
+
+.wrapper {min-width:480px; min-height:100%; width:100%; position:relative; overflow:hidden}
+.wrapper-inner {padding:59px 0 119px 0}
+
+@media screen and (max-width:1199px) {
+    .wrapper {min-height:0}
+    .wrapper-inner {padding:30px 0 116px 0}
+}
+
+.logo {width:141px; height:75px; background:url(../images/sitedown-logo.png) no-repeat}
+
+.content {margin:48px 0 0 0}
+.content::after {content:""; display:block; clear:both}
+.content-text {float:left; width:620px; padding:29px 0 0 0}
+.content-title {font-weight:normal; font-size:48px; line-height:48px}
+.content-descr {padding:27px 0 0 0}
+.content-photo {float:right; margin:0 65px 0 0; width:418px; height:426px; background:url(../images/sitedown-content.png) no-repeat}
+.content-hotline {float:left; clear:left; width:472px; margin:32px 0 0 0}
+
+@media screen and (max-width:1199px) {
+    .content {margin:30px 0 0 0}
+    .content-text {float:none; width:auto; padding:0}
+    .content-title {line-height:57px}
+    .content-descr {padding:13px 0 0 0}
+    .content-photo {float:none; margin:7px 0 0 0; width:328px; height:335px; background:url(../images/sitedown-content-mobile.png) no-repeat}
+    .content-hotline {float:none; width:auto; margin:25px 0 0 0}
+}
+
+.hotline {width:472px; border:1px solid #e6e6e6; background:#fff url(../images/sitedown-hotline.png) no-repeat right bottom; border-top:8px solid #03a9f4; margin:0; padding:29px 32px 29px 32px}
+.hotline-title {text-transform:uppercase; font-size:12px; line-height:20px; color:#7f7f7f; letter-spacing:0.6px; font-weight:normal}
+.hotline-phone {font-weight:bold; font-size:38px; line-height:42px; margin:4px 0 0 0}
+.hotline-phone svg {display:inline-block; vertical-align:middle; margin:-2px 15px 0 0}
+.hotline-phone path {fill:#004e96; transition:all 0.2s}
+@media screen and (min-width:1200px) {
+    .hotline-phone a:hover path {fill:#ff6200}
+    .hotline-phone a:active path {color:#ff8a00}
+}
+.hotline-hint {font-size:12px; line-height:20px; color:#7f7f7f; font-weight:normal; padding:5px 0 0 0}
+
+@media screen and (max-width:1199px) {
+    .hotline {width:auto; padding-left:22px}
+}
+
+.content-social {float:left; clear:left; margin:19px 0 0 10px}
+.content-social::after {content:""; display:block; clear:both}
+.content-social-item {float:left; margin:0 0 0 23px; line-height:0}
+.content-social-item a:hover {opacity:0.8; transition:opacity 0.2s}
+
+@media screen and (max-width:1199px) {
+    .content-social {float:none; margin:19px 0 0 0}
+}
+
+.contacts {padding:85px 0 0 0}
+.contacts-title {font-size:38px; line-height:38px; font-weight:normal}
+
+@media screen and (max-width:1199px) {
+    .contacts {padding:69px 0 0 0}
+}
+
+.contacts-menu {margin:21px 0 0 0}
+.contacts-menu ul {margin:0; padding:0; list-style:none}
+.contacts-menu ul::after {content:""; display:block; clear:both}
+.contacts-menu ul li {float:left; margin:0 20px 0 0; padding:0}
+.contacts-menu ul li::before {display:none}
+.contacts-menu ul li a {border-bottom:1px dashed #004e96}
+@media screen and (min-width:1200px) {
+    .contacts-menu ul li a:hover {border-color:#ff6200}
+    .contacts-menu ul li a:active {border-color:#ff8a00}
+}
+.contacts-menu ul li.active a {color:#7f7f7f}
+.contacts-menu ul li.active a {border-color:rgba(0, 0, 0, 0)}
+
+.contacts-tabs {position:relative}
+.contacts-tab {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.2s}
+.contacts-tab.active {position:relative; left:auto; top:auto; opacity:1}
+.contacts-tab h2 {margin-top:35px}
+
+@media screen and (max-width:1199px) {
+    .contacts-tab h2 {margin-top:23px}
+}
+
+.contacts-container::after {content:""; display:block; clear:both}
+
+.contacts-text {float:left; width:520px}
+.contacts-info {margin:27px 0}
+.contacts-info-row::after {content:""; display:block; clear:both}
+.contacts-info-label {float:left; font-weight:bold; width:130px}
+.contacts-info-value {margin:0 0 0 140px}
+
+@media screen and (max-width:1199px) {
+    .contacts-text {float:none; width:auto}
+    .contacts-info-label {width:110px}
+    .contacts-info-value {margin:0 0 0 110px}
+}
+
+.contacts-yandex-mobile {display:none}
+.contacts-yandex .btn-border {padding:0 15px 0 9px}
+
+@media screen and (max-width:1199px) {
+    .contacts-yandex {display:none}
+    .contacts-yandex-mobile {display:block; padding:24px 0 0 0}
+}
+
+.contacts-map {float:right; width:585px; margin:7px 0 0 0}
+.contacts-map-inner {height:233px}
+
+@media screen and (max-width:1199px) {
+    .contacts-map {float:none; width:auto}
+}
+
+footer {background:#005fb6; color:#fff; font-size:12px; line-height:50px; font-weight:normal; height:50px; margin:-50px 0 0 0; position:relative}
+
+@media screen and (max-width:1199px) {
+    footer {height:69px; line-height:69px; margin:-69px 0 0 0}
+}

@@ -1,0 +1,10 @@
+{
+    "status"    : true,
+
+    "response"  : {
+        "SUM"       : "1 599",
+        "OLD"       : "2 599",
+        "MESSAGE"   : ""
+    }
+
+}

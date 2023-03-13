@@ -1,0 +1,29 @@
+<form action="/order/flat_insurance/" method="post" data-calcForm="ajax/order-precalc.json" data-calcFormPromo="ajax/order-promo.json">
+    <div class="main-events-form-fields">
+        <div class="main-events-form-title">Застрахуйте имущество и ответственность <br>при эксплуатации квартиры</div>
+        <div class="form-field">
+            <div class="form-select">
+                <select name="DOCUMENT_PROGRAM" data-placeholder="Выберите условия страхования" class="required" id="order-programm-select" data-calcField="programm">
+                                            <option  value="1">Страховая сумма по Полису 300 000 ₽</option>
+                                            <option  value="2">Страховая сумма по Полису 500 000 ₽</option>
+                                            <option  value="3">Страховая сумма по Полису 1 000 000 ₽</option>
+                                    </select>
+            </div>
+        </div>
+        <div class="order-programm-details">
+                            <div class="order-programm-detail" data-id="1"></div>
+                            <div class="order-programm-detail" data-id="2"></div>
+                            <div class="order-programm-detail" data-id="3"></div>
+                    </div>
+    </div>
+
+    <div class="main-events-form-results">
+        <div class="main-events-form-results-value">
+            <div class="main-events-form-results-value-title">Стоимость полиса<br /> «Защита квартиры»</div>
+            <div class="main-events-form-results-value-price"><span id="programCost">1350</span></div>
+        </div>
+        <div class="form-field">
+            <div class="form-submit"><input type="submit" value="Купить полис" class="btn-orange" /></div>
+        </div>
+    </div>
+</form>

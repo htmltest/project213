@@ -1,0 +1,22 @@
+<div class="window-resume window-auth">
+    <h1>Авторизация</h1>
+    <div class="window-resume-text">Указанный телефон связан с одним из пользователей системы.<br /> Вы можете авторизоваться и поля будут заполнены автоматически.</div>
+    <form action="#" onsubmit="return false;" method="post">
+
+        <div id="codeFormError" class="form-error" style="display: none;">
+            <div class="form-error-text"></div>
+        </div>
+
+        <div class="form-field">
+            <div class="form-input">
+                <span class="form-input-label">Код подтверждения <em>*</em></span>
+                <input type="text" name="code" id="userCode" value="" class="required" />
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-submit">
+                <input type="button" value="Войти" class="btn-orange">
+            </div>
+        </div>
+    </form>
+</div>

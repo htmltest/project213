@@ -1,0 +1,45 @@
+<form action="/order/accident_insurance/" method="post" data-calcForm="ajax/order-precalc.json" data-calcFormPromo="ajax/order-promo.json">
+    <div class="main-events-form-fields">
+        <div class="main-events-form-title">Рассчитайте стоимость страховки<br /> от несчастных случаев</div>
+        <div class="form-field">
+            <div class="form-select">
+
+                <select name="DOCUMENT_PROGRAM" data-placeholder="Выберите условия страхования" class="required not-cost" id="order-programm-select" data-calcField="programm">
+                                            <option data-value="Вариант 1 - Особый случай"  value="1">Страховая сумма 125 000 ₽</option>
+                                            <option data-value="Вариант 2 - Особый случай"  value="2">Страховая сумма 250 000 ₽</option>
+                                            <option data-value="Вариант 3 - Особый случай"  value="3">Страховая сумма 500 000 ₽</option>
+                                    </select>
+
+            </div>
+        </div>
+        
+        <div class="order-programm-details">
+
+                            <div class="order-programm-detail" data-id="1"></div>
+                            <div class="order-programm-detail" data-id="2"></div>
+                            <div class="order-programm-detail" data-id="3"></div>
+            
+        </div>
+        <div class="order-form-row">
+            <div class="form-field">
+
+                <div class="form-input form-input-date">
+                    <span class="form-input-label">Дата рождения Застрахованного лица <em>*</em></span>
+                                        <input onchange="onChangeProgram()" type="text" name="ADDITIONAL_BIRTHDAY" value="11.06.2001" min="11.06.1949" max="11.06.2016" class="required" data-calcField="birthday" />
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main-events-form-results">
+        <div class="main-events-form-results-value">
+            <div class="main-events-form-results-value-title">Стоимость полиса<br /> «Особый случай»</div>
+            <div class="main-events-form-results-value-price"><span id="programCost"></span></div>
+        </div>
+        <div class="form-field">
+            <div class="form-submit"><input type="submit" value="Купить полис" class="btn-orange" /></div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,67 @@
+<form action="#" method="post" data-calcForm="ajax/order-precalc.json" data-calcFormPromo="ajax/order-promo.json">
+    <div class="main-events-form-fields">
+        <div class="main-events-form-title">Рассчитайте стоимость страховки<br /> для себя и своих близках в поездках<br /> по всему миру</div>
+        <div class="form-field">
+            <div class="form-select">
+                <select name="country" data-placeholder="Страна поездки" class="required" id="order-programm-select" data-calcField="programm">
+                    <option value=""></option>
+                    <option value="1" selected="selected">Объедененные Арабские Эмираты</option>
+                    <option value="2">Эстония</option>
+                    <option value="3">Финляндия</option>
+                </select>
+            </div>
+        </div>
+        <div class="order-programm-details">
+            <div class="order-programm-detail" data-id="1">
+                <p><strong>Страховая сумма продукта 250 000 ₽</strong></p>
+                <p>Конструктивные элементы квартиры 100 000 ₽</p>
+                <p>Внутренняя отделка, инженерно-техническое оборудование квартиры 50 000 ₽</p>
+                <p>Домашнее имущество 50 000 ₽</p>
+                <p>Гражданская ответственность при эксплуатации квартиры 50 000 ₽</p>
+            </div>
+            <div class="order-programm-detail" data-id="2">
+                <p><strong>Страховая сумма продукта 500 000 ₽</strong></p>
+                <p>Конструктивные элементы квартиры 200 000 ₽</p>
+                <p>Внутренняя отделка, инженерно-техническое оборудование квартиры 100 000 ₽</p>
+                <p>Домашнее имущество 100 000 ₽</p>
+                <p>Гражданская ответственность при эксплуатации квартиры 100 000 ₽</p>
+            </div>
+            <div class="order-programm-detail" data-id="3">
+                <p><strong>Страховая сумма продукта 1 000 000 ₽</strong></p>
+                <p>Конструктивные элементы квартиры 400 000 ₽</p>
+                <p>Внутренняя отделка, инженерно-техническое оборудование квартиры 200 000 ₽</p>
+                <p>Домашнее имущество 200 000 ₽</p>
+                <p>Гражданская ответственность при эксплуатации квартиры 200 000 ₽</p>
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-input form-input-date-range"><span class="form-input-label">Период</span><input type="text" name="period" value="" class="required" data-calcField="period" /></div>
+        </div>
+        <div class="main-events-form-row">
+            <div class="form-field">
+                <div class="form-input"><span class="form-input-label">Взрослые (cтарше 16 лет)</span><input type="number" name="parent" value="1" min="1" max="12" step="1" data-calcField="parent" /></div>
+            </div>
+            <div class="form-field">
+                <div class="form-input"><span class="form-input-label">Дети (0-15 лет)</span><input type="number" name="childrens" value="0" min="0" max="12" step="1" data-calcField="childrens" /></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-events-form-results">
+        <div class="main-events-form-results-value">
+            <div class="main-events-form-results-value-title">Стоимость полиса<br /> «Всё просто»</div>
+            <div class="main-events-form-results-value-price"><span id="programCost">25 468</span></div>
+        </div>
+        <div class="main-events-form-results-value main-events-form-results-value-pre">
+            <div class="order-form-results-code">
+                <div class="form-field">
+                    <div class="form-input"><span class="form-input-label">Промокод</span><input type="text" name="promo" value="" id="order-promo" class="promoMask" data-calcField="promo" /><a href="#" class="form-input-clear"></a></div>
+                </div>
+                <div class="order-form-results-code-btn"><a href="#" class="btn-blue"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 12.8 12.8"><path d="M12.8,5.6H3L7.52,1.12,6.4,0,0,6.4l6.4,6.4,1.12-1.12L3,7.2H12.8Zm0,0"/></svg></a></div>
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-submit"><input type="submit" value="Купить полис" class="btn-orange" /></div>
+        </div>
+    </div>
+</form>
