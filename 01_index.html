@@ -11,7 +11,6 @@
             }
         </script>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700&amp;subset=cyrillic" />
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
@@ -34,37 +33,183 @@
             <div class="wrapper-inner">
 
                 <header>
-                    <div class="container">
+                    <div class="header-container">
+                        <div class="header-top">
+                            <div class="header-menu">
+                                <ul>
+                                    <li><a href="#">Частным клиентам</a></li>
+                                    <li><a href="#">Корпоративным клиентам</a></li>
+                                    <li><a href="#">Действующим клиентам</a></li>
+                                </ul>
+                            </div>
 
-                        <div class="logo"><img src="images/logo-psb.svg" alt="" /></div>
+                            <a href="#" class="nav-add-link"><svg><use xlink:href="images/sprite.svg#nav-add-link"></use></svg></a>
 
-                        <div class="header-menu">
-                            <ul>
-                                <li><a href="#">Частным клиентам</a></li>
-                                <li><a href="#">Корпоративным клиентам</a></li>
-                                <li><a href="#">Действующим клиентам</a></li>
-                            </ul>
+                            <div class="header-user">
+                                <a href="#" class="header-user-link"><svg><use xlink:href="images/sprite.svg#header-user-link"></use></svg>Войти</a>
+                            </div>
+
+                            <div class="header-view">
+                                <a href="#" class="header-view-link"><svg><use xlink:href="images/sprite.svg#header-view-link"></use></svg></a>
+                            </div>
+
+                            <div class="header-search">
+                                <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search-link"></use></svg></a>
+                            </div>
+
+                            <div class="header-phone">
+                                <div class="header-phone-number"><a href="tel:8 (800) 555-85-65">8 (800) 555-85-65</a></div>
+                                <div class="header-phone-notice">Звонок по РФ бесплатный</div>
+                            </div>
                         </div>
 
-                        <div class="header-user">
-                            <a href="#" class="header-user-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><path d="M120-.24a120,120,0,1,0,120,120A120,120,0,0,0,120-.24Zm.37,176.61h-52c0-37.48,32.92-37.48,40.23-47.28l.84-4.47c-10.26-5.2-17.51-17.74-17.51-32.41,0-19.33,12.57-35,28.07-35s28.07,15.67,28.07,35c0,14.54-7.12,27-17.24,32.29l.95,5.08c8,9.32,39.84,9.93,39.84,46.79Zm0,0" transform="translate(0 0.24)"/></svg>Войти</a>
+                        <div class="header-middle">
+                            <div class="logo"><img src="images/logo.svg" alt="" /></div>
+                            <div class="nav-main">
+                                <ul>
+                                    <li><a href="#">Путешествия</a></li>
+                                    <li><a href="#">Несчастный случай</a></li>
+                                    <li><a href="#">Имущество</a></li>
+                                    <li><a href="#">Здоровье</a></li>
+                                    <li><a href="#">Животные</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-btn"><a href="#">Сообщить о страховом случае</a></div>
+                            <div class="nav-btn"><a href="#"><svg><use xlink:href="images/sprite.svg#nav-btn-activation"></use></svg>Активировать полис</a></div>
                         </div>
+                    </div>
 
-                        <div class="header-view">
-                            <a href="#" class="header-view-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488.85 291.4" width="17" height="10"><path d="M244.43,0C151,0,66.32,51.1,3.82,134.1a19.35,19.35,0,0,0,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2S422.53,240.3,485,157.3a19.35,19.35,0,0,0,0-23.1C422.52,51.1,337.83,0,244.43,0Zm6.7,248.3A102.88,102.88,0,0,1,141.82,139c3.2-51.2,44.7-92.7,95.9-95.9A102.88,102.88,0,0,1,347,152.4C343.73,203.5,302.23,245,251.13,248.3ZM248,200.9a55.36,55.36,0,1,1,51.7-51.7A55.27,55.27,0,0,1,248,200.9Z"/></svg></a>
+                    <div class="header-main">
+                        <!-- main events list -->
+                        <div class="main-events-list">
+
+                            <!-- main events item -->
+                            <div class="main-events-item">
+                                <a href="06_insurance_service.html" data-href="ajax/main-event-1.html" class="main-events-item-inner">
+                                    <div class="main-events-item-conainer">
+                                        <div class="main-events-item-header">
+                                            <div class="main-events-item-type">Страхование домашних животных</div>
+                                            <div class="main-events-item-photo"><img src="files/main-event-1.png" alt="" /></div>
+                                        </div>
+                                        <div class="main-events-item-content">
+                                            <div class="main-events-item-name">Лапки в порядке</div>
+                                            <div class="main-events-item-text">Будьте спокойны за своего домашнего питомца!</div>
+                                            <div class="main-events-item-ctrl">
+                                                <div class="main-events-item-buy">Купить</div>
+                                                <div class="main-events-item-cost">
+                                                    <div class="main-events-item-cost-from">от</div>
+                                                    <div class="main-events-item-cost-price">1 000</div>
+                                                    <div class="main-events-item-cost-currency">₽/год</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- main events item END -->
+
+                            <!-- main events item -->
+                            <div class="main-events-item">
+                                <a href="06_insurance_service.html" data-href="ajax/main-event-2.html" class="main-events-item-inner">
+                                    <div class="main-events-item-conainer">
+                                        <div class="main-events-item-header">
+                                            <div class="main-events-item-type">Путешествия</div>
+                                            <div class="main-events-item-photo"><img src="files/main-event-2.png" alt="" /></div>
+                                        </div>
+                                        <div class="main-events-item-content">
+                                            <div class="main-events-item-name">За рубеж и РФ</div>
+                                            <div class="main-events-item-text">Минимизируйте риски, с&nbsp;которыми связаны дальние поездки</div>
+                                            <div class="main-events-item-ctrl">
+                                                <div class="main-events-item-buy">Купить</div>
+                                                <div class="main-events-item-cost">
+                                                    <div class="main-events-item-cost-from">от</div>
+                                                    <div class="main-events-item-cost-price">23</div>
+                                                    <div class="main-events-item-cost-currency">₽/день</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- main events item END -->
+
+                            <!-- main events item -->
+                            <div class="main-events-item">
+                                <a href="06_insurance_service.html" data-href="ajax/main-event-3.html" class="main-events-item-inner">
+                                    <div class="main-events-item-conainer">
+                                        <div class="main-events-item-header">
+                                            <div class="main-events-item-type">Добровольное медицинское страхование</div>
+                                            <div class="main-events-item-photo"><img src="files/main-event-3.png" alt="" /></div>
+                                        </div>
+                                        <div class="main-events-item-content">
+                                            <div class="main-events-item-name">Формула здоровья</div>
+                                            <div class="main-events-item-text">Создадим здоровое будущее вместе. Выбирай заботу о&nbsp;себе.</div>
+                                            <div class="main-events-item-ctrl">
+                                                <div class="main-events-item-buy">Купить</div>
+                                                <div class="main-events-item-cost">
+                                                    <div class="main-events-item-cost-from">от</div>
+                                                    <div class="main-events-item-cost-price">4 000</div>
+                                                    <div class="main-events-item-cost-currency">₽/год</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- main events item END -->
+
+                            <!-- main events item -->
+                            <div class="main-events-item">
+                                <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
+                                    <div class="main-events-item-conainer">
+                                        <div class="main-events-item-header">
+                                            <div class="main-events-item-type">Имущество</div>
+                                            <div class="main-events-item-photo"><img src="files/main-event-4.png" alt="" /></div>
+                                        </div>
+                                        <div class="main-events-item-content">
+                                            <div class="main-events-item-name">Защита квартиры</div>
+                                            <div class="main-events-item-text">Защитите свое имущество от&nbsp;непредвиденных ситуаций</div>
+                                            <div class="main-events-item-ctrl">
+                                                <div class="main-events-item-buy">Купить</div>
+                                                <div class="main-events-item-cost">
+                                                    <div class="main-events-item-cost-from">от</div>
+                                                    <div class="main-events-item-cost-price">1350</div>
+                                                    <div class="main-events-item-cost-currency">₽/год</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- main events item END -->
+
+                            <!-- main events item -->
+                            <div class="main-events-item">
+                                <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
+                                    <div class="main-events-item-conainer">
+                                        <div class="main-events-item-header">
+                                            <div class="main-events-item-type">Несчастный случай</div>
+                                            <div class="main-events-item-photo"><img src="files/main-event-5.png" alt="" /></div>
+                                        </div>
+                                        <div class="main-events-item-content">
+                                            <div class="main-events-item-name">Особый случай</div>
+                                            <div class="main-events-item-text">Оградите себя и своих близких от непредвиденных обстоятельств</div>
+                                            <div class="main-events-item-ctrl">
+                                                <div class="main-events-item-buy">Купить</div>
+                                                <div class="main-events-item-cost">
+                                                    <div class="main-events-item-cost-from">от</div>
+                                                    <div class="main-events-item-cost-price">1 350</div>
+                                                    <div class="main-events-item-cost-currency">₽/год</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- main events item END -->
+
                         </div>
-
-                        <div class="header-search">
-                            <a href="#" class="header-search-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 45.57"><path d="M43.33,41.78,32.48,30.5A18.39,18.39,0,1,0,18.4,37.07a18.18,18.18,0,0,0,10.54-3.33L39.87,45.1a2.39,2.39,0,0,0,3.39.07,2.4,2.4,0,0,0,.07-3.39ZM18.4,5.07A13.6,13.6,0,1,1,4.8,18.67,13.62,13.62,0,0,1,18.4,5.07Zm0,0" transform="translate(0 -0.27)"/></svg></a>
-                        </div>
-
-                        <div class="header-phone">
-                            <div class="header-phone-number"><a href="tel:8 (800) 555-85-65">8 (800) 555-85-65</a></div>
-                            <div class="header-phone-notice">Звонок по РФ бесплатный</div>
-                        </div>
-
-                        <a href="#" class="mobile-menu-link"></a>
-
+                        <!-- main events list END -->
                     </div>
                 </header>
 
@@ -284,301 +429,193 @@
                 </div>
                 <!-- nav END -->
 
-                <!-- main -->
-                <div class="main">
-                    <!-- container -->
-                    <div class="container">
+                <div class="main-events-form"></div>
 
-                        <!-- main events -->
-                        <div class="main-events">
+                <!-- container -->
+                <div class="container">
 
-                            <!-- main events list -->
-                            <div class="main-events-list">
+                    <!-- main insurance event desktop -->
+                    <div class="main-insurance-event-desktop">
+                        <div class="main-title">Что делать, если произошел страховой случай?</div>
 
-                                <!-- main events item -->
-                                <div class="main-events-item">
-                                    <a href="06_insurance_service.html" data-href="ajax/main-event-1.html" class="main-events-item-inner">
-                                        <div class="main-events-item-photo"><img src="files/main-event-1.jpg" alt="" /></div>
-                                        <div class="main-events-item-photo-mobile"><img src="files/main-event-1-mobile.jpg" alt="" /></div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-type">Несчастный случай</div>
-                                            <div class="main-events-item-name">Моя защита</div>
-                                            <div class="main-events-item-text">Оградите себя и своих близких от&nbsp;непредвиденных обстоятельств</div>
-                                            <div class="main-events-item-cost">
-                                                <div class="main-events-item-cost-from">От</div>
-                                                <div class="main-events-item-cost-price">1599</div>
-                                                <div class="main-events-item-cost-currency">₽/ГОД</div>
-                                            </div>
-                                            <div class="main-events-item-btn-mobile"><span class="btn-blue btn-mini">Рассчитайте стоимость страховки</span></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- main events item END -->
-
-                                <!-- main events item -->
-                                <div class="main-events-item">
-                                    <a href="06_insurance_service.html" data-href="ajax/main-event-2.html" class="main-events-item-inner">
-                                        <div class="main-events-item-photo"><img src="files/main-event-2.jpg" alt="" /></div>
-                                        <div class="main-events-item-photo-mobile"><img src="files/main-event-2-mobile.jpg" alt="" /></div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-type">Имущество</div>
-                                            <div class="main-events-item-name">Всё просто</div>
-                                            <div class="main-events-item-text">Защитите свое имущество от&nbsp;непредвиденных ситуаций</div>
-                                            <div class="main-events-item-cost">
-                                                <div class="main-events-item-cost-from">От</div>
-                                                <div class="main-events-item-cost-price">1450</div>
-                                                <div class="main-events-item-cost-currency">₽/ГОД</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- main events item END -->
-
-                                <!-- main events item -->
-                                <div class="main-events-item">
-                                    <a href="06_insurance_service.html" data-href="ajax/main-event-3.html" class="main-events-item-inner">
-                                        <div class="main-events-item-photo"><img src="files/main-event-5.jpg" alt="" /></div>
-                                        <div class="main-events-item-photo-mobile"><img src="files/main-event-5-mobile.jpg" alt="" /></div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-type">Добровольное медицинское страхование</div>
-                                            <div class="main-events-item-name">Формула здоровья</div>
-                                            <div class="main-events-item-text">Минимизируйте риски, с&nbsp;которыми связаны дальние&nbsp;поездки</div>
-                                            <div class="main-events-item-cost">
-                                                <div class="main-events-item-cost-from">От</div>
-                                                <div class="main-events-item-cost-price">3200</div>
-                                                <div class="main-events-item-cost-currency">₽/ГОД</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- main events item END -->
-
-                                <!-- main events item -->
-                                <div class="main-events-item">
-                                    <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
-                                        <div class="main-events-item-photo"><img src="files/main-event-4.jpg" alt="" /></div>
-                                        <div class="main-events-item-photo-mobile"><img src="files/main-event-4-mobile.jpg" alt="" /></div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-type">Промо-акции</div>
-                                            <div class="main-events-item-name">Лето—зимой</div>
-                                            <div class="main-events-item-text">Большой список скидок и спец. предложений для постоянных клиентов</div>
-                                            <div class="main-events-item-cost">
-                                                <div class="main-events-item-cost-from">От</div>
-                                                <div class="main-events-item-cost-price">10%</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- main events item END -->
-
-                                <!-- main events item -->
-                                <div class="main-events-item">
-                                    <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
-                                        <div class="main-events-item-photo"><img src="files/main-event-1.jpg" alt="" /></div>
-                                        <div class="main-events-item-photo-mobile"><img src="files/main-event-1-mobile.jpg" alt="" /></div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-type">Имущество</div>
-                                            <div class="main-events-item-name">Всё просто</div>
-                                            <div class="main-events-item-text">Застрахуйте свое имущество от&nbsp;непредвиденных ситуаций</div>
-                                            <div class="main-events-item-cost">
-                                                <div class="main-events-item-cost-from">От</div>
-                                                <div class="main-events-item-cost-price">2599</div>
-                                                <div class="main-events-item-cost-currency">₽/ГОД</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- main events item END -->
-
-                                <!-- main events item -->
-                                <div class="main-events-item">
-                                    <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
-                                        <div class="main-events-item-photo"><img src="files/main-event-2.jpg" alt="" /></div>
-                                        <div class="main-events-item-photo-mobile"><img src="files/main-event-2-mobile.jpg" alt="" /></div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-type">Несчастный случай</div>
-                                            <div class="main-events-item-name">Моя защита</div>
-                                            <div class="main-events-item-text">Застрахуйте себя и своих близких от&nbsp;непредвиденных обстоятельств</div>
-                                            <div class="main-events-item-cost">
-                                                <div class="main-events-item-cost-from">От</div>
-                                                <div class="main-events-item-cost-price">1599</div>
-                                                <div class="main-events-item-cost-currency">₽/ГОД</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- main events item END -->
-
-                                <!-- main events item -->
-                                <div class="main-events-item">
-                                    <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
-                                        <div class="main-events-item-photo"><img src="files/main-event-3.jpg" alt="" /></div>
-                                        <div class="main-events-item-photo-mobile"><img src="files/main-event-3-mobile.jpg" alt="" /></div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-type">Потеря работы</div>
-                                            <div class="main-events-item-name">Сохрани доход</div>
-                                            <div class="main-events-item-text">Выбирайте стабильность в&nbsp;завтрашнем дне</div>
-                                            <div class="main-events-item-cost">
-                                                <div class="main-events-item-cost-from">От</div>
-                                                <div class="main-events-item-cost-price">3200</div>
-                                                <div class="main-events-item-cost-currency">₽/ГОД</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- main events item END -->
-
-                                <!-- main events item -->
-                                <div class="main-events-item">
-                                    <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
-                                        <div class="main-events-item-photo"><img src="files/main-event-4.jpg" alt="" /></div>
-                                        <div class="main-events-item-photo-mobile"><img src="files/main-event-4-mobile.jpg" alt="" /></div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-type">Промо-акции</div>
-                                            <div class="main-events-item-name">Лето—зимой</div>
-                                            <div class="main-events-item-text">Большой список скидок и спец. предложений для постоянных клиентов</div>
-                                            <div class="main-events-item-cost">
-                                                <div class="main-events-item-cost-from">От</div>
-                                                <div class="main-events-item-cost-price">10%</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- main events item END -->
-
-                            </div>
-                            <!-- main events list END -->
-
-                            <div class="main-events-form">
-                            </div>
-
-                        </div>
-                        <!-- main events END -->
-
-                        <!-- main insurance event desktop -->
-                        <div class="main-insurance-event-desktop">
-                            <div class="main-title">Что делать, если произошел страховой случай?</div>
-
-                            <!-- main what -->
-                            <div class="main-what">
-                                <div class="main-what-item">
-                                    <a href="#" class="main-what-item-inner" style="background-image:url(images/main-what-1.png)">
-                                        <div class="main-what-item-title">Шаг 1. Спокойствие</div>
-                                        <div class="main-what-item-text">В первую очередь соблюдайте спокойствие и свяжитесь с&nbsp;ООО&nbsp;«ПСБ-Страхование»</div>
-                                    </a>
-                                </div>
-                                <div class="main-what-item">
-                                    <a href="#" class="main-what-item-inner" style="background-image:url(images/main-what-2.png)">
-                                        <div class="main-what-item-title">Шаг 2. Инструкции</div>
-                                        <div class="main-what-item-text">Следуйте согласно полученным от&nbsp;ООО&nbsp;«ПСБ-Страхование» инструкциям</div>
-                                    </a>
-                                </div>
-                                <div class="main-what-item">
-                                    <a href="#" class="main-what-item-inner" style="background-image:url(images/main-what-3.png)">
-                                        <div class="main-what-item-title">Шаг 3. Документы</div>
-                                        <div class="main-what-item-text">В случае, если вы понесли какие-либо расходы, представьте необходимые документы в&nbsp;ООО&nbsp;«ПСБ-Страхование»</div>
-                                    </a>
-                                </div>
-                                <div class="main-what-item">
-                                    <a href="#" class="main-what-item-inner" style="background-image:url(images/main-what-4.png)">
-                                        <div class="main-what-item-title">Шаг 4. Возврат расходов</div>
-                                        <div class="main-what-item-text">ПСБ-Страхование выполняет свои обязательства</div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- main what END -->
-
-                            <div class="bottom-btns">
-                                <div class="bottom-btn"><a href="#" class="btn-blue"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 22.28 15.6"><path d="M1.76.92l8,6.36a2.06,2.06,0,0,0,1.35.39,2.05,2.05,0,0,0,1.36-.39l8-6.36C21.16.41,21,0,20.2,0H2.08c-.82,0-1,.41-.32.92Zm0,0"/><path d="M21.1,2.6,12.33,9.26a2.12,2.12,0,0,1-2.37,0L1.18,2.6C.53,2.11,0,2.37,0,3.19V14.11A1.49,1.49,0,0,0,1.48,15.6H20.8a1.49,1.49,0,0,0,1.48-1.49V3.19c0-.82-.53-1.08-1.18-.59Zm0,0"/></svg>Сообщить по e-mail</a></div>
-                                <div class="bottom-btn"><a href="#" class="btn-blue"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 462.49 462.18"><path d="M462.27,364.75q1.46,11.25-6.86,19.58L390.29,449a36.7,36.7,0,0,1-11.5,8.32,47.6,47.6,0,0,1-14,4.41q-.49,0-2.94.25t-6.36.25q-9.3,0-30.11-3.18T274.5,443.33q-30.11-12.49-68.3-37.45t-81.27-68.54q-34.27-33.79-56.79-64.63t-36.23-57Q18.2,189.48,11.34,168.18T2,131.46Q-.41,116,.08,107.22t.49-9.79A47.57,47.57,0,0,1,5,83.48,36.65,36.65,0,0,1,13.3,72L78.42,6.85Q85.27,0,94.09,0a18.25,18.25,0,0,1,11.26,3.67,34.07,34.07,0,0,1,8.32,9.06l52.39,99.39a23.84,23.84,0,0,1,2.45,17.14,30.48,30.48,0,0,1-8.32,15.67l-24,24a8.19,8.19,0,0,0-1.71,3.18,12.12,12.12,0,0,0-.74,3.67q2,10.28,8.81,23.5,5.88,11.75,18.12,28.64t34.76,38.92q22,22.52,39.17,35t28.64,18.36q11.5,5.87,17.63,7.1l6.12,1.22a11.71,11.71,0,0,0,3.18-.73,8.12,8.12,0,0,0,3.18-1.71l27.91-28.4a30,30,0,0,1,20.56-7.84q8.33,0,13.22,2.94h.49L450,348.59q10.28,6.37,12.24,16.16Zm0,0"/></svg>Позвонить  8 (800) 555-85-65</a></div>
-                                <div class="bottom-btn"><a href="#" class="btn-blue"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 240 240"><path d="M120-.24a120,120,0,1,0,120,120A120,120,0,0,0,120-.24Zm.37,176.61h-52c0-37.48,32.92-37.48,40.23-47.28l.84-4.47c-10.26-5.2-17.51-17.74-17.51-32.41,0-19.33,12.57-35,28.07-35s28.07,15.67,28.07,35c0,14.54-7.12,27-17.24,32.29l.95,5.08c8,9.32,39.84,9.93,39.84,46.79Zm0,0" transform="translate(0 0.24)"/></svg>Вход в личный кабинет</a></div>
-                            </div>
-                        </div>
-                        <!-- main insurance event desktop END -->
-
-                        <!-- main insurance event mobile -->
-                        <div class="main-insurance-event-mobile">
-                            <div class="main-title">Страховой случай?</div>
-                            <div class="main-insurance-event-mobile-btn main-insurance-event-mobile-btn-more-link"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 443.36 403.52"><path d="M430.8,289,285.2,36.72a73.44,73.44,0,0,0-127.2,0L9.84,293.36a73.44,73.44,0,0,0,63.6,110.16H369.92A73.42,73.42,0,0,0,430.8,289ZM253,313.6c0,17.36-13.36,30.64-31.36,30.64S190.32,331,190.32,313.6v-.72c0-17.28,13.36-30.64,31.36-30.64S253,295.52,253,312.88ZM253.76,107,238.24,242.56c-1,9.76-7.52,15.84-16.56,15.84s-15.52-6.16-16.56-15.84L189.6,107c-1-10.48,4.64-18.4,14.4-18.4h35.28c9.76.08,15.52,8,14.48,18.48Zm0,0"/></svg></span>Уведомить о страховом случае</a></div>
-                            <div class="main-insurance-event-mobile-btn-more">
-                                <div class="main-insurance-event-mobile-btn"><a href="mailto:info@smpins.ru" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 22.28 15.6"><path d="M1.76.92l8,6.36a2.06,2.06,0,0,0,1.35.39,2.05,2.05,0,0,0,1.36-.39l8-6.36C21.16.41,21,0,20.2,0H2.08c-.82,0-1,.41-.32.92Zm0,0"/><path d="M21.1,2.6,12.33,9.26a2.12,2.12,0,0,1-2.37,0L1.18,2.6C.53,2.11,0,2.37,0,3.19V14.11A1.49,1.49,0,0,0,1.48,15.6H20.8a1.49,1.49,0,0,0,1.48-1.49V3.19c0-.82-.53-1.08-1.18-.59Zm0,0"/></svg></span>Сообщить по e-mail</a></div>
-                                <div class="main-insurance-event-mobile-btn"><a href="tel:+78005558565" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 462.49 462.18"><path d="M462.27,364.75q1.46,11.25-6.86,19.58L390.29,449a36.7,36.7,0,0,1-11.5,8.32,47.6,47.6,0,0,1-14,4.41q-.49,0-2.94.25t-6.36.25q-9.3,0-30.11-3.18T274.5,443.33q-30.11-12.49-68.3-37.45t-81.27-68.54q-34.27-33.79-56.79-64.63t-36.23-57Q18.2,189.48,11.34,168.18T2,131.46Q-.41,116,.08,107.22t.49-9.79A47.57,47.57,0,0,1,5,83.48,36.65,36.65,0,0,1,13.3,72L78.42,6.85Q85.27,0,94.09,0a18.25,18.25,0,0,1,11.26,3.67,34.07,34.07,0,0,1,8.32,9.06l52.39,99.39a23.84,23.84,0,0,1,2.45,17.14,30.48,30.48,0,0,1-8.32,15.67l-24,24a8.19,8.19,0,0,0-1.71,3.18,12.12,12.12,0,0,0-.74,3.67q2,10.28,8.81,23.5,5.88,11.75,18.12,28.64t34.76,38.92q22,22.52,39.17,35t28.64,18.36q11.5,5.87,17.63,7.1l6.12,1.22a11.71,11.71,0,0,0,3.18-.73,8.12,8.12,0,0,0,3.18-1.71l27.91-28.4a30,30,0,0,1,20.56-7.84q8.33,0,13.22,2.94h.49L450,348.59q10.28,6.37,12.24,16.16Zm0,0"/></svg></span>Позвонить 8 (800) 555-85-65</a></div>
-                            </div>
-                            <div class="main-insurance-event-mobile-btn"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="25" viewBox="0 0 400.7 512"><polygon points="267.13 9.78 267.13 133.56 390.91 133.56 267.13 9.78"/><path d="M250.43,167a16.7,16.7,0,0,1-16.7-16.7V0H16.7A16.7,16.7,0,0,0,0,16.7V495.3A16.7,16.7,0,0,0,16.7,512H384a16.7,16.7,0,0,0,16.7-16.7V167ZM217,411.83H83.48a16.7,16.7,0,0,1,0-33.39H217a16.7,16.7,0,0,1,0,33.39ZM317.22,345H83.48a16.7,16.7,0,1,1,0-33.39H317.22a16.7,16.7,0,0,1,0,33.39Zm0-66.78H83.48a16.7,16.7,0,0,1,0-33.39H317.22a16.7,16.7,0,0,1,0,33.39Z"/></svg></span>Порядок действий</a></div>
-                            <div class="main-insurance-event-mobile-btn"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 240 240"><path d="M120,0A120,120,0,1,0,240,120,120,120,0,0,0,120,0Zm.37,176.61h-52c0-37.48,32.92-37.48,40.23-47.28l.84-4.47c-10.26-5.2-17.51-17.74-17.51-32.41,0-19.33,12.57-35,28.07-35s28.07,15.67,28.07,35c0,14.54-7.12,27-17.24,32.29l.95,5.08c8,9.32,39.84,9.93,39.84,46.79Zm0,0"/></svg></span>Узнать статус дела</a></div>
-                        </div>
-                        <!-- main insurance event mobile END -->
-
-                        <div class="main-title">ПСБ-Страхование выполняет свои обязательства</div>
-
-                        <!-- main obligations -->
-                        <div class="main-obligations">
-                            <div class="main-obligation">
-                                <a href="#" class="main-obligation-inner">
-                                    <div class="main-obligation-bg"><img src="images/main-obligation-bg-1.png" alt="" /></div>
-                                    <div class="main-obligation-icon"><img src="images/main-obligation-icon-1.svg" alt="" /></div>
-                                    <div class="main-obligation-stat">+1.25%</div>
-                                    <div class="main-obligation-value">1 689 620 <sup>₽</sup></div>
-                                    <div class="main-obligation-text">составили выплаты в сентябре 2017</div>
+                        <!-- main what -->
+                        <div class="main-what">
+                            <div class="main-what-item">
+                                <a href="#" class="main-what-item-inner">
+                                    <img src="images/main-what-1.png" alt="">
+                                    <div class="main-what-item-number">1</div>
+                                    <div class="main-what-item-content">
+                                        <div class="main-what-item-title">Спокойствие</div>
+                                        <div class="main-what-item-text">В первую очередь соблюдайте спокойствие и свяжитесь с&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
+                                    </div>
+                                    <div class="main-what-item-link">подробнее</div>
                                 </a>
                             </div>
-
-                            <div class="main-obligation">
-                                <a href="#" class="main-obligation-inner">
-                                    <div class="main-obligation-bg"><img src="images/main-obligation-bg-2.png" alt="" /></div>
-                                    <div class="main-obligation-icon"><img src="images/main-obligation-icon-2.svg" alt="" /></div>
-                                    <div class="main-obligation-stat">+0.13%</div>
-                                    <div class="main-obligation-value">1400 дел</div>
-                                    <div class="main-obligation-text">урегулировано в сентябре 2017</div>
+                            <div class="main-what-item">
+                                <a href="#" class="main-what-item-inner">
+                                    <img src="images/main-what-2.png" alt="">
+                                    <div class="main-what-item-number">2</div>
+                                    <div class="main-what-item-content">
+                                        <div class="main-what-item-title">Инструкции</div>
+                                        <div class="main-what-item-text">Следуйте полученным от&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование» инструкциям</div>
+                                    </div>
+                                    <div class="main-what-item-link">подробнее</div>
                                 </a>
                             </div>
-
-                            <div class="main-obligation">
-                                <a href="#" class="main-obligation-inner">
-                                    <div class="main-obligation-bg"><img src="images/main-obligation-bg-3.png" alt="" /></div>
-                                    <div class="main-obligation-icon"><img src="images/main-obligation-icon-3.svg" alt="" /></div>
-                                    <div class="main-obligation-stat">- 2 дня</div>
-                                    <div class="main-obligation-value">10 дней</div>
-                                    <div class="main-obligation-text">среднее время на урегулирование</div>
+                            <div class="main-what-item">
+                                <a href="#" class="main-what-item-inner">
+                                    <img src="images/main-what-3.png" alt="">
+                                    <div class="main-what-item-number">3</div>
+                                    <div class="main-what-item-content">
+                                        <div class="main-what-item-title">Документы</div>
+                                        <div class="main-what-item-text">В случае, если вы понесли какие-либо расходы, представьте необходимые документы в ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
+                                    </div>
+                                    <div class="main-what-item-link">подробнее</div>
+                                </a>
+                            </div>
+                            <div class="main-what-item">
+                                <a href="#" class="main-what-item-inner">
+                                    <img src="images/main-what-4.png" alt="">
+                                    <div class="main-what-item-number">4</div>
+                                    <div class="main-what-item-content">
+                                        <div class="main-what-item-title">Возврат расходов</div>
+                                        <div class="main-what-item-text">Возврат расходов Получите компенсацию понесенных Вами расходов от&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
+                                    </div>
+                                    <div class="main-what-item-link">подробнее</div>
                                 </a>
                             </div>
                         </div>
-                        <!-- main obligations END -->
+                        <!-- main what END -->
 
-                        <div class="main-title">Почему выбирают ПСБ-Страхование</div>
+                        <div class="bottom-btns">
+                            <div class="bottom-btn"><a href="#" class="btn-border">Сообщить по e-mail</a></div>
+                            <div class="bottom-btn"><a href="#" class="btn-border">Позвонить</a></div>
+                            <div class="bottom-btn"><a href="#" class="btn-blue">Вход в личный кабинет</a></div>
+                        </div>
+                    </div>
+                    <!-- main insurance event desktop END -->
+
+                    <!-- main insurance event mobile -->
+                    <div class="main-insurance-event-mobile">
+                        <div class="main-title">Страховой случай?</div>
+                        <div class="main-insurance-event-mobile-btn main-insurance-event-mobile-btn-more-link"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 443.36 403.52"><path d="M430.8,289,285.2,36.72a73.44,73.44,0,0,0-127.2,0L9.84,293.36a73.44,73.44,0,0,0,63.6,110.16H369.92A73.42,73.42,0,0,0,430.8,289ZM253,313.6c0,17.36-13.36,30.64-31.36,30.64S190.32,331,190.32,313.6v-.72c0-17.28,13.36-30.64,31.36-30.64S253,295.52,253,312.88ZM253.76,107,238.24,242.56c-1,9.76-7.52,15.84-16.56,15.84s-15.52-6.16-16.56-15.84L189.6,107c-1-10.48,4.64-18.4,14.4-18.4h35.28c9.76.08,15.52,8,14.48,18.48Zm0,0"/></svg></span>Уведомить о страховом случае</a></div>
+                        <div class="main-insurance-event-mobile-btn-more">
+                            <div class="main-insurance-event-mobile-btn"><a href="mailto:info@smpins.ru" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 22.28 15.6"><path d="M1.76.92l8,6.36a2.06,2.06,0,0,0,1.35.39,2.05,2.05,0,0,0,1.36-.39l8-6.36C21.16.41,21,0,20.2,0H2.08c-.82,0-1,.41-.32.92Zm0,0"/><path d="M21.1,2.6,12.33,9.26a2.12,2.12,0,0,1-2.37,0L1.18,2.6C.53,2.11,0,2.37,0,3.19V14.11A1.49,1.49,0,0,0,1.48,15.6H20.8a1.49,1.49,0,0,0,1.48-1.49V3.19c0-.82-.53-1.08-1.18-.59Zm0,0"/></svg></span>Сообщить по e-mail</a></div>
+                            <div class="main-insurance-event-mobile-btn"><a href="tel:+78005558565" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 462.49 462.18"><path d="M462.27,364.75q1.46,11.25-6.86,19.58L390.29,449a36.7,36.7,0,0,1-11.5,8.32,47.6,47.6,0,0,1-14,4.41q-.49,0-2.94.25t-6.36.25q-9.3,0-30.11-3.18T274.5,443.33q-30.11-12.49-68.3-37.45t-81.27-68.54q-34.27-33.79-56.79-64.63t-36.23-57Q18.2,189.48,11.34,168.18T2,131.46Q-.41,116,.08,107.22t.49-9.79A47.57,47.57,0,0,1,5,83.48,36.65,36.65,0,0,1,13.3,72L78.42,6.85Q85.27,0,94.09,0a18.25,18.25,0,0,1,11.26,3.67,34.07,34.07,0,0,1,8.32,9.06l52.39,99.39a23.84,23.84,0,0,1,2.45,17.14,30.48,30.48,0,0,1-8.32,15.67l-24,24a8.19,8.19,0,0,0-1.71,3.18,12.12,12.12,0,0,0-.74,3.67q2,10.28,8.81,23.5,5.88,11.75,18.12,28.64t34.76,38.92q22,22.52,39.17,35t28.64,18.36q11.5,5.87,17.63,7.1l6.12,1.22a11.71,11.71,0,0,0,3.18-.73,8.12,8.12,0,0,0,3.18-1.71l27.91-28.4a30,30,0,0,1,20.56-7.84q8.33,0,13.22,2.94h.49L450,348.59q10.28,6.37,12.24,16.16Zm0,0"/></svg></span>Позвонить 8 (800) 555-85-65</a></div>
+                        </div>
+                        <div class="main-insurance-event-mobile-btn"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="25" viewBox="0 0 400.7 512"><polygon points="267.13 9.78 267.13 133.56 390.91 133.56 267.13 9.78"/><path d="M250.43,167a16.7,16.7,0,0,1-16.7-16.7V0H16.7A16.7,16.7,0,0,0,0,16.7V495.3A16.7,16.7,0,0,0,16.7,512H384a16.7,16.7,0,0,0,16.7-16.7V167ZM217,411.83H83.48a16.7,16.7,0,0,1,0-33.39H217a16.7,16.7,0,0,1,0,33.39ZM317.22,345H83.48a16.7,16.7,0,1,1,0-33.39H317.22a16.7,16.7,0,0,1,0,33.39Zm0-66.78H83.48a16.7,16.7,0,0,1,0-33.39H317.22a16.7,16.7,0,0,1,0,33.39Z"/></svg></span>Порядок действий</a></div>
+                        <div class="main-insurance-event-mobile-btn"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 240 240"><path d="M120,0A120,120,0,1,0,240,120,120,120,0,0,0,120,0Zm.37,176.61h-52c0-37.48,32.92-37.48,40.23-47.28l.84-4.47c-10.26-5.2-17.51-17.74-17.51-32.41,0-19.33,12.57-35,28.07-35s28.07,15.67,28.07,35c0,14.54-7.12,27-17.24,32.29l.95,5.08c8,9.32,39.84,9.93,39.84,46.79Zm0,0"/></svg></span>Узнать статус дела</a></div>
+                    </div>
+                    <!-- main insurance event mobile END -->
+
+                    <div class="main-title">ПСБ Страхование выполняет свои обязательства</div>
+
+                    <!-- main obligations -->
+                    <div class="main-obligations">
+                        <div class="main-obligation">
+                            <a href="#" class="main-obligation-inner">
+                                <div class="main-obligation-img"><img src="images/main-obligation-1.png" alt=""></div>
+                                <div class="main-obligation-stat">+31.1%</div>
+                                <div class="main-obligation-value">594 092 164 ₽</div>
+                                <div class="main-obligation-text">Составили выплаты в в 2022-м году</div>
+                            </a>
+                        </div>
+
+                        <div class="main-obligation">
+                            <a href="#" class="main-obligation-inner">
+                                <div class="main-obligation-img"><img src="images/main-obligation-2.png" alt=""></div>
+                                <div class="main-obligation-stat">+13.8%</div>
+                                <div class="main-obligation-value">80 638 дел</div>
+                                <div class="main-obligation-text">Урегулировано в в 2022-м году</div>
+                            </a>
+                        </div>
+
+                        <div class="main-obligation">
+                            <a href="#" class="main-obligation-inner">
+                                <div class="main-obligation-img"><img src="images/main-obligation-3.png" alt=""></div>
+                                <div class="main-obligation-stat">- 2 дня</div>
+                                <div class="main-obligation-value">10 дней</div>
+                                <div class="main-obligation-text">Среднее время<br> на урегулирование</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- main obligations END -->
+
+                    <!-- main prefs container -->
+                    <div class="main-prefs-container">
+                        <div class="main-prefs-text">
+                            <div class="main-title">Почему выбирают ПСБ Страхование</div>
+                            <div class="main-prefs-descr">Возврат расходов Получите компенсацию понесенных Вами расходов от&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
+                        </div>
 
                         <!-- main prefs -->
                         <div class="main-prefs">
-                            <div class="main-prefs-inner">
-                                <a href="#" class="main-pref">
-                                    <div class="main-pref-icon"><img src="images/main-pref-1.svg" alt="" /></div>
-                                    <div class="main-pref-title">Выбирайте лучшее</div>
-                                    <div class="main-pref-text">Входим в банковскую Группу «ПСБ-Банка»</div>
-                                </a>
-                                <a href="#" class="main-pref">
-                                    <div class="main-pref-icon"><img src="images/main-pref-2.svg" alt="" /></div>
-                                    <div class="main-pref-title">Не переплачивайте</div>
-                                    <div class="main-pref-text">Максимально широкое страховое покрытие по&nbsp;выгодной цене</div>
-                                </a>
-                                <a href="#" class="main-pref">
-                                    <div class="main-pref-icon"><img src="images/main-pref-3.svg" alt="" /></div>
-                                    <div class="main-pref-title">Будьте уверены</div>
-                                    <div class="main-pref-text">Вы получите полис отвечающий всем требованиям законодательства</div>
-                                </a>
-                                <a href="#" class="main-pref">
-                                    <div class="main-pref-icon"><img src="images/main-pref-4.svg" alt="" /></div>
-                                    <div class="main-pref-title">Мы поможем</div>
-                                    <div class="main-pref-text">Круголосуточная служба поддержки, Электронная подача документов</div>
-                                </a>
-                            </div>
+                            <a href="#" class="main-pref">
+                                <div class="main-pref-img"><img src="images/main-pref-1.png" alt=""></div>
+                                <div class="main-pref-title">Выбирайте лучшее</div>
+                                <div class="main-pref-text">Входим в банковскую Группу «Промсвязьбанк»</div>
+                                <div class="main-pref-link">подробнее</div>
+                            </a>
+                            <a href="#" class="main-pref">
+                                <div class="main-pref-img"><img src="images/main-pref-2.png" alt=""></div>
+                                <div class="main-pref-title">Не переплачивайте</div>
+                                <div class="main-pref-text">Максимально широкое страховое покрытие по&nbsp;выгодной цене</div>
+                                <div class="main-pref-link">подробнее</div>
+                            </a>
+                            <a href="#" class="main-pref">
+                                <div class="main-pref-img"><img src="images/main-pref-3.png" alt=""></div>
+                                <div class="main-pref-title">Будьте уверены</div>
+                                <div class="main-pref-text">Вы получите полис, отвечающий всем требованиям законодательства</div>
+                                <div class="main-pref-link">подробнее</div>
+                            </a>
+                            <a href="#" class="main-pref">
+                                <div class="main-pref-img"><img src="images/main-pref-4.png" alt=""></div>
+                                <div class="main-pref-title">Мы поможем</div>
+                                <div class="main-pref-text">Круголосуточная служба поддержки, Электронная подача документов</div>
+                                <div class="main-pref-link">подробнее</div>
+                            </a>
                         </div>
                         <!-- main prefs END -->
-
                     </div>
-                    <!-- container END -->
+                    <!-- main prefs container END -->
+
+                    <div class="main-title">Статьи</div>
+
+                    <div class="main-articles">
+                        <div class="main-article">
+                            <a href="#">
+                                <div class="main-article-img"><img src="files/main-article-1.png" alt=""></div>
+                                <div class="main-article-content">
+                                    <div class="main-article-title">Страхование квартиры от&nbsp;затопления и пожара</div>
+                                    <div class="main-article-anonce">В первую очередь соблюдайте спокойствие и свяжитесь с&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
+                                </div>
+                                <div class="main-article-link">Читать</div>
+                            </a>
+                        </div>
+                        <div class="main-article">
+                            <a href="#">
+                                <div class="main-article-img"><img src="files/main-article-2.png" alt=""></div>
+                                <div class="main-article-content">
+                                    <div class="main-article-title">Титульное страхование недвижимости</div>
+                                    <div class="main-article-anonce">В случае, если вы понесли какие-либо расходы, представьте необходимые документы в&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
+                                </div>
+                                <div class="main-article-link">Читать</div>
+                            </a>
+                        </div>
+                        <div class="main-article">
+                            <a href="#">
+                                <div class="main-article-img"><img src="files/main-article-3.png" alt=""></div>
+                                <div class="main-article-content">
+                                    <div class="main-article-title">Страховка на время ремонта квартиры</div>
+                                    <div class="main-article-anonce">Следуйте полученным от&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование» инструкциям</div>
+                                </div>
+                                <div class="main-article-link">Читать</div>
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
-                <!-- main END-->
+                <!-- container END -->
 
                 <div class="cookies-message">
                     Продолжая использовать сайт ООО «ПСБ-Страхование» Вы выражаете своё согласие на обработку Ваших персональных данных, ознакомьтесь с <a href="#">условиями и принципами их обработки</a>
@@ -594,51 +631,63 @@
 
                 <!-- footer top -->
                 <div class="footer-top">
+                    <div class="footer-left">
+                        <div class="footer-logo"><img src="images/logo.svg" alt="" /></div>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#footer-social-vk"></use></svg></a>
+                            <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#footer-social-dzen"></use></svg></a>
+                        </div>
+                    </div>
                     <div class="footer-menu">
                         <ul>
                             <li><a href="#">О компании</a></li>
-                            <li><a href="#">Новости компании</a></li>
                             <li><a href="#">Руководство</a></li>
-                            <li><a href="#">Инвесторы и акционеры</a></li>
+                            <li><a href="#">Наша команда</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Реквизиты</a></li>
+                            <li><a href="#">Пресс-центр</a></li>
                             <li><a href="#">Раскрытие информации</a></li>
-                            <li><a href="#">Общественная деятельность</a></li>
-                            <li><a href="#">Корпоративным клиентам</a></li>
+                            <li><a href="#">Внутренние документы</a></li>
+                            <li><a href="#">Отчетность</a></li>
+                            <li><a href="#">Правила страхования</a></li>
+                            <li><a href="#">Лицензии</a></li>
+                            <li><a href="#">Карьера</a></li>
                             <li><a href="#">Партнерам</a></li>
-                            <li><a href="#">Агентам</a></li>
-                            <li><a href="#">Сотрудникам партнеров</a></li>
-                            <li><a href="#">Офисы</a></li>
-                            <li><a href="#">Автосалонам</a></li>
-                            <li><a href="#">Анетам и брокерам</a></li>
-                            <li><a href="#">Банкам</a></li>
-                            <li><a href="#">Медицинским учреждениям</a></li>
-                            <li><a href="#">Оценочным компаниям</a></li>
-                            <li><a href="#">Службам эвакуации автомобилей</a></li>
-                            <li><a href="#">СТОА</a></li>
-                            <li class="footer-hotline-wrap"><a href="#" class="footer-hotline">Обратиться на горячую линию</a></li>
+                            <li><a href="#">Несчастный случай</a></li>
+                            <li><a href="#">Финансовая защита</a></li>
+                            <li><a href="#">Бизнес под защитой</a></li>
                         </ul>
                     </div>
                     <div class="footer-right">
-                        <div class="footer-logo"><img src="images/logo-psb.svg" alt="" /></div>
                         <div class="footer-phone"><a href="tel:+78005558565">8 (800) 555-85-65</a></div>
                         <div class="footer-phone-hint">Звонок по РФ бесплатный</div>
-                        <div class="footer-social">
-                            <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M20.001,10.000 C20.001,15.523 15.523,20.001 10.000,20.001 C4.477,20.001 -0.001,15.523 -0.001,10.000 C-0.001,4.477 4.477,-0.001 10.000,-0.001 C15.523,-0.001 20.001,4.477 20.001,10.000 Z"/><path fill="#005fb6" d="M10.179,14.999 C5.623,14.999 3.024,11.871 2.916,6.666 L5.198,6.666 C5.273,10.486 6.955,12.105 8.288,12.438 L8.288,6.666 L10.437,6.666 L10.437,9.961 C11.753,9.819 13.135,8.318 13.602,6.666 L15.751,6.666 C15.393,8.701 13.894,10.203 12.827,10.820 C13.894,11.320 15.601,12.630 16.251,14.999 L13.885,14.999 C13.377,13.414 12.111,12.188 10.437,12.021 L10.437,14.999 L10.179,14.999 Z"/></svg></a>
-                            <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path fill-rule="evenodd" d="M0.917,10.237 C0.917,4.944 5.207,0.653 10.501,0.653 C15.794,0.653 20.085,4.944 20.085,10.237 C20.085,15.531 15.794,19.821 10.501,19.821 C5.207,19.821 0.917,15.531 0.917,10.237 Z"/><path fill="#005fb6" fill-rule="evenodd" d="M10.307,0.653 C10.261,4.596 10.003,6.803 8.535,8.272 C7.066,9.740 4.860,9.998 0.917,10.043 L0.917,10.616 C4.860,10.661 7.066,10.919 8.535,12.387 C9.980,13.833 10.253,15.994 10.304,19.821 L10.881,19.821 C10.932,15.994 11.205,13.833 12.651,12.387 C14.096,10.942 16.257,10.669 20.085,10.618 L20.085,10.041 C16.257,9.990 14.096,9.717 12.651,8.272 C11.182,6.803 10.924,4.596 10.879,0.653 L10.307,0.653 Z"/></svg></a>
+                        <div class="footer-hotline"><a href="#"><svg><use xlink:href="images/sprite.svg#footer-hotline"></use></svg>Обратиться на горячую линию</a></div>
+                        <div class="footer-right-links">
+                            <div class="footer-right-link"><a href="#">Карта сайта</a></div>
+                            <div class="footer-right-link"><a href="#">Версия для слабовидящих</a></div>
                         </div>
                     </div>
                 </div>
                 <!-- footer top END -->
 
                 <div class="footer-bottom">
-                    <div class="footer-copyrights">2018 ООО «ПСБ-Страхование»</div>
-                    <div class="footer-time">Страница изменена 26.09.2018, 12:16</div>
-                    <div class="footer-info">Вся информация носит справочный характер и не является публичной офертой</div>
+                    <div class="footer-copyrights">© 2022, ООО «ПСБ Страхование»</div>
+                    <div class="footer-time">Страница изменена 21.03.2022, 14:23.</div>
+                    <div class="footer-info">Вся информация носит справочный характер и не является публичной офертой.</div>
                 </div>
 
             </div>
         </footer>
 
         <a href="#" class="main-up"></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/slick/slick.min.js"></script>

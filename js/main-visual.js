@@ -4,13 +4,42 @@ $(document).ready(function() {
         $('footer').addClass('with-main');
     }
 
-    $('.gallery').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201.72 381.74"><path d="M26.14,191l172.4-172.4A10.8,10.8,0,0,0,183.26,3.28L3.18,183.36a10.77,10.77,0,0,0,0,15.28l180.08,180a10.85,10.85,0,0,0,7.6,3.2,10.55,10.55,0,0,0,7.6-3.2,10.77,10.77,0,0,0,0-15.28Zm0,0" transform="translate(0 -0.1)"/></svg></button>',
-        nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201.72 381.74"><path d="M26.14,191l172.4-172.4A10.8,10.8,0,0,0,183.26,3.28L3.18,183.36a10.77,10.77,0,0,0,0,15.28l180.08,180a10.85,10.85,0,0,0,7.6,3.2,10.55,10.55,0,0,0,7.6-3.2,10.77,10.77,0,0,0,0-15.28Zm0,0" transform="translate(0 -0.1)"/></svg></button>',
-        dots: false
+    $('.gallery').each(function() {
+        var curGallery = $(this);
+        curGallery.on('init', function(event, slick) {
+            var curSlide = curGallery.find('.slick-current');
+            var curPhotoHeight = curSlide.find('.gallery-item-photo').outerHeight();
+            curGallery.find('.slick-dots').css({'top': curPhotoHeight});
+            curGallery.find('.slick-prev').css({'top': curPhotoHeight / 2});
+            curGallery.find('.slick-next').css({'top': curPhotoHeight / 2});
+        });
+        var options = {
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-prev"></use></svg></button>',
+            nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-next"></use></svg></button>',
+            adaptiveHeight: true,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        fade: false,
+                        dots: false
+                    }
+                }
+            ]
+        };
+        curGallery.slick(
+            options
+        ).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            var curSlide = curGallery.find('.slick-slide:not(.slick-cloned)').eq(nextSlide);
+            var curPhotoHeight = curSlide.find('.gallery-item-photo').outerHeight();
+            curGallery.find('.slick-dots').css({'top': curPhotoHeight});
+            curGallery.find('.slick-prev').css({'top': curPhotoHeight / 2});
+            curGallery.find('.slick-next').css({'top': curPhotoHeight / 2});
+        });
     });
 
     $('.nav-add-link').click(function(e) {
@@ -34,26 +63,14 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.main-events-list').each(function() {
-        if ($('.main-events-item').length > 4) {
-            var startHTML = $(this).html();
-            $(this).data('startIndex', $('.main-events-item').length * 5);
-            $(this).data('startCount', $('.main-events-item').length);
-            $(this).prepend(startHTML).prepend(startHTML).prepend(startHTML).prepend(startHTML).prepend(startHTML);
-            $(this).append(startHTML).append(startHTML).append(startHTML).append(startHTML).append(startHTML);
-        }
-    });
-
     $('.main-events-list').slick({
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        initialSlide: $('.main-events-list').data('startIndex'),
-        prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201.72 381.74"><path d="M26.14,191l172.4-172.4A10.8,10.8,0,0,0,183.26,3.28L3.18,183.36a10.77,10.77,0,0,0,0,15.28l180.08,180a10.85,10.85,0,0,0,7.6,3.2,10.55,10.55,0,0,0,7.6-3.2,10.77,10.77,0,0,0,0-15.28Zm0,0" transform="translate(0 -0.1)"/></svg></button>',
-        nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201.72 381.74"><path d="M26.14,191l172.4-172.4A10.8,10.8,0,0,0,183.26,3.28L3.18,183.36a10.77,10.77,0,0,0,0,15.28l180.08,180a10.85,10.85,0,0,0,7.6,3.2,10.55,10.55,0,0,0,7.6-3.2,10.77,10.77,0,0,0,0-15.28Zm0,0" transform="translate(0 -0.1)"/></svg></button>',
+        variableWidth: true,
+        prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-prev"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#gallery-next"></use></svg></button>',
         autoplay: true,
         autoplaySpeed: 15000,
-        dots: false,
+        dots: true,
         responsive: [
             {
                 breakpoint: 1199,
@@ -67,19 +84,6 @@ $(document).ready(function() {
         ]
     });
     $('.main-events-list').on('setPosition', function(event, slick) {
-        if ($('.main-events-list .slick-dots li').length > 0) {
-            var curIndex = $('.main-events-list').slick('slickCurrentSlide');
-            var startCount = $('.main-events-list').data('startCount');
-            var startPage = Math.floor(curIndex / startCount) * startCount;
-            $('.main-events-list .slick-dots li').css({'display': 'none'});
-            $('.main-events-list .slick-dots li').each(function() {
-                var curItem = $(this);
-                var itemIndex = $('.main-events-list .slick-dots li').index(curItem);
-                if (itemIndex >= startPage && itemIndex < startPage + startCount) {
-                    curItem.css({'display': 'inline-block'});
-                }
-            });
-        }
         if ($('.main-events-item.active').length > 0) {
             $('.main-events-list').slick('slickSetOption', 'autoplaySpeed', 9999999);
         }
@@ -112,7 +116,7 @@ $(document).ready(function() {
                         dataType: 'html',
                         cache: false
                     }).done(function(html) {
-                        $('.main-events-form').html(html);
+                        $('.main-events-form').html('<div class="container">' + html + '</div>');
                         initForm($('.main-events-form form'));
                         updatePrecalc($('.main-events-form form'));
                         $('#order-programm-select').each(function() {
