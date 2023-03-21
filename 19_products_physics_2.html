@@ -4,13 +4,6 @@
         <meta charset="utf-8" />
         <title>ПСБ Страхование</title>
 
-        <script>
-            var ua = window.navigator.userAgent.toLowerCase();
-            if ((/trident/gi).test(ua) || (/msie/gi).test(ua)) {
-                window.location.href = '14_old_browser.html';
-            }
-        </script>
-
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
@@ -21,9 +14,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <meta name="viewport" content="width=device-width" />
-
-        <link rel="icon" type="image/png" href="favicon.png" />
-
     </head>
 
     <body>
@@ -37,7 +27,7 @@
                         <div class="header-top">
                             <div class="header-menu">
                                 <ul>
-                                    <li><a href="#">Частным клиентам</a></li>
+                                    <li class="active"><a href="#">Частным клиентам</a></li>
                                     <li><a href="#">Корпоративным клиентам</a></li>
                                     <li><a href="#">Действующим клиентам</a></li>
                                 </ul>
@@ -64,7 +54,7 @@
                         </div>
 
                         <div class="header-middle">
-                            <div class="logo"><img src="images/logo.svg" alt="" /></div>
+                            <div class="logo"><a href="#"><img src="images/logo.svg" alt="" /></a></div>
                             <div class="nav-main">
                                 <ul>
                                     <li><a href="#">Путешествия</a></li>
@@ -79,137 +69,11 @@
                         </div>
                     </div>
 
-                    <div class="header-main">
-                        <!-- main events list -->
-                        <div class="main-events-list">
-
-                            <!-- main events item -->
-                            <div class="main-events-item">
-                                <a href="06_insurance_service.html" data-href="ajax/main-event-1.html" class="main-events-item-inner">
-                                    <div class="main-events-item-conainer">
-                                        <div class="main-events-item-header">
-                                            <div class="main-events-item-type">Страхование домашних животных</div>
-                                            <div class="main-events-item-photo"><img src="files/main-event-1.png" alt="" /></div>
-                                        </div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-name">Лапки в порядке</div>
-                                            <div class="main-events-item-text">Будьте спокойны за своего домашнего питомца!</div>
-                                            <div class="main-events-item-ctrl">
-                                                <div class="main-events-item-buy">Купить</div>
-                                                <div class="main-events-item-cost">
-                                                    <div class="main-events-item-cost-from">от</div>
-                                                    <div class="main-events-item-cost-price">1 000</div>
-                                                    <div class="main-events-item-cost-currency">₽/год</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- main events item END -->
-
-                            <!-- main events item -->
-                            <div class="main-events-item">
-                                <a href="06_insurance_service.html" data-href="ajax/main-event-2.html" class="main-events-item-inner">
-                                    <div class="main-events-item-conainer">
-                                        <div class="main-events-item-header">
-                                            <div class="main-events-item-type">Путешествия</div>
-                                            <div class="main-events-item-photo"><img src="files/main-event-2.png" alt="" /></div>
-                                        </div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-name">За рубеж и РФ</div>
-                                            <div class="main-events-item-text">Минимизируйте риски, с&nbsp;которыми связаны дальние поездки</div>
-                                            <div class="main-events-item-ctrl">
-                                                <div class="main-events-item-buy">Купить</div>
-                                                <div class="main-events-item-cost">
-                                                    <div class="main-events-item-cost-from">от</div>
-                                                    <div class="main-events-item-cost-price">23</div>
-                                                    <div class="main-events-item-cost-currency">₽/день</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- main events item END -->
-
-                            <!-- main events item -->
-                            <div class="main-events-item">
-                                <a href="06_insurance_service.html" data-href="ajax/main-event-3.html" class="main-events-item-inner">
-                                    <div class="main-events-item-conainer">
-                                        <div class="main-events-item-header">
-                                            <div class="main-events-item-type">Добровольное медицинское страхование</div>
-                                            <div class="main-events-item-photo"><img src="files/main-event-3.png" alt="" /></div>
-                                        </div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-name">Формула здоровья</div>
-                                            <div class="main-events-item-text">Создадим здоровое будущее вместе. Выбирай заботу о&nbsp;себе.</div>
-                                            <div class="main-events-item-ctrl">
-                                                <div class="main-events-item-buy">Купить</div>
-                                                <div class="main-events-item-cost">
-                                                    <div class="main-events-item-cost-from">от</div>
-                                                    <div class="main-events-item-cost-price">4 000</div>
-                                                    <div class="main-events-item-cost-currency">₽/год</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- main events item END -->
-
-                            <!-- main events item -->
-                            <div class="main-events-item">
-                                <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
-                                    <div class="main-events-item-conainer">
-                                        <div class="main-events-item-header">
-                                            <div class="main-events-item-type">Имущество</div>
-                                            <div class="main-events-item-photo"><img src="files/main-event-4.png" alt="" /></div>
-                                        </div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-name">Защита квартиры</div>
-                                            <div class="main-events-item-text">Защитите свое имущество от&nbsp;непредвиденных ситуаций</div>
-                                            <div class="main-events-item-ctrl">
-                                                <div class="main-events-item-buy">Купить</div>
-                                                <div class="main-events-item-cost">
-                                                    <div class="main-events-item-cost-from">от</div>
-                                                    <div class="main-events-item-cost-price">1 350</div>
-                                                    <div class="main-events-item-cost-currency">₽/год</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- main events item END -->
-
-                            <!-- main events item -->
-                            <div class="main-events-item">
-                                <a href="06_insurance_service.html" data-href="ajax/main-event.html" class="main-events-item-inner">
-                                    <div class="main-events-item-conainer">
-                                        <div class="main-events-item-header">
-                                            <div class="main-events-item-type">Несчастный случай</div>
-                                            <div class="main-events-item-photo"><img src="files/main-event-5.png" alt="" /></div>
-                                        </div>
-                                        <div class="main-events-item-content">
-                                            <div class="main-events-item-name">Особый случай</div>
-                                            <div class="main-events-item-text">Оградите себя и своих близких от непредвиденных обстоятельств</div>
-                                            <div class="main-events-item-ctrl">
-                                                <div class="main-events-item-buy">Купить</div>
-                                                <div class="main-events-item-cost">
-                                                    <div class="main-events-item-cost-from">от</div>
-                                                    <div class="main-events-item-cost-price">1 350</div>
-                                                    <div class="main-events-item-cost-currency">₽/год</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- main events item END -->
-
+                    <div class="header-page">
+                        <div class="container">
+                            <div class="breadcrumbs"><a href="#">ПСБ Страхование</a><svg><use xlink:href="images/sprite.svg#breadcrumbs"></use></svg>Частным клиентам</div>
+                            <h1>Частным клиентам</h1>
                         </div>
-                        <!-- main events list END -->
                     </div>
                 </header>
 
@@ -247,7 +111,13 @@
                                             <li>
                                                 <a href="#">Путешествия</a>
                                                 <ul>
-                                                    <li><a href="#">За рубеж и РФ</a></li>
+                                                    <li><a href="#">За рубеж и РФ<svg class="icon-online" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25866 12.3231C4.0156 12.3231 3.8091 12.2381 3.63916 12.0682C3.46883 11.8978 3.38366 11.6911 3.38366 11.4481C3.38366 11.1953 3.46883 10.9863 3.63916 10.821C3.8091 10.6557 4.0156 10.5731 4.25866 10.5731C4.51144 10.5731 4.72046 10.6557 4.88574 10.821C5.05102 10.9863 5.13366 11.1953 5.13366 11.4481C5.13366 11.6911 5.05102 11.8978 4.88574 12.0682C4.72046 12.2381 4.51144 12.3231 4.25866 12.3231ZM9.74199 12.3231C9.48922 12.3231 9.28019 12.2381 9.11491 12.0682C8.94963 11.8978 8.86699 11.6911 8.86699 11.4481C8.86699 11.1953 8.94963 10.9863 9.11491 10.821C9.28019 10.6557 9.48922 10.5731 9.74199 10.5731C9.98505 10.5731 10.1915 10.6557 10.3615 10.821C10.5318 10.9863 10.617 11.1953 10.617 11.4481C10.617 11.6911 10.5318 11.8978 10.3615 12.0682C10.1915 12.2381 9.98505 12.3231 9.74199 12.3231ZM3.42741 3.2085L4.98783 6.48975H8.85241C8.92046 6.48975 8.98133 6.47263 9.03499 6.43841C9.08827 6.40458 9.13435 6.3585 9.17324 6.30016L10.7045 3.52933C10.7434 3.44183 10.7434 3.36638 10.7045 3.303C10.6656 3.24 10.6024 3.2085 10.5149 3.2085H3.42741ZM3.15033 2.62516H10.7337C10.9962 2.62516 11.1906 2.72958 11.317 2.93841C11.4434 3.14763 11.4482 3.35919 11.3316 3.57308L9.66908 6.60641C9.58158 6.75225 9.46977 6.86638 9.33366 6.94883C9.19755 7.03166 9.05171 7.07308 8.89616 7.07308H4.72533L4.01074 8.371C3.95241 8.4585 3.95241 8.55572 4.01074 8.66266C4.06908 8.76961 4.15171 8.82308 4.25866 8.82308H10.617V9.40641H4.25866C3.91838 9.40641 3.6656 9.26291 3.50033 8.97591C3.33505 8.6893 3.33019 8.40016 3.48574 8.1085L4.36074 6.54808L2.21699 2.04183H1.16699V1.4585H2.59616L3.15033 2.62516Z" /></svg></a></li>
+                                                    <li><a href="#">Россия<svg class="icon-online" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25866 12.3231C4.0156 12.3231 3.8091 12.2381 3.63916 12.0682C3.46883 11.8978 3.38366 11.6911 3.38366 11.4481C3.38366 11.1953 3.46883 10.9863 3.63916 10.821C3.8091 10.6557 4.0156 10.5731 4.25866 10.5731C4.51144 10.5731 4.72046 10.6557 4.88574 10.821C5.05102 10.9863 5.13366 11.1953 5.13366 11.4481C5.13366 11.6911 5.05102 11.8978 4.88574 12.0682C4.72046 12.2381 4.51144 12.3231 4.25866 12.3231ZM9.74199 12.3231C9.48922 12.3231 9.28019 12.2381 9.11491 12.0682C8.94963 11.8978 8.86699 11.6911 8.86699 11.4481C8.86699 11.1953 8.94963 10.9863 9.11491 10.821C9.28019 10.6557 9.48922 10.5731 9.74199 10.5731C9.98505 10.5731 10.1915 10.6557 10.3615 10.821C10.5318 10.9863 10.617 11.1953 10.617 11.4481C10.617 11.6911 10.5318 11.8978 10.3615 12.0682C10.1915 12.2381 9.98505 12.3231 9.74199 12.3231ZM3.42741 3.2085L4.98783 6.48975H8.85241C8.92046 6.48975 8.98133 6.47263 9.03499 6.43841C9.08827 6.40458 9.13435 6.3585 9.17324 6.30016L10.7045 3.52933C10.7434 3.44183 10.7434 3.36638 10.7045 3.303C10.6656 3.24 10.6024 3.2085 10.5149 3.2085H3.42741ZM3.15033 2.62516H10.7337C10.9962 2.62516 11.1906 2.72958 11.317 2.93841C11.4434 3.14763 11.4482 3.35919 11.3316 3.57308L9.66908 6.60641C9.58158 6.75225 9.46977 6.86638 9.33366 6.94883C9.19755 7.03166 9.05171 7.07308 8.89616 7.07308H4.72533L4.01074 8.371C3.95241 8.4585 3.95241 8.55572 4.01074 8.66266C4.06908 8.76961 4.15171 8.82308 4.25866 8.82308H10.617V9.40641H4.25866C3.91838 9.40641 3.6656 9.26291 3.50033 8.97591C3.33505 8.6893 3.33019 8.40016 3.48574 8.1085L4.36074 6.54808L2.21699 2.04183H1.16699V1.4585H2.59616L3.15033 2.62516Z" /></svg></a></li>
+                                                    <li><a href="#">Шенген<svg class="icon-online" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25866 12.3231C4.0156 12.3231 3.8091 12.2381 3.63916 12.0682C3.46883 11.8978 3.38366 11.6911 3.38366 11.4481C3.38366 11.1953 3.46883 10.9863 3.63916 10.821C3.8091 10.6557 4.0156 10.5731 4.25866 10.5731C4.51144 10.5731 4.72046 10.6557 4.88574 10.821C5.05102 10.9863 5.13366 11.1953 5.13366 11.4481C5.13366 11.6911 5.05102 11.8978 4.88574 12.0682C4.72046 12.2381 4.51144 12.3231 4.25866 12.3231ZM9.74199 12.3231C9.48922 12.3231 9.28019 12.2381 9.11491 12.0682C8.94963 11.8978 8.86699 11.6911 8.86699 11.4481C8.86699 11.1953 8.94963 10.9863 9.11491 10.821C9.28019 10.6557 9.48922 10.5731 9.74199 10.5731C9.98505 10.5731 10.1915 10.6557 10.3615 10.821C10.5318 10.9863 10.617 11.1953 10.617 11.4481C10.617 11.6911 10.5318 11.8978 10.3615 12.0682C10.1915 12.2381 9.98505 12.3231 9.74199 12.3231ZM3.42741 3.2085L4.98783 6.48975H8.85241C8.92046 6.48975 8.98133 6.47263 9.03499 6.43841C9.08827 6.40458 9.13435 6.3585 9.17324 6.30016L10.7045 3.52933C10.7434 3.44183 10.7434 3.36638 10.7045 3.303C10.6656 3.24 10.6024 3.2085 10.5149 3.2085H3.42741ZM3.15033 2.62516H10.7337C10.9962 2.62516 11.1906 2.72958 11.317 2.93841C11.4434 3.14763 11.4482 3.35919 11.3316 3.57308L9.66908 6.60641C9.58158 6.75225 9.46977 6.86638 9.33366 6.94883C9.19755 7.03166 9.05171 7.07308 8.89616 7.07308H4.72533L4.01074 8.371C3.95241 8.4585 3.95241 8.55572 4.01074 8.66266C4.06908 8.76961 4.15171 8.82308 4.25866 8.82308H10.617V9.40641H4.25866C3.91838 9.40641 3.6656 9.26291 3.50033 8.97591C3.33505 8.6893 3.33019 8.40016 3.48574 8.1085L4.36074 6.54808L2.21699 2.04183H1.16699V1.4585H2.59616L3.15033 2.62516Z" /></svg></a></li>
+                                                    <li><a href="#">Турция<svg class="icon-online" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25866 12.3231C4.0156 12.3231 3.8091 12.2381 3.63916 12.0682C3.46883 11.8978 3.38366 11.6911 3.38366 11.4481C3.38366 11.1953 3.46883 10.9863 3.63916 10.821C3.8091 10.6557 4.0156 10.5731 4.25866 10.5731C4.51144 10.5731 4.72046 10.6557 4.88574 10.821C5.05102 10.9863 5.13366 11.1953 5.13366 11.4481C5.13366 11.6911 5.05102 11.8978 4.88574 12.0682C4.72046 12.2381 4.51144 12.3231 4.25866 12.3231ZM9.74199 12.3231C9.48922 12.3231 9.28019 12.2381 9.11491 12.0682C8.94963 11.8978 8.86699 11.6911 8.86699 11.4481C8.86699 11.1953 8.94963 10.9863 9.11491 10.821C9.28019 10.6557 9.48922 10.5731 9.74199 10.5731C9.98505 10.5731 10.1915 10.6557 10.3615 10.821C10.5318 10.9863 10.617 11.1953 10.617 11.4481C10.617 11.6911 10.5318 11.8978 10.3615 12.0682C10.1915 12.2381 9.98505 12.3231 9.74199 12.3231ZM3.42741 3.2085L4.98783 6.48975H8.85241C8.92046 6.48975 8.98133 6.47263 9.03499 6.43841C9.08827 6.40458 9.13435 6.3585 9.17324 6.30016L10.7045 3.52933C10.7434 3.44183 10.7434 3.36638 10.7045 3.303C10.6656 3.24 10.6024 3.2085 10.5149 3.2085H3.42741ZM3.15033 2.62516H10.7337C10.9962 2.62516 11.1906 2.72958 11.317 2.93841C11.4434 3.14763 11.4482 3.35919 11.3316 3.57308L9.66908 6.60641C9.58158 6.75225 9.46977 6.86638 9.33366 6.94883C9.19755 7.03166 9.05171 7.07308 8.89616 7.07308H4.72533L4.01074 8.371C3.95241 8.4585 3.95241 8.55572 4.01074 8.66266C4.06908 8.76961 4.15171 8.82308 4.25866 8.82308H10.617V9.40641H4.25866C3.91838 9.40641 3.6656 9.26291 3.50033 8.97591C3.33505 8.6893 3.33019 8.40016 3.48574 8.1085L4.36074 6.54808L2.21699 2.04183H1.16699V1.4585H2.59616L3.15033 2.62516Z" /></svg></a></li>
+                                                    <li><a href="#">Европа<svg class="icon-online" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25866 12.3231C4.0156 12.3231 3.8091 12.2381 3.63916 12.0682C3.46883 11.8978 3.38366 11.6911 3.38366 11.4481C3.38366 11.1953 3.46883 10.9863 3.63916 10.821C3.8091 10.6557 4.0156 10.5731 4.25866 10.5731C4.51144 10.5731 4.72046 10.6557 4.88574 10.821C5.05102 10.9863 5.13366 11.1953 5.13366 11.4481C5.13366 11.6911 5.05102 11.8978 4.88574 12.0682C4.72046 12.2381 4.51144 12.3231 4.25866 12.3231ZM9.74199 12.3231C9.48922 12.3231 9.28019 12.2381 9.11491 12.0682C8.94963 11.8978 8.86699 11.6911 8.86699 11.4481C8.86699 11.1953 8.94963 10.9863 9.11491 10.821C9.28019 10.6557 9.48922 10.5731 9.74199 10.5731C9.98505 10.5731 10.1915 10.6557 10.3615 10.821C10.5318 10.9863 10.617 11.1953 10.617 11.4481C10.617 11.6911 10.5318 11.8978 10.3615 12.0682C10.1915 12.2381 9.98505 12.3231 9.74199 12.3231ZM3.42741 3.2085L4.98783 6.48975H8.85241C8.92046 6.48975 8.98133 6.47263 9.03499 6.43841C9.08827 6.40458 9.13435 6.3585 9.17324 6.30016L10.7045 3.52933C10.7434 3.44183 10.7434 3.36638 10.7045 3.303C10.6656 3.24 10.6024 3.2085 10.5149 3.2085H3.42741ZM3.15033 2.62516H10.7337C10.9962 2.62516 11.1906 2.72958 11.317 2.93841C11.4434 3.14763 11.4482 3.35919 11.3316 3.57308L9.66908 6.60641C9.58158 6.75225 9.46977 6.86638 9.33366 6.94883C9.19755 7.03166 9.05171 7.07308 8.89616 7.07308H4.72533L4.01074 8.371C3.95241 8.4585 3.95241 8.55572 4.01074 8.66266C4.06908 8.76961 4.15171 8.82308 4.25866 8.82308H10.617V9.40641H4.25866C3.91838 9.40641 3.6656 9.26291 3.50033 8.97591C3.33505 8.6893 3.33019 8.40016 3.48574 8.1085L4.36074 6.54808L2.21699 2.04183H1.16699V1.4585H2.59616L3.15033 2.62516Z" /></svg></a></li>
+                                                    <li><a href="#">Германия<svg class="icon-online" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25866 12.3231C4.0156 12.3231 3.8091 12.2381 3.63916 12.0682C3.46883 11.8978 3.38366 11.6911 3.38366 11.4481C3.38366 11.1953 3.46883 10.9863 3.63916 10.821C3.8091 10.6557 4.0156 10.5731 4.25866 10.5731C4.51144 10.5731 4.72046 10.6557 4.88574 10.821C5.05102 10.9863 5.13366 11.1953 5.13366 11.4481C5.13366 11.6911 5.05102 11.8978 4.88574 12.0682C4.72046 12.2381 4.51144 12.3231 4.25866 12.3231ZM9.74199 12.3231C9.48922 12.3231 9.28019 12.2381 9.11491 12.0682C8.94963 11.8978 8.86699 11.6911 8.86699 11.4481C8.86699 11.1953 8.94963 10.9863 9.11491 10.821C9.28019 10.6557 9.48922 10.5731 9.74199 10.5731C9.98505 10.5731 10.1915 10.6557 10.3615 10.821C10.5318 10.9863 10.617 11.1953 10.617 11.4481C10.617 11.6911 10.5318 11.8978 10.3615 12.0682C10.1915 12.2381 9.98505 12.3231 9.74199 12.3231ZM3.42741 3.2085L4.98783 6.48975H8.85241C8.92046 6.48975 8.98133 6.47263 9.03499 6.43841C9.08827 6.40458 9.13435 6.3585 9.17324 6.30016L10.7045 3.52933C10.7434 3.44183 10.7434 3.36638 10.7045 3.303C10.6656 3.24 10.6024 3.2085 10.5149 3.2085H3.42741ZM3.15033 2.62516H10.7337C10.9962 2.62516 11.1906 2.72958 11.317 2.93841C11.4434 3.14763 11.4482 3.35919 11.3316 3.57308L9.66908 6.60641C9.58158 6.75225 9.46977 6.86638 9.33366 6.94883C9.19755 7.03166 9.05171 7.07308 8.89616 7.07308H4.72533L4.01074 8.371C3.95241 8.4585 3.95241 8.55572 4.01074 8.66266C4.06908 8.76961 4.15171 8.82308 4.25866 8.82308H10.617V9.40641H4.25866C3.91838 9.40641 3.6656 9.26291 3.50033 8.97591C3.33505 8.6893 3.33019 8.40016 3.48574 8.1085L4.36074 6.54808L2.21699 2.04183H1.16699V1.4585H2.59616L3.15033 2.62516Z" /></svg></a></li>
+                                                    <li><a href="#">Страхование путешественников<svg class="icon-online" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.25866 12.3231C4.0156 12.3231 3.8091 12.2381 3.63916 12.0682C3.46883 11.8978 3.38366 11.6911 3.38366 11.4481C3.38366 11.1953 3.46883 10.9863 3.63916 10.821C3.8091 10.6557 4.0156 10.5731 4.25866 10.5731C4.51144 10.5731 4.72046 10.6557 4.88574 10.821C5.05102 10.9863 5.13366 11.1953 5.13366 11.4481C5.13366 11.6911 5.05102 11.8978 4.88574 12.0682C4.72046 12.2381 4.51144 12.3231 4.25866 12.3231ZM9.74199 12.3231C9.48922 12.3231 9.28019 12.2381 9.11491 12.0682C8.94963 11.8978 8.86699 11.6911 8.86699 11.4481C8.86699 11.1953 8.94963 10.9863 9.11491 10.821C9.28019 10.6557 9.48922 10.5731 9.74199 10.5731C9.98505 10.5731 10.1915 10.6557 10.3615 10.821C10.5318 10.9863 10.617 11.1953 10.617 11.4481C10.617 11.6911 10.5318 11.8978 10.3615 12.0682C10.1915 12.2381 9.98505 12.3231 9.74199 12.3231ZM3.42741 3.2085L4.98783 6.48975H8.85241C8.92046 6.48975 8.98133 6.47263 9.03499 6.43841C9.08827 6.40458 9.13435 6.3585 9.17324 6.30016L10.7045 3.52933C10.7434 3.44183 10.7434 3.36638 10.7045 3.303C10.6656 3.24 10.6024 3.2085 10.5149 3.2085H3.42741ZM3.15033 2.62516H10.7337C10.9962 2.62516 11.1906 2.72958 11.317 2.93841C11.4434 3.14763 11.4482 3.35919 11.3316 3.57308L9.66908 6.60641C9.58158 6.75225 9.46977 6.86638 9.33366 6.94883C9.19755 7.03166 9.05171 7.07308 8.89616 7.07308H4.72533L4.01074 8.371C3.95241 8.4585 3.95241 8.55572 4.01074 8.66266C4.06908 8.76961 4.15171 8.82308 4.25866 8.82308H10.617V9.40641H4.25866C3.91838 9.40641 3.6656 9.26291 3.50033 8.97591C3.33505 8.6893 3.33019 8.40016 3.48574 8.1085L4.36074 6.54808L2.21699 2.04183H1.16699V1.4585H2.59616L3.15033 2.62516Z" /></svg></a></li>
                                                 </ul>
                                             </li>
                                             <li>
@@ -429,200 +299,123 @@
                 </div>
                 <!-- nav END -->
 
-                <div class="main-events-form"></div>
-
                 <!-- container -->
                 <div class="container">
 
-                    <!-- main insurance event desktop -->
-                    <div class="main-insurance-event-desktop">
-                        <div class="main-title">Что делать, если произошел страховой случай?</div>
+                    <!-- services -->
+                    <div class="services services-vertical">
 
-                        <!-- main what -->
-                        <div class="main-what">
-                            <div class="main-what-item">
-                                <a href="#" class="main-what-item-inner">
-                                    <img src="images/main-what-1.png" alt="">
-                                    <div class="main-what-item-number">1</div>
-                                    <div class="main-what-item-content">
-                                        <div class="main-what-item-title">Спокойствие</div>
-                                        <div class="main-what-item-text">В первую очередь соблюдайте спокойствие и свяжитесь с&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
+                        <div class="services-item">
+                            <div class="services-item-inner">
+                                <div class="services-item-photo"><img src="files/services-new-01-big.png" alt="" /></div>
+                                <div class="services-item-content">
+                                    <div class="services-item-title"><a href="#">Путешествия</a></div>
+                                    <div class="services-item-list">
+                                        <ol>
+                                            <li><a href="#">За рубеж и РФ<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Европа<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Германия<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Шенген<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Россия<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li>Турция</li>
+                                            <li>Страхование путешественников</li>
+                                        </ol>
                                     </div>
-                                    <div class="main-what-item-link">подробнее</div>
-                                </a>
-                            </div>
-                            <div class="main-what-item">
-                                <a href="#" class="main-what-item-inner">
-                                    <img src="images/main-what-2.png" alt="">
-                                    <div class="main-what-item-number">2</div>
-                                    <div class="main-what-item-content">
-                                        <div class="main-what-item-title">Инструкции</div>
-                                        <div class="main-what-item-text">Следуйте полученным от&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование» инструкциям</div>
-                                    </div>
-                                    <div class="main-what-item-link">подробнее</div>
-                                </a>
-                            </div>
-                            <div class="main-what-item">
-                                <a href="#" class="main-what-item-inner">
-                                    <img src="images/main-what-3.png" alt="">
-                                    <div class="main-what-item-number">3</div>
-                                    <div class="main-what-item-content">
-                                        <div class="main-what-item-title">Документы</div>
-                                        <div class="main-what-item-text">В случае, если вы понесли какие-либо расходы, представьте необходимые документы в ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
-                                    </div>
-                                    <div class="main-what-item-link">подробнее</div>
-                                </a>
-                            </div>
-                            <div class="main-what-item">
-                                <a href="#" class="main-what-item-inner">
-                                    <img src="images/main-what-4.png" alt="">
-                                    <div class="main-what-item-number">4</div>
-                                    <div class="main-what-item-content">
-                                        <div class="main-what-item-title">Возврат расходов</div>
-                                        <div class="main-what-item-text">Возврат расходов Получите компенсацию понесенных Вами расходов от&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
-                                    </div>
-                                    <div class="main-what-item-link">подробнее</div>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- main what END -->
-
-                        <div class="bottom-btns">
-                            <div class="bottom-btns-list">
-                                <div class="bottom-btn"><a href="#" class="btn-border">Сообщить по e-mail</a></div>
-                                <div class="bottom-btn"><a href="#" class="btn-border">Позвонить</a></div>
-                                <div class="bottom-btn"><a href="#" class="btn-blue">Вход в личный кабинет</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- main insurance event desktop END -->
-
-                    <!-- main insurance event mobile -->
-                    <div class="main-insurance-event-mobile">
-                        <div class="main-title">Страховой случай?</div>
-                        <div class="main-insurance-event-mobile-btn main-insurance-event-mobile-btn-more-link"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 443.36 403.52"><path d="M430.8,289,285.2,36.72a73.44,73.44,0,0,0-127.2,0L9.84,293.36a73.44,73.44,0,0,0,63.6,110.16H369.92A73.42,73.42,0,0,0,430.8,289ZM253,313.6c0,17.36-13.36,30.64-31.36,30.64S190.32,331,190.32,313.6v-.72c0-17.28,13.36-30.64,31.36-30.64S253,295.52,253,312.88ZM253.76,107,238.24,242.56c-1,9.76-7.52,15.84-16.56,15.84s-15.52-6.16-16.56-15.84L189.6,107c-1-10.48,4.64-18.4,14.4-18.4h35.28c9.76.08,15.52,8,14.48,18.48Zm0,0"/></svg></span>Уведомить о страховом случае</a></div>
-                        <div class="main-insurance-event-mobile-btn-more">
-                            <div class="main-insurance-event-mobile-btn"><a href="mailto:info@smpins.ru" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="23" height="17" viewBox="0 0 22.28 15.6"><path d="M1.76.92l8,6.36a2.06,2.06,0,0,0,1.35.39,2.05,2.05,0,0,0,1.36-.39l8-6.36C21.16.41,21,0,20.2,0H2.08c-.82,0-1,.41-.32.92Zm0,0"/><path d="M21.1,2.6,12.33,9.26a2.12,2.12,0,0,1-2.37,0L1.18,2.6C.53,2.11,0,2.37,0,3.19V14.11A1.49,1.49,0,0,0,1.48,15.6H20.8a1.49,1.49,0,0,0,1.48-1.49V3.19c0-.82-.53-1.08-1.18-.59Zm0,0"/></svg></span>Сообщить по e-mail</a></div>
-                            <div class="main-insurance-event-mobile-btn"><a href="tel:+78005558565" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 462.49 462.18"><path d="M462.27,364.75q1.46,11.25-6.86,19.58L390.29,449a36.7,36.7,0,0,1-11.5,8.32,47.6,47.6,0,0,1-14,4.41q-.49,0-2.94.25t-6.36.25q-9.3,0-30.11-3.18T274.5,443.33q-30.11-12.49-68.3-37.45t-81.27-68.54q-34.27-33.79-56.79-64.63t-36.23-57Q18.2,189.48,11.34,168.18T2,131.46Q-.41,116,.08,107.22t.49-9.79A47.57,47.57,0,0,1,5,83.48,36.65,36.65,0,0,1,13.3,72L78.42,6.85Q85.27,0,94.09,0a18.25,18.25,0,0,1,11.26,3.67,34.07,34.07,0,0,1,8.32,9.06l52.39,99.39a23.84,23.84,0,0,1,2.45,17.14,30.48,30.48,0,0,1-8.32,15.67l-24,24a8.19,8.19,0,0,0-1.71,3.18,12.12,12.12,0,0,0-.74,3.67q2,10.28,8.81,23.5,5.88,11.75,18.12,28.64t34.76,38.92q22,22.52,39.17,35t28.64,18.36q11.5,5.87,17.63,7.1l6.12,1.22a11.71,11.71,0,0,0,3.18-.73,8.12,8.12,0,0,0,3.18-1.71l27.91-28.4a30,30,0,0,1,20.56-7.84q8.33,0,13.22,2.94h.49L450,348.59q10.28,6.37,12.24,16.16Zm0,0"/></svg></span>Позвонить 8 (800) 555-85-65</a></div>
-                        </div>
-                        <div class="main-insurance-event-mobile-btn"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="25" viewBox="0 0 400.7 512"><polygon points="267.13 9.78 267.13 133.56 390.91 133.56 267.13 9.78"/><path d="M250.43,167a16.7,16.7,0,0,1-16.7-16.7V0H16.7A16.7,16.7,0,0,0,0,16.7V495.3A16.7,16.7,0,0,0,16.7,512H384a16.7,16.7,0,0,0,16.7-16.7V167ZM217,411.83H83.48a16.7,16.7,0,0,1,0-33.39H217a16.7,16.7,0,0,1,0,33.39ZM317.22,345H83.48a16.7,16.7,0,1,1,0-33.39H317.22a16.7,16.7,0,0,1,0,33.39Zm0-66.78H83.48a16.7,16.7,0,0,1,0-33.39H317.22a16.7,16.7,0,0,1,0,33.39Z"/></svg></span>Порядок действий</a></div>
-                        <div class="main-insurance-event-mobile-btn"><a href="#" class="btn-blue"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 240 240"><path d="M120,0A120,120,0,1,0,240,120,120,120,0,0,0,120,0Zm.37,176.61h-52c0-37.48,32.92-37.48,40.23-47.28l.84-4.47c-10.26-5.2-17.51-17.74-17.51-32.41,0-19.33,12.57-35,28.07-35s28.07,15.67,28.07,35c0,14.54-7.12,27-17.24,32.29l.95,5.08c8,9.32,39.84,9.93,39.84,46.79Zm0,0"/></svg></span>Узнать статус дела</a></div>
-                    </div>
-                    <!-- main insurance event mobile END -->
-
-                    <div class="main-title">ПСБ Страхование выполняет свои обязательства</div>
-
-                    <!-- main obligations -->
-                    <div class="main-obligations">
-                        <div class="main-obligation">
-                            <a href="#" class="main-obligation-inner">
-                                <div class="main-obligation-img"><img src="images/main-obligation-1.png" alt=""></div>
-                                <div class="main-obligation-stat">+31.1%</div>
-                                <div class="main-obligation-value">594 092 164 ₽</div>
-                                <div class="main-obligation-text">Составили выплаты в в 2022-м году</div>
-                            </a>
-                        </div>
-
-                        <div class="main-obligation">
-                            <a href="#" class="main-obligation-inner">
-                                <div class="main-obligation-img"><img src="images/main-obligation-2.png" alt=""></div>
-                                <div class="main-obligation-stat">+13.8%</div>
-                                <div class="main-obligation-value">80 638 дел</div>
-                                <div class="main-obligation-text">Урегулировано в в 2022-м году</div>
-                            </a>
-                        </div>
-
-                        <div class="main-obligation">
-                            <a href="#" class="main-obligation-inner">
-                                <div class="main-obligation-img"><img src="images/main-obligation-3.png" alt=""></div>
-                                <div class="main-obligation-stat">- 2 дня</div>
-                                <div class="main-obligation-value">10 дней</div>
-                                <div class="main-obligation-text">Среднее время<br> на урегулирование</div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- main obligations END -->
-
-                    <!-- main prefs container -->
-                    <div class="main-prefs-container">
-                        <div class="main-prefs-text">
-                            <div class="main-title">Почему выбирают ПСБ Страхование</div>
-                            <div class="main-prefs-descr">Возврат расходов Получите компенсацию понесенных Вами расходов от&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
-                        </div>
-
-                        <!-- main prefs -->
-                        <div class="main-prefs">
-                            <a href="#" class="main-pref">
-                                <div class="main-pref-img"><img src="images/main-pref-1.png" alt=""></div>
-                                <div class="main-pref-title">Выбирайте лучшее</div>
-                                <div class="main-pref-text">Входим в банковскую Группу «Промсвязьбанк»</div>
-                                <div class="main-pref-link">подробнее</div>
-                            </a>
-                            <a href="#" class="main-pref">
-                                <div class="main-pref-img"><img src="images/main-pref-2.png" alt=""></div>
-                                <div class="main-pref-title">Не переплачивайте</div>
-                                <div class="main-pref-text">Максимально широкое страховое покрытие по&nbsp;выгодной цене</div>
-                                <div class="main-pref-link">подробнее</div>
-                            </a>
-                            <a href="#" class="main-pref">
-                                <div class="main-pref-img"><img src="images/main-pref-3.png" alt=""></div>
-                                <div class="main-pref-title">Будьте уверены</div>
-                                <div class="main-pref-text">Вы получите полис, отвечающий всем требованиям законодательства</div>
-                                <div class="main-pref-link">подробнее</div>
-                            </a>
-                            <a href="#" class="main-pref">
-                                <div class="main-pref-img"><img src="images/main-pref-4.png" alt=""></div>
-                                <div class="main-pref-title">Мы поможем</div>
-                                <div class="main-pref-text">Круголосуточная служба поддержки, Электронная подача документов</div>
-                                <div class="main-pref-link">подробнее</div>
-                            </a>
-                        </div>
-                        <!-- main prefs END -->
-                    </div>
-                    <!-- main prefs container END -->
-
-                    <div class="main-title">Статьи</div>
-
-                    <div class="main-articles">
-                        <div class="main-article">
-                            <a href="#">
-                                <div class="main-article-img"><img src="files/main-article-1.png" alt=""></div>
-                                <div class="main-article-content">
-                                    <div class="main-article-title">Страхование квартиры от&nbsp;затопления и пожара</div>
-                                    <div class="main-article-anonce">В первую очередь соблюдайте спокойствие и свяжитесь с&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
                                 </div>
-                                <div class="main-article-link">Читать</div>
-                            </a>
+                            </div>
                         </div>
-                        <div class="main-article">
-                            <a href="#">
-                                <div class="main-article-img"><img src="files/main-article-2.png" alt=""></div>
-                                <div class="main-article-content">
-                                    <div class="main-article-title">Титульное страхование недвижимости</div>
-                                    <div class="main-article-anonce">В случае, если вы понесли какие-либо расходы, представьте необходимые документы в&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование»</div>
+
+                        <div class="services-item">
+                            <div class="services-item-inner">
+                                <div class="services-item-photo"><img src="files/services-new-02-big.png" alt="" /></div>
+                                <div class="services-item-content">
+                                    <div class="services-item-title"><a href="#">Здоровье</a></div>
+                                    <div class="services-item-list">
+                                        <ol>
+                                            <li><a href="#">Здоровый образ жизни<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li>ДМС для студентов</li>
+                                            <li><a href="#">ДМС трудовых мигрантов<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li>Формула здоровья</li>
+                                        </ol>
+                                    </div>
                                 </div>
-                                <div class="main-article-link">Читать</div>
-                            </a>
+                            </div>
                         </div>
-                        <div class="main-article">
-                            <a href="#">
-                                <div class="main-article-img"><img src="files/main-article-3.png" alt=""></div>
-                                <div class="main-article-content">
-                                    <div class="main-article-title">Страховка на время ремонта квартиры</div>
-                                    <div class="main-article-anonce">Следуйте полученным от&nbsp;ООО&nbsp;«ПСБ&nbsp;Страхование» инструкциям</div>
+
+                        <div class="services-item">
+                            <div class="services-item-inner">
+                                <div class="services-item-photo"><img src="files/services-new-03-big.png" alt="" /></div>
+                                <div class="services-item-content">
+                                    <div class="services-item-title"><a href="#">Несчастные случаи</a></div>
+                                    <div class="services-item-list">
+                                        <ol>
+                                            <li><a href="#">Особый случай<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Моя защита<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li>Будь спокоен</li>
+                                        </ol>
+                                    </div>
                                 </div>
-                                <div class="main-article-link">Читать</div>
-                            </a>
+                            </div>
                         </div>
+
+                        <div class="services-item">
+                            <div class="services-item-inner">
+                                <div class="services-item-photo"><img src="files/services-new-01-big.png" alt="" /></div>
+                                <div class="services-item-content">
+                                    <div class="services-item-title"><a href="#">Финансовая защита</a></div>
+                                    <div class="services-item-list">
+                                        <ol>
+                                            <li><a href="#">Здоровый образ жизни<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li>ДМС для студентов</li>
+                                            <li><a href="#">ДМС трудовых мигрантов<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li>Формула здоровья</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="services-item">
+                            <div class="services-item-inner">
+                                <div class="services-item-photo"><img src="files/services-new-02-big.png" alt="" /></div>
+                                <div class="services-item-content">
+                                    <div class="services-item-title"><a href="#">Недвижимость/ имущество</a></div>
+                                    <div class="services-item-list">
+                                        <ol>
+                                            <li><a href="#">Особый случай<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Моя защита<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li>Будь спокоен</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="services-item">
+                            <div class="services-item-inner">
+                                <div class="services-item-photo"><img src="files/services-new-03-big.png" alt="" /></div>
+                                <div class="services-item-content">
+                                    <div class="services-item-title"><a href="#">Транспорт</a></div>
+                                    <div class="services-item-list">
+                                        <ol>
+                                            <li><a href="#">За рубеж и РФ<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Европа<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Германия<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Шенген<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li><a href="#">Россия<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                            <li>Турция</li>
+                                            <li>Страхование путешественников</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                    <!-- services END -->
 
                 </div>
                 <!-- container END -->
-
-                <div class="cookies-message">
-                    Продолжая использовать сайт ООО «ПСБ Страхование» Вы выражаете своё согласие на обработку Ваших персональных данных, ознакомьтесь с <a href="#">условиями и принципами их обработки</a>
-                    <div class="cookies-message-close"></div>
-                </div>
 
             </div>
         </div>
@@ -704,7 +497,6 @@
         <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/f-main.js"></script>
         <script src="js/main-visual.js"></script>
-        <script src="js/f-logic.js"></script>
 
     </body>
 </html>

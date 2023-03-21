@@ -251,24 +251,6 @@ $(document).ready(function() {
         $('.nav-add-open').removeClass('nav-add-open');
     });
 
-    $('.services-item').each(function() {
-        var curItem = $(this);
-        if (curItem.find('.services-item-list').length > 0) {
-            curItem.find('.services-item-title a').prepend('<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 92.87 49.68"><path d="M91.92,1.2a3.28,3.28,0,0,0-4.64,0L46.48,42.08,5.6,1.2A3.28,3.28,0,0,0,1,5.84L44.08,49a3.21,3.21,0,0,0,2.32,1,3.34,3.34,0,0,0,2.32-1L91.84,5.84a3.22,3.22,0,0,0,.08-4.64Zm0,0" transform="translate(0 -0.24)"/></svg>');
-            curItem.find('.services-item-title span').prepend('<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 92.87 49.68"><path d="M91.92,1.2a3.28,3.28,0,0,0-4.64,0L46.48,42.08,5.6,1.2A3.28,3.28,0,0,0,1,5.84L44.08,49a3.21,3.21,0,0,0,2.32,1,3.34,3.34,0,0,0,2.32-1L91.84,5.84a3.22,3.22,0,0,0,.08-4.64Zm0,0" transform="translate(0 -0.24)"/></svg>');
-        }
-    });
-
-    $('.services-item-title a, .services-item-title span').click(function(e) {
-        if ($(window).width() < 1200) {
-            var curItem = $(this).parents().filter('.services-item');
-            if (curItem.find('.services-item-list').length > 0) {
-                curItem.toggleClass('open');
-                e.preventDefault();
-            }
-        }
-    });
-
     $('.main-insurance-event-mobile-btn-more-link a').click(function(e) {
         $(this).parent().toggleClass('open');
         e.preventDefault();
@@ -301,6 +283,45 @@ $(document).ready(function() {
         if (curHint.find('.desktop-menu-icon-text').offset().left < 0) {
             curHint.addClass('to-right');
         }
+    });
+
+    $('body').on('click', '.text-with-hint-link', function(e) {
+        var curBlock = $(this).parent();
+        if (curBlock.hasClass('open')) {
+            curBlock.removeClass('open');
+        } else {
+            $('.text-with-hint.open').removeClass('open');
+            curBlock.removeClass('to-right');
+            curBlock.addClass('open');
+            var curPopup = curBlock.find('.text-with-hint-popup');
+            if (curPopup.offset().left + curPopup.outerWidth() > $(window).width()) {
+                curBlock.addClass('to-right');
+            }
+        }
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.text-with-hint-popup-close', function(e) {
+        $('.text-with-hint.open').removeClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.text-with-hint').length == 0) {
+            $('.text-with-hint.open').removeClass('open');
+        }
+    });
+
+    $('.product-info-menu ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            $('.product-info-menu ul li.active').removeClass('active');
+            curLi.addClass('active');
+            var curIndex = $('.product-info-menu ul li').index(curLi);
+            $('.product-info-content.active').removeClass('active');
+            $('.product-info-content').eq(curIndex).addClass('active');
+        }
+        e.preventDefault();
     });
 
 });
@@ -358,7 +379,7 @@ function windowOpen(linkWindow, addWindow, dataWindow, callbackWindow) {
         data: dataWindow,
         cache: false
     }).done(function(html) {
-        $('.window:last').html('<div class="window-container window-container-load"><div class="window-content">' + html + '<a href="#" class="window-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.2 11.2"><path d="M11.2,1.12,10.08,0,5.6,4.48,1.12,0,0,1.12,4.48,5.6,0,10.08,1.12,11.2,5.6,6.72l4.48,4.48,1.12-1.12L6.72,5.6Zm0,0"/></svg></a></div></div>')
+        $('.window:last').html('<div class="window-container window-container-load"><div class="window-content">' + html + '<a href="#" class="window-close"><svg><use xlink:href="' + pathTemplate + 'images/sprite.svg#window-close"></use></svg></a></div></div>')
 
         if ($('.window:last .window-container img').length > 0) {
             $('.window:last .window-container img').each(function() {

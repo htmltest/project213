@@ -1781,10 +1781,10 @@ function updatePrecalc(curForm, statusChange) {
                         $('.order-form-results-code').addClass('success');
                     }
 
-                    $('#programCost').removeClass('loading').html(data.response.SUM + ' ₽');
+                    $('#programCost').removeClass('loading').html(data.response.SUM);
 
                     if (Number(data.response.OLD) > 0) {
-                        $('#programCost').append(' <em>' + data.response.OLD + ' ₽</em>');
+                        $('#programCost').append('<em><strong>' + data.response.OLD + '</strong> ₽</em>');
                     }
                     if (typeof gtag === 'function') {
                         var productID = curForm.attr('data-product');

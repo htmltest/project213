@@ -181,7 +181,7 @@ function initForm(curForm) {
         curSelect.on('select2:select', function(e) {
             $(e.delegateTarget).parent().find('.select2-container').addClass('select2-container--full');
         });
-        if (curSelect.find('option:selected').legnth > 0 || curSelect.find('option').legnth == 1 || curSelect.find('option:first').html() != '') {
+        if (curSelect.find('option:selected').length > 0 && curSelect.find('option:selected').html() != '') {
             curSelect.trigger({type: 'select2:select'})
         }
     });
