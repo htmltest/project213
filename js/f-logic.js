@@ -344,7 +344,7 @@ $(document).ready(function() {
             curCheckbox.addClass('loading');
             $.ajax({
                 type: 'POST',
-                url: '/jsonResponse/checkPhoneBeforeBay/',
+                url: 'jsonResponse/checkPhoneBeforeBay/',
                 data: {'phone': $('#confirmPhone').val(), 'url': $('#confirmURL').val()},
                 dataType: 'json',
                 cache: false,
