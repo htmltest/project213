@@ -76,10 +76,19 @@ h2 {margin:60px 0 16px 0; padding:0; font-weight:600; font-size:36px; line-heigh
 .hotline-other-label {display:table-cell; vertical-align:middle; padding:0 20px 0 0; font-size:13px; line-height:18px; color:#8D8DA6}
 .hotline-other-value {display:table-cell; vertical-align:middle; color:#3E3E59}
 .hotline-other-value a {color:#3E3E59}
+.hotline-other-value a:hover {color:#ED885E}
 
 @media screen and (max-width:1199px) {
-    .hotline {width:auto}
-    .hotline-title {font-size:13px}
+    .hotline {display:block; width:auto; padding:16px}
+    .hotline-img {width:160px; min-width:160px}
+    .hotline-img img {display:block; width:160px}
+    .hotline-container {width:auto; padding:0; margin:20px 0 0 0}
+    .hotline-phone {font-size:36px; line-height:43px}
+    .hotline-others {margin:20px 0 0 0}
+    .hotline-other {display:table-cell; width:50%; padding:0 0 0 38px; border-left:1px solid #C7C7D9}
+    .hotline-other:first-child {padding:0; border-left:none}
+    .hotline-other-label {display:block; padding:0; font-size:11px; line-height:16px; letter-spacing:0.02em}
+    .hotline-other-value {display:block; padding:0; font-size:15px; line-height:23px; font-weight:500}
 }
 
 .contacts {padding:120px 0}
@@ -99,8 +108,12 @@ h2 {margin:60px 0 16px 0; padding:0; font-weight:600; font-size:36px; line-heigh
 .contacts-menu ul li.active a {color:#3E3E59; background:#FFFFFF; box-shadow:0px 0px 10px rgba(0, 0, 0, 0.02), 0px 10px 30px rgba(0, 0, 0, 0.05)}
 
 @media screen and (max-width:1199px) {
-    .contacts-menu ul li {margin:0 0 0 20px}
-    .contacts-menu ul li:first-child {margin:0}
+    .contacts-menu {margin:40px -16px 0 -16px; height:38px; overflow:auto; position:relative}
+    .contacts-menu::-webkit-scrollbar-thumb {background:transparent}
+    .contacts-menu::-webkit-scrollbar {width:0; height:0; background:transparent}
+    .contacts-menu ul {display:inline-block; vertical-align:top; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; padding:0 16px}
+    .contacts-menu ul li {float:none; display:inline-block; vertical-align:top; margin:0}
+    .contacts-menu ul li a {padding:8px 16px; font-size:13px; line-height:18px}
 }
 
 .contacts-tabs {position:relative; margin:40px 0 0 0}

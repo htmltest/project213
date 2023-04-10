@@ -494,7 +494,7 @@ $(window).on('load resize scroll', function() {
     $('#body-test-height').remove();
 
     $('.page-menu').each(function() {
-        if (windowScroll > $('.page-menu').offset().top) {
+        if (windowScroll > $('.page-menu').offset().top - $('.header-top').outerHeight() - 10) {
             $('.page-menu').addClass('fixed');
         } else {
             $('.page-menu').removeClass('fixed');
@@ -512,13 +512,6 @@ $(window).on('load resize scroll', function() {
             }
             }
         });
-        window.clearTimeout(pageMenuTimer);
-        pageMenuTimer = null;
-        pageMenuTimer = window.setTimeout(function() {
-            if ($('.page-menu ul').hasClass('slick-slider')) {
-                $('.page-menu ul').slick('slickGoTo', $('.page-menu ul li').index($('.page-menu ul li.active')));
-            }
-        }, 100);
     });
 
     if ($('.main-up').length == 1) {
@@ -531,29 +524,6 @@ $(window).on('load resize scroll', function() {
             $('.main-up').css({'margin-bottom': (windowScroll + windowHeight) - $('footer').offset().top});
         } else {
             $('.main-up').css({'margin-bottom': 0});
-        }
-    }
-
-    if ($(window).width() < 1200) {
-        if (!$('.page-menu ul').hasClass('slick-slider')) {
-            var curWidth = 0;
-            $('.page-menu ul li').each(function() {
-                curWidth += $(this).width();
-            });
-            if (curWidth > $('.page-menu').width()) {
-                $('.page-menu ul').slick({
-                    dots: false,
-                    infinite: false,
-                    variableWidth: true,
-                    centerMode: true,
-                    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201.72 381.74"><path d="M26.14,191l172.4-172.4A10.8,10.8,0,0,0,183.26,3.28L3.18,183.36a10.77,10.77,0,0,0,0,15.28l180.08,180a10.85,10.85,0,0,0,7.6,3.2,10.55,10.55,0,0,0,7.6-3.2,10.77,10.77,0,0,0,0-15.28Zm0,0" transform="translate(0 -0.1)"/></svg></button>',
-                    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 201.72 381.74"><path d="M26.14,191l172.4-172.4A10.8,10.8,0,0,0,183.26,3.28L3.18,183.36a10.77,10.77,0,0,0,0,15.28l180.08,180a10.85,10.85,0,0,0,7.6,3.2,10.55,10.55,0,0,0,7.6-3.2,10.77,10.77,0,0,0,0-15.28Zm0,0" transform="translate(0 -0.1)"/></svg></button>'
-                });
-            }
-        }
-    } else {
-        if ($('.page-menu ul').hasClass('slick-slider')) {
-            $('.page-menu ul').slick('unslick');
         }
     }
 });
