@@ -592,7 +592,7 @@ header.fixed .header-phone {margin:24px 125px 0 0}
     .nav-container {padding:24px 0 32px 0}
 }
 
-.nav-add-close {max-width:1480px; margin:0 auto}
+.nav-add-close {max-width:1560px; padding:0 40px; margin:0 auto}
 .nav-add-close::after {content:""; display:block; clear:both}
 .nav-add-close a {float:right; width:24px; height:24px; position:relative; margin:8px 0 0 0}
 .nav-add-close a svg {position:absolute; left:50%; top:50%; width:30px; height:30px; margin:-15px 0 0 -15px; fill:#1C1B1F; transition:fill 0.2s}
@@ -1135,7 +1135,8 @@ h1+.page-menu {margin-top:-17px}
 .main-what-item-content {position:absolute; left:32px; bottom:48px; width:254px}
 .main-what-item-title {font-size:24px; line-height:31px; font-weight:600; letter-spacing:0; color:#3E3E59}
 .main-what-item-text {font-size:15px; line-height:23px; letter-spacing:0; margin:8px 0 0 0; color:#5C5C73; min-height:92px}
-.main-what-item-link {position:absolute; left:32px; bottom:24px; font-weight:500; font-size:12px; line-height:17px; letter-spacing:0; text-transform:uppercase; color:#2C2D84}
+.main-what-item-link {position:absolute; left:32px; bottom:24px; font-weight:500; font-size:12px; line-height:17px; letter-spacing:0; text-transform:uppercase; color:#2C2D84; transition:color 0.2s}
+.main-what-item-link:hover {color:#ED885E}
 
 .main-insurance-event-desktop .bottom-btns {margin-top:40px; margin-bottom:120px}
 
@@ -1216,7 +1217,8 @@ h1+.page-menu {margin-top:-17px}
 }
 .main-pref-title {margin:16px 0 0 0; font-weight:600; font-size:20px; line-height:26px; color:#3E3E59}
 .main-pref-text {margin:8px 0 0 0; color:#5C5C73}
-.main-pref-link {position:absolute; left:24px; bottom:24px; font-size:12px; line-height:17px; text-transform:uppercase; color:#2C2D84}
+.main-pref-link {position:absolute; left:24px; bottom:24px; font-size:12px; line-height:17px; text-transform:uppercase; color:#2C2D84; transition:color 0.2s}
+.main-pref-link:hover {color:#ED885E}
 
 @media screen and (max-width:1199px) {
     .main-prefs {float:none; margin:24px 0 0 0; width:auto}
@@ -1652,6 +1654,9 @@ h1+.page-menu {margin-top:-17px}
 @media screen and (max-width:1199px) {
     .press-news .cards {margin:10px 0 0 0}
 }
+
+.press-publications {margin:60px 0}
+.press-publications .cards {margin:10px -10px 0 -10px}
 
 .articles {margin:10px -10px 0 -10px; display:flex; flex-wrap:wrap}
 .article {width:33.33%; padding:20px 10px 0 10px}
@@ -2442,14 +2447,14 @@ footer a {color:#FFFFFF}
     .vzr-currency {float:left; margin:20px 0 0 0}
 }
 
-.vzr-programms {padding:24px 0 0 0}
+.vzr-programms {margin:24px 0 0 0; display:flex}
 .vzr-programms::after {content:""; display:block; clear:both}
 
 @media screen and (max-width:1199px) {
-    .vzr-programms {margin:0 -5px}
+    .vzr-programms {margin:0 -5px; display:block}
 }
 
-.vzr-programms-headers {float:left; width:305px; border-top:1px solid #E6E6EF}
+.vzr-programms-headers {width:100%; border-top:1px solid #E6E6EF}
 .vzr-programms-header-main {display:table; width:100%; color:#3E3E59; border-bottom:1px solid #E6E6EF; font-weight:600}
 .vzr-programms-header-main-inner {display:table-cell; vertical-align:middle; height:68px; padding:0 20px 0 0}
 .vzr-programms-header {display:table; width:100%; color:#3E3E59; border-bottom:1px solid #E6E6EF}
@@ -2457,13 +2462,13 @@ footer a {color:#FFFFFF}
 .vzr-programms-header .desktop-menu-icon {display:inline-block; vertical-align:middle; position:relative; right:auto; top:auto; margin:-2px 0 0 5px}
 
 @media screen and (max-width:1199px) {
-    .vzr-programms-headers {float:none; width:auto; padding:0 0 20px 5px}
+    .vzr-programms-headers {width:auto; padding:0 0 20px 5px}
     .vzr-programms-header-main {display:block; border-bottom:none}
     .vzr-programms-header-main-inner {display:block; height:auto; padding:0}
     .vzr-programms-header {display:none}
 }
 
-.vzr-programms-item {float:left; width:102px}
+.vzr-programms-item {width:102px; min-width:102px}
 .vzr-programms-item+.vzr-programms-item {background:#F8F8FC}
 .vzr-programms-item+.vzr-programms-item+.vzr-programms-item {background:#F0F0F7}
 .vzr-programms-item label {display:block; cursor:pointer}
@@ -2480,7 +2485,7 @@ footer a {color:#FFFFFF}
 .vzr-params-item.active {display:block}
 
 @media screen and (max-width:1199px) {
-    .vzr-programms-item {width:33.33%; margin:0; padding:0 5px; background:none; position:relative}
+    .vzr-programms-item {float:left; min-width:0; width:33.33%; margin:0; padding:0 5px; background:none; position:relative}
     .vzr-programms-item+.vzr-programms-item {background:none}
     .vzr-programms-item+.vzr-programms-item+.vzr-programms-item {background:none}
     .vzr-programms-item-content::after {border:1px dashed #e5edf4; opacity:1}
@@ -2495,7 +2500,7 @@ footer a {color:#FFFFFF}
     .vzr-programms-mobile-tab.active {display:block}
     .vzr-programms-mobile-item {border-bottom:1px solid #d9d9d9}
     .vzr-programms-mobile-inner {padding:12px 48px 12px 0; position:relative}
-    .vzr-programms-mobile-inner .desktop-menu-icon {display:block; position:absolute; width:24px; height:24px; right:0; top:50%; margin-top:-12px; background:url(../images/vzr-programms-item-option.svg)}
+    .vzr-programms-mobile-inner .desktop-menu-icon {display:block; position:absolute; width:24px; height:24px; right:0; top:50%; margin-top:-12px}
 }
 
 .vzr-type {margin:80px 0 0 0}

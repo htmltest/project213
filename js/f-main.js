@@ -502,8 +502,8 @@ function initForm(curForm) {
             }
         },
         submitHandler: function(form) {
+            var curForm = $(form);
             if (typeof gtag === 'function') {
-                var curForm = $(form);
                 var productID = curForm.attr('data-product');
                 var formName = curForm.attr('data-name');
                 var productName = curForm.attr('data-name');
