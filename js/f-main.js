@@ -59,16 +59,12 @@ $(document).ready(function() {
     $('body').on('change', '.form-file input', function() {
         var curInput = $(this);
         var curField = curInput.parents().filter('.form-file');
-        var curForm = curField.parents().filter('form');
-        curField.find('.form-file-name-text').html(curInput.val().replace(/.*(\/|\\)/, ''));
-        curForm.find('.form-files').append(curForm.data('filesCode'));
-        curField.find('label.error').remove();
-        curField.removeClass('error');
-    });
-
-    $('body').on('click', '.form-file-name-remove', function() {
-        var curField = $(this).parents().filter('.form-file');
-        curField.remove();
+        var curName = curInput.val().replace(/.*(\/|\\)/, '');
+        if (curName != '') {
+            curField.find('.form-file-input span').html(curName);
+        } else {
+            curField.find('.form-file-input span').html(curField.find('.form-file-input').attr('data-placeholder'));
+        }
     });
 
     $('body').on('click', '.form-input-clear', function(e) {
@@ -382,10 +378,6 @@ function initForm(curForm) {
         });
     });
 
-    if (curForm.find('.form-files').length > 0) {
-        curForm.data('filesCode', curForm.find('.form-files').html());
-    }
-
     curForm.find('.onlyRUS').each(function() {
         $(this).keypress(function(evt) {
             var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -465,6 +457,22 @@ function initForm(curForm) {
         }
     });
 
+    curForm.find('.captcha-container').each(function() {
+        if ($('script#smartCaptchaScript').length == 0) {
+            $('body').append('<script src="https://captcha-api.yandex.ru/captcha.js?render=onload&onload=smartCaptchaLoad" defer id="smartCaptchaScript"></script>');
+        } else {
+            if (window.smartCaptcha) {
+                var curID = window.smartCaptcha.render(this, {
+                    sitekey: smartCaptchaKey,
+                    callback: smartCaptchaCallback,
+                    invisible: true,
+                    hideShield: true,
+                });
+                $(this).attr('data-smartid', curID);
+            }
+        }
+    });
+
     curForm.validate({
         ignore: '',
         invalidHandler: function(event, validator) {
@@ -525,11 +533,58 @@ function initForm(curForm) {
                 }
             }
 
-            if ($(form).hasClass('ajax-form')) {
-                windowOpen($(form).attr('action'), false, new FormData(form));
-            } else {
-                form.submit();
+            var smartCaptchaWaiting = false;
+            curForm.find('.captcha-container').each(function() {
+                if (curForm.attr('form-smartcaptchawaiting') != 'true') {
+                    var curBlock = $(this);
+                    var curInput = curBlock.find('input[name="smart-token"]');
+                    curInput.removeAttr('value');
+                    smartCaptchaWaiting = true;
+                    $('form[form-smartcaptchawaiting]').removeAttr('form-smartcaptchawaiting');
+                    curForm.attr('form-smartcaptchawaiting', 'false');
+
+                    if (!window.smartCaptcha) {
+                        alert('Сервис временно недоступен');
+                        return;
+                    }
+                    var curID = $(this).attr('data-smartid');
+                    window.smartCaptcha.execute(curID);
+                } else {
+                    curForm.removeAttr('form-smartcaptchawaiting');
+                }
+            });
+
+            if (!smartCaptchaWaiting) {
+
+                if ($(form).hasClass('ajax-form')) {
+                    windowOpen($(form).attr('action'), false, new FormData(form));
+                } else {
+                    form.submit();
+                }
+
             }
         }
     });
+}
+
+var smartCaptchaKey = 'uahGSHTKJqjaJ0ezlhjrbOYH4OxS6zzL9CZ47OgY';
+
+function smartCaptchaLoad() {
+    $('.captcha-container').each(function() {
+        if (!window.smartCaptcha) {
+            return;
+        }
+        var curID = window.smartCaptcha.render(this, {
+            sitekey: smartCaptchaKey,
+            callback: smartCaptchaCallback,
+            invisible: true,
+            hideShield: true,
+        });
+        $(this).attr('data-smartid', curID);
+    });
+}
+
+function smartCaptchaCallback(token) {
+    $('form[form-smartcaptchawaiting]').attr('form-smartcaptchawaiting', 'true');
+    $('form[form-smartcaptchawaiting] input[type="submit"]').trigger('click');
 }

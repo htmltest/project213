@@ -12,7 +12,7 @@ body {min-width:480px; height:100%; margin:0; padding:0; font:500 15px/23px Aria
 .fonts-loaded body {font-family:Gilroy, sans-serif}
 
 @media screen and (max-width:1199px) {
-    body {font-size:18px; height:auto}
+    body {font-size:13px; line-height:18px; height:auto}
 }
 
 a {outline:none; color:#E86630; text-decoration:none; transition:color 0.3s}
@@ -28,6 +28,11 @@ strong {font-weight:bold}
 
 h1 {margin:20px 0 0 0; padding:0; font-weight:600; font-size:48px; line-height:58px; color:#3E3E59}
 h2 {margin:60px 0 16px 0; padding:0; font-weight:600; font-size:36px; line-height:43px; color:#3E3E59}
+
+@media screen and (max-width:1199px) {
+    h1 {font-size:22px; line-height:29px}
+    h2 {font-size:24px; line-height:29px}
+}
 
 .btn-border {display:inline-block; border-radius:4px; background:transparent; margin:0; padding:18px 29px; outline:none; overflow:visible; border:1px solid rgba(141, 141, 166, 0.5); text-decoration:none; box-sizing:border-box; color:#3E3E59; text-align:center; text-transform:uppercase; font:600 11px/15px Arial, sans-serif; letter-spacing:0.09em; -webkit-appearance:none; cursor:pointer; transition:border-color 0.3s}
 .fonts-loaded .btn-border {font-family:Gilroy, sans-serif}
@@ -59,8 +64,9 @@ h2 {margin:60px 0 16px 0; padding:0; font-weight:600; font-size:36px; line-heigh
 
 @media screen and (max-width:1199px) {
     .old-header-left {float:none; width:auto; padding:30px 0 0 0}
-    .old-logo {margin:0 0 68px 0}
-    .old-header-right {float:none; width:auto}
+    .old-logo {margin:60px 0}
+    .old-header-left p {margin:16px 0 0 0}
+    .old-header-right {float:none; width:auto; padding:0; margin:30px 0 0 0}
     .old-header-right::after {display:none}
 }
 
@@ -94,6 +100,10 @@ h2 {margin:60px 0 16px 0; padding:0; font-weight:600; font-size:36px; line-heigh
 .contacts {padding:120px 0}
 .contacts h2 {margin:0}
 
+@media screen and (max-width:1199px) {
+    .contacts {padding:60px 0}
+}
+
 .contacts-menu {margin:40px 0 0 0}
 .contacts-menu ul {margin:0; padding:0; list-style:none}
 .contacts-menu ul::after {content:""; display:block; clear:both}
@@ -108,7 +118,7 @@ h2 {margin:60px 0 16px 0; padding:0; font-weight:600; font-size:36px; line-heigh
 .contacts-menu ul li.active a {color:#3E3E59; background:#FFFFFF; box-shadow:0px 0px 10px rgba(0, 0, 0, 0.02), 0px 10px 30px rgba(0, 0, 0, 0.05)}
 
 @media screen and (max-width:1199px) {
-    .contacts-menu {margin:40px -16px 0 -16px; height:38px; overflow:auto; position:relative}
+    .contacts-menu {margin:30px -16px 0 -16px; height:38px; overflow:auto; position:relative}
     .contacts-menu::-webkit-scrollbar-thumb {background:transparent}
     .contacts-menu::-webkit-scrollbar {width:0; height:0; background:transparent}
     .contacts-menu ul {display:inline-block; vertical-align:top; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; padding:0 16px}
@@ -133,8 +143,8 @@ h2 {margin:60px 0 16px 0; padding:0; font-weight:600; font-size:36px; line-heigh
 .contacts-text p:first-child {margin:0}
 .contacts-info {margin:30px 0 0 0; display:table; width:100%; border-bottom:1px solid rgba(168, 168, 191, 0.3)}
 .contacts-info-row {display:table-row}
-.contacts-info-label {display:table-cell; border-top:1px solid rgba(168, 168, 191, 0.3); vertical-align:middle; padding:20px 0; font-weight:600; font-size:11px; line-height:15px; letter-spacing:0.09em; color:#8D8DA6; text-transform:uppercase; white-space:nowrap}
-.contacts-info-value {display:table-cell; border-top:1px solid rgba(168, 168, 191, 0.3); vertical-align:middle; padding:20px 0 20px 20px; width:100%}
+.contacts-info-label {display:table-cell; border-top:1px solid rgba(168, 168, 191, 0.3); vertical-align:top; padding:24px 0 20px 0; font-weight:600; font-size:11px; line-height:15px; letter-spacing:0.09em; color:#8D8DA6; text-transform:uppercase; white-space:nowrap}
+.contacts-info-value {display:table-cell; border-top:1px solid rgba(168, 168, 191, 0.3); vertical-align:top; padding:20px 0 20px 20px; width:100%}
 .contacts-info-value a {color:#5C5C73}
 @media screen and (min-width:1200px) {
     .contacts-info-value a:hover {color:#ED885E}
