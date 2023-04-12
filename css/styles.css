@@ -2881,3 +2881,57 @@ label.error+label.error {display:none !important}
 @media (max-width:1199px) {
     .cards-about {margin:45px 0 60px 0}
 }
+
+.pets-type {margin:36px 0 0 0}
+.pets-type-header {font-size:18px; font-weight:normal}
+.pets-type-header span {color:#ff6200}
+.pets-type-list {margin:0 -6px}
+.pets-type-list::after {content:""; display:block; clear:both}
+.pets-type-item {float:left; width:33.33%; padding:12px 6px 0 6px}
+.pets-type-item .desktop-menu-icon {right:8px; top:8px; width:24px}
+.pets-type-static {position:relative; text-align:center; border-radius:12px; background:#EDEDED url(../images/vzr-type-checkbox-active.svg) no-repeat center 24px; height:148px; font-size:16px; font-weight:bold; color:#3E3E59; padding:45px 0 0 0; line-height: initial; }
+.pets-type-checkbox {display:block; cursor:pointer}
+.pets-type-checkbox input {display:none}
+.pets-type-checkbox-inner {position:relative; border-radius:12px; background:#F8F8FC url(../images/vzr-type-checkbox.svg) no-repeat center 20px; height:91px; font-size:16px; font-weight:bold; color:#3E3E59; padding:44px 0 0 0; transition:border 0.2s, color 0.2s, background-color 0.2s; text-align:center}
+.pets-type-checkbox input:checked+.pets-type-checkbox-inner {background:#F8F8FC url(../images/vzr-type-checkbox-active.svg) no-repeat center 20px; color:#fff;}
+.pets-type-checkbox-inner .desktop-menu-icon g {fill:#5C5C73; transition:all 0.2s}
+.pets-type-checkbox input:checked+.pets-type-checkbox-inner .desktop-menu-icon g {fill:#C7C7D9}
+.pets-type-checkbox-extreme input:checked+.pets-type-checkbox-inner::after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-9px; margin-left:-12px; border-top:8px solid #ff6200; border-left:12px solid transparent; border-right:12px solid transparent}
+
+@media screen and (max-width:1199px) {
+    .pets-type-list {margin:10px 0 0 0}
+    .pets-type-item {float:none; width:auto; padding:0; margin:20px 0}
+    .pets-type-item .desktop-menu-icon {right:15px; top:50%; transform:translateY(-50%)}
+    .pets-type-checkbox-inner {background-position:16px center; padding:10px 0 7px 50px; height:auto; text-align:left}
+    .pets-type-checkbox input:checked+.pets-type-checkbox-inner {background-position:16px center}
+    .pets-type-static {background-position:16px center; height:auto; padding:10px 0 7px 50px; text-align:left}
+}
+
+.pets-more {padding:33px 0}
+.pets-more-title {font-size:18px; font-weight:normal}
+.pets-more-list {margin:0 -6px}
+.pets-more-list::after {content:""; display:block; clear:both}
+.pets-more-item {float:left; width:33.33%; padding:12px 6px 0 6px}
+.pets-more-item .desktop-menu-icon {position:absolute; right:8px; top:8px; width:24px}
+.pets-more-checkbox {display:block; cursor:pointer}
+.pets-more-checkbox input {display:none}
+.pets-more-checkbox-inner {position:relative;border-radius:12px; background:#F8F8FC url(../images/vzr-type-checkbox.svg) no-repeat center 20px; height:148px; font-size:16px; line-height:20px; font-weight:bold; color: #3E3E59; padding:53px 0 0 0; transition:border 0.2s, color 0.2s, background-color 0.2s; text-align:center}
+.pets-more-checkbox input:checked+.pets-more-checkbox-inner {background:#585892 url(../images/vzr-type-checkbox-active.svg) no-repeat center 20px; color:#FFFFFF; }
+.pets-more-checkbox-inner .desktop-menu-icon g {fill:#5C5C73; transition:all 0.2s}
+.pets-more-checkbox input:checked+.pets-more-checkbox-inner .desktop-menu-icon g {fill:#C7C7D9}
+.pets-more-checkbox-title {padding:0 20px; min-height:60px}
+.pets-more-checkbox-price {font-weight:500; font-size:14px; line-height:17px; padding:1px 0 0 0}
+.pets-more-checkbox-price em {font-style:normal; font-size:12px; opacity:0.5; text-decoration:line-through}
+.pets-more-checkbox-price-old-mobile {display:none}
+
+@media screen and (max-width:1199px) {
+    .pets-more-list {margin:10px 0 0 0}
+    .pets-more-item {float:none; width:auto; padding:0; margin:20px 0}
+    .pets-more-item .desktop-menu-icon {right:15px; top:50%; transform:translateY(-50%)}
+    .pets-more-checkbox-inner {background-position:16px center; padding:0 100px 0 50px; height:auto; text-align:left}
+    .pets-more-checkbox input:checked+.pets-more-checkbox-inner {background-position:16px center}
+    .pets-more-checkbox-title {padding:10px 0 7px 0; min-height:0}
+    .pets-more-checkbox-price {padding:0; position:absolute; right:40px; top:50%; transform:translateY(-50%)}
+    .pets-more-checkbox-price em {display:none}
+    .pets-more-checkbox-price em.pets-more-checkbox-price-old-mobile {display:block; text-align:right; margin:0 0 -3px 0}
+}
