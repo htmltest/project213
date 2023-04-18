@@ -228,12 +228,12 @@ $(document).ready(function() {
     });
 
     $('.cookies-message-close').click(function(e) {
-        $('.cookies-message').remove();
+        $('.cookies-message').fadeOut(500);
         e.preventDefault();
     });
 
     $('.psb-message-close').click(function(e) {
-        $('.psb-message').remove();
+        $('.psb-message').fadeOut(500);
         e.preventDefault();
     });
 
@@ -566,4 +566,15 @@ $(window).on('load', function() {
             $('.page-menu ul li a[href="' + window.location.hash + '"]').trigger('click');
         }, 500);
     }
+
+    $('.psb-message').each(function() {
+        window.setTimeout(function() {
+            $('.psb-message').fadeIn(500);
+            window.setTimeout(function() {
+                if ($('.psb-message').length == 1) {
+                    $('.psb-message-close').trigger('click');
+                }
+            }, 9000);
+        }, 3000);
+    });
 });
