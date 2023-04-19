@@ -221,6 +221,7 @@ fieldset {margin:20px 0; padding:0; border:0}
 .form-input {position:relative; margin:20px 0}
 .form-input.loading::after {content:""; display:block; position:absolute; top:20px; right:10px; width:24px; height:24px; background:url(../images/loading.svg) no-repeat center}
 .form-input-label {position:absolute; left:15px; font-size:20px; line-height:26px; color:#8D8DA6; top:20px; transition:all 0.3s; font-weight:600; z-index:1; pointer-events:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; right:15px}
+.form-input-disabled .form-input-label {color:#A8A8BF}
 .form-input-alt .form-input-label {left:0; top:24px; font-weight:500; font-size:15px; line-height:23px; right:0}
 .form-input-number .form-input-label {left:54px}
 .form-input-number.form-input-alt .form-input-label {left:0;}
@@ -246,7 +247,7 @@ fieldset {margin:20px 0; padding:0; border:0}
 .form-input-alt textarea {border-top:none; border-left:none; border-right:none; font-weight:500; font-size:15px; line-height:23px; letter-spacing:0.01em; padding:24px 0 0 0; height:48px; border-radius:0}
 .fonts-loaded .form-input input,
 .fonts-loaded .form-input textarea {font-family:Gilroy, sans-serif}
-.form-input-disabled input {color:#888; background:#f7f5f5}
+.form-input-disabled input {background:#F8F8FC; border-color:#E6E6EF; color:#A8A8BF}
 .form-input textarea {height:auto; resize:none; overflow:auto}
 .form-input input.error,
 .form-input textarea.error {border-color:#BC3F46}
@@ -254,6 +255,8 @@ fieldset {margin:20px 0; padding:0; border:0}
 .form-input textarea:focus {border-color:#E86630}
 .form-input label.error {display:block; color:#BC3F46; font-size:13px; line-height:18px; letter-spacing:0.02em; margin:6px 0 0 0}
 .vzr-item .form-input label.error {margin:0; padding:8px 0 0 0; background:#ddeef6}
+.form-input input:disabled,
+.form-input textarea:disabled {background:#F8F8FC; border-color:#E6E6EF; color:#A8A8BF}
 
 .form-input .suggestions-addon {top:-65px !important; height:65px !important}
 .form-input label.error+.suggestions-wrapper .suggestions-addon {top:-89px !important; height:65px !important}
@@ -1913,9 +1916,9 @@ h1+.page-menu {margin-top:-17px}
     .order-step {height:31px}
     .order-step:first-child {border-radius:4px 0 0 4px}
     .order-step:last-child {border-radius:0 4px 4px 0}
-    .order-step::before {width:20px; height:31px; left:-10px; background-size:20px auto}
+    .order-step::before {width:20px; height:31px; left:-10px; background:url(../images/order-step-mobile.svg)}
     .order-step.active+.order-step::before {background-position:left -31px}
-    .order-step.success+.order-step::before {background-position:left -62px}
+    .order-step.success+.order-step::before {background-position:left -61px}
 }
 
 .order-form::after {content:""; display:block; clear:both}
