@@ -237,8 +237,7 @@ fieldset {margin:20px 0; padding:0; border:0}
 
 @media screen and (max-width:1199px) {
     .form-input-number {max-width:none}
-    .form-input.focus .form-input-label {top:3px; font-size:13px}
-    .form-input-with-hint {margin-right:23px}
+    .form-input.focus .form-input-label {top:12px}
 }
 
 .form-input input,
@@ -265,7 +264,7 @@ fieldset {margin:20px 0; padding:0; border:0}
 
 @media screen and (max-width:1199px) {
     .form-input input,
-    .form-input textarea {font-size:22px}
+    .form-input textarea {font-size:20px; line-height:30px; padding-top:27px; padding-bottom:7px}
 }
 
 .form-input-number input {padding-left:53px; padding-right:53px}
@@ -320,6 +319,10 @@ fieldset {margin:20px 0; padding:0; border:0}
 .form-checkbox label input.error+label+span::before {border-color:#ff1800}
 .form-checkbox label.error {display:none !important}
 .form-checkbox span em {font-style:normal; color:#ff6200}
+
+@media screen and (max-width:1199px) {
+    .form-checkbox span::before {top:-2px}
+}
 
 .form-checkbox-2 {margin:24px 0; font-size:17px; line-height:24px; letter-spacing:0.01em}
 .form-checkbox-2 span {padding:0 0 0 45px}
@@ -463,7 +466,7 @@ header.fixed .header-user {margin:17px 25px 0 0}
 
 @media screen and (max-width:1199px) {
     .header-user {float:right; margin:19px 24px 0 0}
-    .header-user-link {display:block; padding:1px; width:24px; height:24px; font-size:0; line-height:0; color:rgba(0, 0, 0, 0); border-radius:none; background:none}
+    .header-user-link {display:block; padding:1px; width:24px; height:24px; font-size:0; line-height:0; color:rgba(0, 0, 0, 0); border-radius:0; background:none}
     .header-user-link svg {width:22px; height:22px; margin:-2px 0 0 0}
     header.fixed .header-user {margin:19px 24px 0 0}
 }
@@ -1962,7 +1965,8 @@ h1+.page-menu {margin-top:-17px}
 .order-form-results-code {margin:24px 0; position:relative}
 .order-form-results-code::after {content:""; display:block; clear:both}
 .order-form-results-code label.error {display:block !important; font-size:11px; line-height:15px; margin:5px 0 0 0}
-.order-form-results-code .form-input .form-input-label {display:none}
+.order-form-results-code .form-input .form-input-label {left:12px; top:14px; font-size:17px; line-height:23px; color:#3E3E59}
+.order-form-results-code .form-input.focus .form-input-label {display:none}
 .order-form-results-code .form-input input {border:none; background:#F8F8FC; padding:14px 12px; height:52px; font-size:17px; line-height:23px}
 .order-form-results-code-btn {position:absolute; right:0; top:0}
 .order-form-results-code.success .order-form-results-code-btn {display:none}
@@ -1986,6 +1990,9 @@ h1+.page-menu {margin-top:-17px}
 @media screen and (max-width:1199px) {
     .order-form-results {float:none; width:auto; padding:0; margin:40px 0 0 0}
     .order-form-results:first-child {padding-top:20px}
+    .vzr-form-step-3 .order-form-results:first-child {padding-top:0}
+    .vzr-form-step-3 .main-events-form-results-value {margin:0}
+    .vzr-form-step-3 .order-form-results .main-events-form-results-value+.main-events-form-results-value {margin:0}
     .order-form-results.fixed .order-form-results-inner {position:relative; width:auto; left:auto !important; top:auto !important}
 }
 
@@ -2343,7 +2350,7 @@ footer a {color:#FFFFFF}
 .order-form .form-field+h3 {margin-top:80px}
 .vzr-item-header::after {content:""; display:block; clear:both}
 .vzr-item-header h3 {float:left; margin:0}
-.vzr-item-hint {float:left; color:#8D8DA6; font-size:13px; line-height:18px; letter-spacing:0.02em; margin:9px 0 0 16px}
+.vzr-item-hint {float:right; color:#8D8DA6; font-size:13px; line-height:18px; letter-spacing:0.02em; margin:11px 0 0 0}
 .order-form .form-field {margin:24px 0}
 .order-form .order-form-row {margin:24px -10px}
 .order-form .order-form-row .form-field {margin:0}
@@ -2354,10 +2361,12 @@ footer a {color:#FFFFFF}
     .vzr-item-hint {float:none; margin:17px 0 0 0}
     .order-form .order-form-row .form-field+.form-field {margin:24px 0 0 0}
     .vzr-item {margin:30px -16px; padding:30px 16px; border-radius:0}
-    .vzr-item:first-child {margin:30px -16px}
+    .vzr-item:first-child {margin:0 -16px 30px -16px}
     .vzr-item-header h3 {float:none}
     .vzr-item-hint {float:none; margin:12px 0 0 0}
-    .order-form .order-form-row {margin:24px 0}
+    .order-form .order-form-row {margin:24px 0 0 0}
+    .vzr-item+h3 {margin-top:30px}
+    .order-form .form-field+h3 {margin-top:58px}
 }
 
 .main-events-form-results-info {font-size:13px; line-height:18px}
@@ -2427,7 +2436,7 @@ footer a {color:#FFFFFF}
     .order-vzr-docs {margin:20px 0 40px 0}
 }
 
-.order-vzr-days-count {background:#e5edf4; text-align:center; height:65px; border-radius:3px}
+.order-vzr-days-count {background:#e5edf4; text-align:center; height:66px; border-radius:3px}
 .order-vzr-days-count-title {font-size:12px; line-height:14px; color:#7f7f7f; font-weight:normal; padding:12px 0 0 0}
 .order-vzr-days-count-value {font-size:18px; line-height:24px; color:#000; font-weight:bold; padding:7px 0 0 0}
 
@@ -2445,7 +2454,7 @@ footer a {color:#FFFFFF}
 .vzr-programm-header h3 span {color:#E86630}
 
 @media screen and (max-width:1199px) {
-    .vzr-programm-header h2 {float:none}
+    .vzr-programm-header h3 {float:none}
 }
 
 .vzr-currency {float:right; position:relative; margin:7px 0 0 0}
@@ -2460,14 +2469,14 @@ footer a {color:#FFFFFF}
 .vzr-currency label input:checked+span+span+.vzr-currency-icon::after {left:17px}
 
 @media screen and (max-width:1199px) {
-    .vzr-currency {float:left; margin:20px 0 0 0}
+    .vzr-currency {float:left; margin:24px 0 0 0}
 }
 
 .vzr-programms {margin:24px 0 0 0; display:flex}
 .vzr-programms::after {content:""; display:block; clear:both}
 
 @media screen and (max-width:1199px) {
-    .vzr-programms {margin:0 -5px; display:block}
+    .vzr-programms {margin:40px -6px 0 -6px; display:block}
 }
 
 .vzr-programms-headers {width:100%; border-top:1px solid #E6E6EF}
@@ -2475,12 +2484,14 @@ footer a {color:#FFFFFF}
 .vzr-programms-header-main-inner {display:table-cell; vertical-align:middle; height:68px; padding:0 20px 0 0}
 .vzr-programms-header {display:table; width:100%; color:#3E3E59; border-bottom:1px solid #E6E6EF}
 .vzr-programms-header-inner {display:table-cell; vertical-align:middle; height:68px; padding:0 20px 0 0}
-.vzr-programms-header .desktop-menu-icon {display:inline-block; vertical-align:middle; position:relative; right:auto; top:auto; margin:-2px 0 0 5px}
+.vzr-programms-header .desktop-menu-icon {display:inline-block; vertical-align:middle; position:relative; right:auto; top:auto; margin:-2px 0 0 5px; width:24px; height:24px}
+.vzr-programms-header .desktop-menu-icon img {width:24px; height:24px}
 
 @media screen and (max-width:1199px) {
-    .vzr-programms-headers {width:auto; padding:0 0 20px 5px}
-    .vzr-programms-header-main {display:block; border-bottom:none}
-    .vzr-programms-header-main-inner {display:block; height:auto; padding:0}
+    .vzr-programms-headers {width:auto; padding:0; border-top:none}
+    .vzr-programms-header-main {display:block; border-bottom:none; font-size:15px; line-height:20px; margin:0 6px}
+    .vzr-programms-header-main-inner {display:block; height:auto; padding:0; max-width:210px}
+    .vzr-programms-header-main-inner br {display:none}
     .vzr-programms-header {display:none}
 }
 
@@ -2501,21 +2512,22 @@ footer a {color:#FFFFFF}
 .vzr-params-item.active {display:block}
 
 @media screen and (max-width:1199px) {
-    .vzr-programms-item {float:left; min-width:0; width:33.33%; margin:0; padding:0 5px; background:none; position:relative}
+    .vzr-programms-item {float:left; min-width:0; width:33.33%; margin:0; padding:12px 6px 0 6px; background:none; position:relative}
     .vzr-programms-item+.vzr-programms-item {background:none}
     .vzr-programms-item+.vzr-programms-item+.vzr-programms-item {background:none}
-    .vzr-programms-item-content::after {border:1px dashed #e5edf4; opacity:1}
-    .vzr-programms-item input:checked+.vzr-programms-item-content::after {border:1px solid #004e96}
-    .vzr-programms-item-price {border-bottom:none; height:56px; line-height:56px}
-    .vzr-programms-item input:checked+.vzr-programms-item-content .vzr-programms-item-price {color:#fff; background:#004e96}
-    .vzr-programms-item input:checked+.vzr-programms-item-content::before {content:""; display:block; position:absolute; left:50%; bottom:-7px; margin-left:-9px; border-top:7px solid #004e96; border-left:9px solid transparent; border-right:9px solid transparent}
+    .vzr-programms-item-content::after {border:none}
+    .vzr-programms-item input:checked+.vzr-programms-item-content {background:none}
+    .vzr-programms-item input:checked+.vzr-programms-item-content::after {border:none}
+    .vzr-programms-item-price {border-bottom:none; height:40px; line-height:38px; border:1px solid rgba(141, 141, 166, 0.5); border-radius:4px; font-size:11px; transition:color 0.2s, background 0.2s, border-color 0.2s}
+    .vzr-programms-item input:checked+.vzr-programms-item-content .vzr-programms-item-price {color:#FFFFFF; background:#E86630; border-color:#E86630}
+    .vzr-programms-item input:checked+.vzr-programms-item-content::before {content:""; display:block; position:absolute; left:50%; bottom:-14px; margin-left:-13px; border-top:14px solid #E86630; border-left:13px solid transparent; border-right:13px solid transparent}
     .vzr-programms-item-price::before {display:none}
     .vzr-programms-item-option {display:none}
-    .vzr-programms-mobile {display:block; border-top:1px solid #d9d9d9; margin:20px 0 0 0}
+    .vzr-programms-mobile {display:block; margin:12px 0 0 0}
     .vzr-programms-mobile-tab {display:none}
     .vzr-programms-mobile-tab.active {display:block}
     .vzr-programms-mobile-item {border-bottom:1px solid #d9d9d9}
-    .vzr-programms-mobile-inner {padding:12px 48px 12px 0; position:relative}
+    .vzr-programms-mobile-inner {padding:12px 48px 11px 0; position:relative; color:#3E3E59; display:flex; min-height:48px; align-items:center}
     .vzr-programms-mobile-inner .desktop-menu-icon {display:block; position:absolute; width:24px; height:24px; right:0; top:50%; margin-top:-12px}
 }
 
@@ -2534,12 +2546,14 @@ footer a {color:#FFFFFF}
 .vzr-type-checkbox input:checked+.vzr-type-checkbox-inner {background:#585892 url(../images/vzr-type-checkbox-active.svg) no-repeat center 24px; color:#FFFFFF}
 
 @media screen and (max-width:1199px) {
-    .vzr-type-list {margin:10px 0 0 0}
-    .vzr-type-item {float:none; width:auto; padding:0; margin:20px 0}
-    .vzr-type-item .desktop-menu-icon {right:15px; top:50%; transform:translateY(-50%)}
-    .vzr-type-checkbox-inner {background-position:16px center; padding:10px 0 7px 50px; height:auto; text-align:left}
+    .vzr-type {margin:40px 0 0 0}
+    .vzr-type-header {font-size:17px; line-height:22px}
+    .vzr-type-list {margin:24px 0 0 0}
+    .vzr-type-item {float:none; width:auto; padding:0; margin:16px 0 0 0}
+    .vzr-type-item .desktop-menu-icon {right:16px; top:50%; transform:translateY(-50%)}
+    .vzr-type-checkbox-inner {background-position:16px center; padding:18px 0 18px 56px; height:auto; text-align:left; font-size:15px; line-height:20px}
     .vzr-type-checkbox input:checked+.vzr-type-checkbox-inner {background-position:16px center}
-    .vzr-type-static {background-position:16px center; height:auto; padding:10px 0 7px 50px; text-align:left}
+    .vzr-type-static {background-position:16px center; height:auto; padding:18px 0 18px 56px; text-align:left; font-size:15px; line-height:20px}
 }
 
 .vzr-add {padding:13px 0 0 0}
@@ -2549,7 +2563,9 @@ footer a {color:#FFFFFF}
 
 @media screen and (max-width:1199px) {
     .vzr-add {padding:0}
-    .vzr-add-title {display:none}
+    .vzr-add-title {font-size:17px; line-height:22px}
+    .vzr-add-list {margin:22px 0 -22px 0}
+    .vzr-add-list .form-checkbox {padding-bottom:22px; padding-top:2px}
 }
 
 .vzr-more {margin:80px 0 0 0}
@@ -2564,19 +2580,20 @@ footer a {color:#FFFFFF}
 .vzr-more-checkbox-inner {position:relative; border-radius:12px; background:#F8F8FC url(../images/vzr-type-checkbox.svg) no-repeat center 24px; height:194px; font-size:17px; line-height:22px; font-weight:600; color:#3E3E59; padding:56px 0 0 0; transition:color 0.2s, background-color 0.2s; text-align:center}
 .vzr-more-checkbox input:checked+.vzr-more-checkbox-inner {background:#585892 url(../images/vzr-type-checkbox-active.svg) no-repeat center 24px; color:#FFFFFF}
 .vzr-more-checkbox-title {padding:0 20px; min-height:88px}
-.vzr-more-checkbox-price {font-weight:500; font-size:13px; line-height:18px; letter-spacing:0.02e; color:#5C5C73; padding:8px 0 0 0}
+.vzr-more-checkbox-price {font-weight:500; font-size:13px; line-height:18px; letter-spacing:0.02em; color:#5C5C73; padding:8px 0 0 0}
 .vzr-more-checkbox input:checked+.vzr-more-checkbox-inner .vzr-more-checkbox-price {color:#FFFFFF}
 .vzr-more-checkbox-price em {font-style:normal; font-size:12px; opacity:0.5; text-decoration:line-through}
 .vzr-more-checkbox-price-old-mobile {display:none}
 
 @media screen and (max-width:1199px) {
-    .vzr-more-list {margin:10px 0 0 0}
-    .vzr-more-item {float:none; width:auto; padding:0; margin:20px 0}
-    .vzr-more-item .desktop-menu-icon {right:15px; top:50%; transform:translateY(-50%)}
-    .vzr-more-checkbox-inner {background-position:16px center; padding:0 100px 0 50px; height:auto; text-align:left}
+    .vzr-more {margin:40px 0 0 0}
+    .vzr-more-title {font-size:17px; line-height:22px}
+    .vzr-more-list {margin:24px 0 0 0}
+    .vzr-more-item {float:none; width:auto; padding:0; margin:16px 0 0 0}
+    .vzr-more-item .desktop-menu-icon {right:16px; top:50%; transform:translateY(-50%)}
+    .vzr-more-checkbox-inner {background-position:16px center; padding:16px 54px 16px 56px; height:auto; text-align:left}
     .vzr-more-checkbox input:checked+.vzr-more-checkbox-inner {background-position:16px center}
-    .vzr-more-checkbox-title {padding:10px 0 7px 0; min-height:0}
-    .vzr-more-checkbox-price {padding:0; position:absolute; right:40px; top:50%; transform:translateY(-50%)}
+    .vzr-more-checkbox-title {padding:0; min-height:0; font-size:15px; line-height:20px}
     .vzr-more-checkbox-price em {display:none}
     .vzr-more-checkbox-price em.vzr-more-checkbox-price-old-mobile {display:block; text-align:right; margin:0 0 -3px 0}
 }
@@ -2588,28 +2605,31 @@ footer a {color:#FFFFFF}
 .order-confirm-form-detail+.form-required-notice {margin-top:0}
 
 @media screen and (max-width:1199px) {
-    .vzr-form-step-3 {position:relative; padding:5px 0 0 0}
-    .vzr-form-step-3 .order-form-fields {margin:0}
+    .vzr-form-step-3 {position:relative}
+    .vzr-form-step-3 form {display:flex; flex-wrap:wrap}
+    .vzr-form-step-3 .order-form-results {order:1; width:100%}
+    .vzr-form-step-3 .order-form-fields {margin:0; order:0; width:100%}
+    .vzr-form-step-3 .order-form-ctrl {order:2; width:100%}
     .vzr-form-step-3 .order-form-results-inner {position:static !important}
 }
 
-.vzr-form-window-mobile {display:none; position:fixed; left:0; bottom:0; right:0; z-index:100; background:#fff; border-top:3px solid #03a9f4}
+.vzr-form-window-mobile {display:none; position:fixed; left:0; bottom:0; right:0; z-index:100; background:#FFFFFF; border-top:1px solid #E86630}
 @media screen and (max-width:1199px) {
     .vzr-form-window-mobile.visible {display:block}
 }
-.vzr-form-window-mobile-header {position:relative; padding:0 134px 0 20px}
-.vzr-form-window-mobile-title {font-weight:normal; font-size:20px; line-height:22px; color:#000; padding:10px 0 0 0}
-.vzr-form-window-mobile-cost {position:absolute; right:0; top:10px; width:134px; font-size:20px; line-height:22px; color:#000; font-weight:bold; white-space:nowrap}
-.vzr-form-window-mobile-cost em {display:none; font-size:12px; color:#7f7f7f; text-decoration:line-through}
-.vzr-form-window-mobile-ctrl {padding:8px 0 0 0}
+.vzr-form-window-mobile-header {position:relative; padding:4px 103px 0 16px}
+.vzr-form-window-mobile-title {font-weight:600; font-size:16px; line-height:20px; color:#3E3E59}
+.vzr-form-window-mobile-cost {position:absolute; right:16px; top:4px; font-size:17px; line-height:20px; color:#000; font-weight:600; white-space:nowrap}
+.vzr-form-window-mobile-cost em {display:none}
+.vzr-form-window-mobile-ctrl {padding:7px 16px 6px 16px}
 .vzr-form-window-mobile-ctrl::after {content:""; display:block; clear:both}
-.vzr-form-window-mobile-ctrl .form-submit {float:right; margin:0; width:134px}
-.vzr-form-window-mobile-ctrl .form-submit .btn-orange {padding:0; width:100%; height:33px; line-height:33px; font-size:14px; min-width:0; font-weight:500}
-.vzr-form-window-mobile-ctrl .back-link {float:right; margin:0 18px 0 0; padding:0}
-.vzr-form-window-mobile-ctrl .back-link .btn-border {border-color:transparent; padding:0; color:#7f7f7f; line-height:33px; height:33px}
-.vzr-form-window-mobile-ctrl .back-link .btn-border::before {border-right-color:#7f7f7f}
-.vzr-form-window-mobile-detail {float:left; line-height:33px; font-size:16px; font-weight:normal; padding:0 0 0 20px}
-.vzr-form-window-mobile-detail a {color:#004e96; border-bottom:1px dashed #004e96; text-decoration:none}
+.vzr-form-window-mobile-ctrl .form-submit {float:right; margin:0; width:130px}
+.vzr-form-window-mobile-ctrl .form-submit .btn-orange {padding:0; width:100%; height:32px; line-height:32px; font-size:11px; min-width:0; font-weight:600}
+.vzr-form-window-mobile-ctrl .back-link {float:right; margin:0 25px 0 0; padding:0}
+.vzr-form-window-mobile-ctrl .back-link .btn-border {border-color:transparent; padding:0; color:#5C5C73; font-size:11px; font-weight:600; line-height:32px; height:32px}
+.vzr-form-window-mobile-ctrl .back-link .btn-border::before {display:none}
+.vzr-form-window-mobile-detail {float:left; line-height:32px; font-size:12px; letter-spacing:0.02em; font-weight:500}
+.vzr-form-window-mobile-detail a {color:#E86630; border-bottom:1px dashed #E86630; text-decoration:none}
 
 .product-header {margin:60px 0 0 0}
 .product-header::after {content:""; display:block; clear:both}
@@ -2698,6 +2718,10 @@ footer a {color:#FFFFFF}
 .vzr-type-add {margin:80px 0 0 0}
 .vzr-type-add-item {display:none}
 .vzr-type-add-item.active {display:block}
+
+@media screen and (max-width:1199px) {
+    .vzr-type-add {margin:40px 0 0 0}
+}
 
 .main-events-form .order-vzr-days-count {background:#eaf4f9}
 .main-events-form .order-vzr-schengen {background:#f5fcff}

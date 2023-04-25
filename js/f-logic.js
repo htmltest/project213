@@ -1485,7 +1485,7 @@ $(document).ready(function() {
     });
 
     $('body').on('click', '.vzr-form-window-mobile-detail a', function(e) {
-        $('html, body').animate({'scrollTop': $('.main-events-form-results-info').parent().offset().top});
+        $('html, body').animate({'scrollTop': $('.main-events-form-results-info').parent().offset().top - $('.header-top').outerHeight()});
         e.preventDefault();
     });
 
