@@ -2347,10 +2347,14 @@ footer a {color:#FFFFFF}
 
 .vzr-item {background:#F8F8FC; padding:32px 58px 23px 32px; border-radius:12px; margin:24px 0 0 0}
 .vzr-item:first-child {margin:0}
+.vzr-item h2 {margin:0; font-size:24px; line-height:31px}
+.vzr-item+h2 {margin-top:80px; font-size:24px; line-height:31px}
 .vzr-item h3 {margin:0}
 .vzr-item+h3 {margin-top:80px}
+.order-form .form-field+h2 {margin-top:80px; font-size:24px; line-height:31px}
 .order-form .form-field+h3 {margin-top:80px}
 .vzr-item-header::after {content:""; display:block; clear:both}
+.vzr-item-header h2 {float:left; margin:0; font-size:24px; line-height:31px}
 .vzr-item-header h3 {float:left; margin:0}
 .vzr-item-hint {float:right; color:#8D8DA6; font-size:13px; line-height:18px; letter-spacing:0.02em; margin:11px 0 0 0}
 .order-form .form-field {margin:24px 0}
@@ -2359,15 +2363,17 @@ footer a {color:#FFFFFF}
 .order-form .order-form-row .form-input {margin:0}
 
 @media screen and (max-width:1199px) {
-    .vzr-item-header h2 {float:none}
+    .vzr-item-header h2 {float:none; font-size:17px; line-height:21px}
+    .vzr-item-header h3 {float:none}
     .vzr-item-hint {float:none; margin:17px 0 0 0}
     .order-form .order-form-row .form-field+.form-field {margin:24px 0 0 0}
     .vzr-item {margin:30px -16px; padding:30px 16px; border-radius:0}
     .vzr-item:first-child {margin:0 -16px 30px -16px}
-    .vzr-item-header h3 {float:none}
     .vzr-item-hint {float:none; margin:12px 0 0 0}
     .order-form .order-form-row {margin:24px 0 0 0}
+    .vzr-item+h2 {margin-top:30px; font-size:17px; line-height:21px}
     .vzr-item+h3 {margin-top:30px}
+    .order-form .form-field+h2 {margin-top:58px; font-size:17px; line-height:21px}
     .order-form .form-field+h3 {margin-top:58px}
 }
 
