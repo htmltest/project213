@@ -509,6 +509,10 @@ header.fixed .header-search {margin:18px 16px 0 0}
 
 header.fixed .header-phone {margin:17px 125px 0 0}
 
+@media screen and (max-width:1280px) {
+    header.fixed .header-phone {margin-right:25px}
+}
+
 @media screen and (max-width:1199px) {
     .header-phone {display:none}
 }
@@ -539,6 +543,11 @@ header.fixed .header-phone {margin:17px 125px 0 0}
     .nav-main ul li a:hover::before {width:100%}
 }
 
+@media screen and (max-width:1280px) {
+    .nav-main {margin-left:20px}
+    .nav-main ul li {margin:0 0 0 16px}
+}
+
 @media screen and (max-width:1199px) {
     .nav-main {display:none}
 }
@@ -549,6 +558,11 @@ header.fixed .header-phone {margin:17px 125px 0 0}
     .nav-btn a:hover {border-color:#E6E6EF}
 }
 .nav-btn a svg {display:inline-block; vertical-align:middle; margin:-2px 8px 0 0; width:16px; height:16px; fill:none; stroke:#FFFFFF}
+
+@media screen and (max-width:1280px) {
+    .nav-btn {margin-left:20px}
+    .nav-btn+.nav-btn {margin-left:0}
+}
 
 @media screen and (max-width:1199px) {
     .nav-btn {display:none}
