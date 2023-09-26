@@ -2197,6 +2197,7 @@ footer {height:402px; margin:-402px 0 0 0; background:#3E3E59; color:#FFFFFF; po
 footer a {color:#FFFFFF}
 @media screen and (min-width:1200px) {
     footer a:hover {color:#ED885E}
+    footer a:hover svg {stroke:#ED885E}
 }
 
 @media screen and (max-width:1199px) {
@@ -2263,19 +2264,19 @@ footer a {color:#FFFFFF}
 @media screen and (min-width:1200px) {
     .footer-hotline a:hover svg {stroke:#ED885E}
 }
-.footer-right-links {position:absolute; left:0; top:192px; font-weight:normal; font-size:14px; line-height:20px}
+.footer-right-links {position:absolute; left:0; top:160px; font-weight:normal; font-size:14px; line-height:20px; white-space:nowrap}
 .footer-right-link {margin:12px 0 0 0}
 .footer-right-link:first-child {margin:0}
+.footer-right-link svg {display:inline-block; vertical-align:middle; margin:-2px 10px 0 0; width:20px; height:20px; fill:none; stroke:#FFFFFF; transition:stroke 0.3s}
 
 @media screen and (max-width:1199px) {
-    .footer-right {float:none; margin:0; position:static}
+    .footer-right {float:none; margin:32px 0 0 0; position:static}
     .footer-phone-wrap {position:absolute; right:0; top:0}
     .footer-phone {font-size:15px; line-height:20px; letter-spacing:0}
     .footer-phone-hint {margin:4px 0 0 0; font-size:13px; line-height:14px; letter-spacing:0.01em; opacity:1; color:#AFAFB6}
     .footer-hotline {margin:32px 0 0 0}
     .footer-hotline a {text-align:center}
-    .footer-right-links {display:none; font-weight:500; font-size:13px; line-height:18px; position:relative; left:auto; top:auto; margin:12px 0 0 0}
-    .footer-top.menu-open .footer-right-links {display:block}
+    .footer-right-links {font-weight:500; font-size:13px; line-height:18px; position:relative; left:auto; top:auto; margin:12px 0 0 0}
 }
 
 .footer-bottom {border-top:1px solid rgba(255, 255, 255, 0.1); font-size:13px; line-height:18px; letter-spacing:0.02em; padding:19px 0 0 0}
