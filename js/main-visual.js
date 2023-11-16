@@ -43,12 +43,6 @@ $(document).ready(function() {
     });
 
     $('.nav-add-link').click(function(e) {
-        if ($('header').hasClass('fixed')) {
-            $('.nav').addClass('fixed');
-        } else {
-            $('.nav').removeClass('fixed');
-        }
-
         var curScroll = $(window).scrollTop();
         $('.wrapper').css({'top': -curScroll});
         $('.wrapper').data('curScroll', curScroll);
@@ -60,7 +54,6 @@ $(document).ready(function() {
 
     $('.nav-add-close a').click(function(e) {
         $('html').removeClass('nav-add-open');
-        $('.nav').removeClass('fixed');
 
         $('.wrapper').css({'top': 0});
         $(window).scrollTop($('.wrapper').data('curScroll'));
@@ -430,13 +423,6 @@ $(window).on('load resize scroll', function() {
         }
     });
 
-    if ($('header').length == 1) {
-        if (curScroll > $('.header-middle').offset().top + $('.header-middle').outerHeight()) {
-            $('header').addClass('fixed');
-        } else {
-            $('header').removeClass('fixed');
-        }
-    }
 });
 
 function windowOpen(linkWindow, addWindow, dataWindow, callbackWindow) {
@@ -524,27 +510,6 @@ $(window).on('load resize scroll', function() {
     $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
     var windowHeight = $('#body-test-height').height();
     $('#body-test-height').remove();
-
-    $('.page-menu').each(function() {
-        if (windowScroll > $('.page-menu').offset().top - $('.header-top').outerHeight() - 10) {
-            $('.page-menu').addClass('fixed');
-        } else {
-            $('.page-menu').removeClass('fixed');
-        }
-
-        $('.page-menu li.active').removeClass('active');
-        $('.page-menu').find('li').each(function() {
-            var curBlock = $($(this).find('a').attr('href'));
-            if (curBlock.length > 0) {
-                if (curBlock.parents().filter('.product-info-content').length == 0 || curBlock.parents().filter('.product-info-content').hasClass('active')) {
-                    if (windowScroll + windowHeight / 2 > curBlock.offset().top) {
-                        $('.page-menu li.active').removeClass('active');
-                        $(this).addClass('active');
-                    }
-            }
-            }
-        });
-    });
 
     if ($('.main-up').length == 1) {
         if (windowScroll > windowHeight) {
