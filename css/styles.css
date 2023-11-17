@@ -295,7 +295,7 @@ fieldset {margin:20px 0; padding:0; border:0}
 .form-file-input input {height:200px; position:absolute; z-index:1; top:0; right:0; opacity:0; cursor:pointer; font-size:200px; background:url(../images/blank.gif); -webkit-appearance:none}
 .form-file-input::before {content:""; display:inline-block; width:16px; height:16px; background:url(../images/form-input-file.svg) no-repeat; background-size:100%; margin:-2px 6px 0 0; vertical-align:middle}
 
-.form-select {position:relative}
+.form-select {position:relative; margin:20px 0}
 .form-select select {position:relative; border:1px solid #e6e6e6; font:bold 18px/23px Roboto, sans-serif; color:#000; vertical-align:top; margin:0; padding:32px 24px 8px 24px; width:100%; height:65px; box-sizing:border-box; outline:none; border-radius:3px; background:url(../images/blank.gif); -webkit-appearance:none; transition:all 0.2s}
 .form-select label.error {display:none !important}
 
@@ -2420,13 +2420,6 @@ footer a {color:#FFFFFF}
     .order-form-row-vzr .form-field-wide {width:auto}
     .order-form-row-vzr .form-field-vzr-days-count {width:50%}
     .defense-form .main-events-form-fields .order-form-row-vzr .form-field {margin:24px 0 0 0}
-}
-
-.order-vzr-docs {display:none; margin:24px 0}
-.order-vzr-docs.visible {display:block}
-
-@media screen and (max-width:1199px) {
-    .order-vzr-docs {margin:20px 0 40px 0}
 }
 
 .order-vzr-days-count {background:#e5edf4; text-align:center; height:66px; border-radius:3px}

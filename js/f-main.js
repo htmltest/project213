@@ -163,20 +163,37 @@ function initForm(curForm) {
 
     curForm.find('.form-select select').each(function() {
         var curSelect = $(this);
-        if (curSelect.parents().filter('.window').length == 0) {
-            curSelect.select2({
-                minimumResultsForSearch: 10
-            });
-        } else {
-            curSelect.select2({
-                minimumResultsForSearch: 10,
-                dropdownParent: $('.window-content')
-            });
+        var options = {
+            minimumResultsForSearch: 10,
+            closeOnSelect: false
+        };
+        if (curSelect.parents().filter('.window').length == 1) {
+            options['dropdownParent'] = $('.window-content');
         }
+        if (typeof(curSelect.attr('data-searchplaceholder')) != 'undefined') {
+            options['searchInputPlaceholder'] = curSelect.attr('data-searchplaceholder');
+        }
+        curSelect.select2(options);
         curSelect.parent().find('.select2-container').attr('data-placeholder', curSelect.attr('data-placeholder'));
         curSelect.on('select2:select', function(e) {
             $(e.delegateTarget).parent().find('.select2-container').addClass('select2-container--full');
+            $(e.delegateTarget).parent().find('.select2-search--inline input').val('').trigger('input.search').trigger('focus');
+            $(e.delegateTarget).parent().find('.select2-search--inline input').attr('placeholder', curSelect.attr('data-searchplaceholder'));
         });
+        curSelect.on('select2:unselect', function(e) {
+            if (curSelect.find('option:selected').length == 0) {
+                $(e.delegateTarget).parent().find('.select2-container').removeClass('select2-container--full');
+                $(e.delegateTarget).parent().find('.select2-search--inline input').attr('placeholder', curSelect.attr('data-placeholder'));
+            } else {
+                $(e.delegateTarget).parent().find('.select2-search--inline input').attr('placeholder', curSelect.attr('data-searchplaceholder'));
+            }
+        });
+        if (typeof(curSelect.attr('multiple')) != 'undefined') {
+            curSelect.on('select2:open', function(e) {
+                $(e.delegateTarget).parent().find('.select2-container').addClass('select2-container--full');
+                $(e.delegateTarget).parent().find('.select2-search--inline input').attr('placeholder', curSelect.attr('data-searchplaceholder'));
+            });
+        }
         if (curSelect.find('option:selected').length > 0 && curSelect.find('option:selected').html() != '') {
             curSelect.trigger({type: 'select2:select'})
         }

@@ -338,7 +338,7 @@
                                 <h3>Рассчитайте стоимость страховки для себя и&nbsp;своих близких по всему миру</h3>
                                 <div class="form-field">
                                     <div class="form-select">
-                                        <select name="country" data-placeholder="Страна поездки" class="required" id="vzr-country-select">
+                                        <select name="country" data-placeholder="Страна поездки" class="required" id="vzr-country-select" data-searchplaceholder="Поиск страны" multiple>
                                             <option value=""></option>
                                             <option value="1" data-schengen="1">Австрия</option>
                                             <option value="2">Англия</option>
@@ -350,7 +350,7 @@
                                             <option value="8" data-schengen="1">Исландия</option>
                                             <option value="9" data-schengen="1">Испания</option>
                                             <option value="10" data-schengen="1">Италия</option>
-                                            <option value="11" data-schengen="1" data-schengen="1">Латвия</option>
+                                            <option value="11" data-schengen="1">Латвия</option>
                                             <option value="12">Лихтенштейн</option>
                                             <option value="13" data-schengen="1">Литва</option>
                                             <option value="14" data-schengen="1">Люксембург</option>
@@ -363,7 +363,6 @@
                                             <option value="20" data-schengen="1">Словакия</option>
                                             <option value="21" data-schengen="1">Словения</option>
                                             <option value="22">Соединенные Штаты Америки</option>
-                                            <option value="23" data-schengen="1" data-docs="1">Финляндия</option>
                                             <option value="24" data-schengen="1">Франция</option>
                                             <option value="25" data-schengen="1">Чехия</option>
                                             <option value="26" data-schengen="1">Швеции</option>
@@ -411,36 +410,20 @@
                                     </div>
                                 </div>
 
-                                <div class="order-vzr-docs">
-                                    <div class="order-form-row order-form-row-vzr">
-                                        <div class="form-field form-field-wide">
-                                            <div class="form-input form-input-date">
-                                                <span class="form-input-label">Дата подачи документов <em>*</em></span>
-                                                <input type="text" name="vzr_date_docs" value="" id="vzr-date-docs" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="order-form-row order-form-row-vzr">
-                                        <div class="form-field form-field-wide">
-                                            <div class="order-vzr-schengen">Дата подачи документов будет указана в полисе как дата начала страхования. Количество дней поездки не меняется.</div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="order-form-vzr-peoples">
                                     <div class="order-form-row order-form-row-vzr">
                                         <div class="form-field form-field-wide">
-                                            <div class="form-input"><span class="form-input-label">Возраст (0-7 лет)</span><input type="number" name="childrens" id="vzr-childrens" value="0" min="0" max="5" step="1" class="VZRSummPeople" /></div>
+                                            <div class="form-input"><span class="form-input-label">Сколько едет детей (0-7 лет)</span><input type="number" name="childrens" id="vzr-childrens" value="0" min="0" max="5" step="1" class="VZRSummPeople" /></div>
                                         </div>
                                     </div>
                                     <div class="order-form-row order-form-row-vzr">
                                         <div class="form-field form-field-wide">
-                                            <div class="form-input"><span class="form-input-label">Возраст (8-64 лет)</span><input type="number" name="adults" id="vzr-adults" value="0" min="0" max="5" step="1" class="VZRSummPeople" /></div>
+                                            <div class="form-input"><span class="form-input-label">Сколько едет взрослых (8-64 лет)</span><input type="number" name="adults" id="vzr-adults" value="0" min="0" max="5" step="1" class="VZRSummPeople" /></div>
                                         </div>
                                     </div>
                                     <div class="order-form-row order-form-row-vzr">
                                         <div class="form-field form-field-wide">
-                                            <div class="form-input"><span class="form-input-label">Возраст (65-70 лет)</span><input type="number" name="olders" id="vzr-olders" value="0" min="0" max="5" step="1" class="VZRSummPeople" /></div>
+                                            <div class="form-input"><span class="form-input-label">Сколько едет пожилых (65-70 лет)</span><input type="number" name="olders" id="vzr-olders" value="0" min="0" max="5" step="1" class="VZRSummPeople" /></div>
                                         </div>
                                     </div>
                                 </div>

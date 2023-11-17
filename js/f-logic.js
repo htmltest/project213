@@ -761,30 +761,36 @@ $(document).ready(function() {
     });
 
     $('body').on('change', '#vzr-country-select', function() {
-        var curOption = $(this).find('option:selected');
-        if (curOption.length == 1) {
-            if (typeof (curOption.attr('data-schengen')) != 'undefined') {
+        var curOptions = $(this).find('option:selected');
+        if (curOptions.length > 0) {
+            var isSchengen = false;
+            var isRus = false;
+            curOptions.each(function() {
+                var curOption = $(this);
+                if (typeof (curOption.attr('data-schengen')) != 'undefined') {
+                    isSchengen = true;
+                } else {
+                }
+
+                if (typeof (curOption.attr('data-rus')) != 'undefined') {
+                    isRus = true;
+                } else {
+                    $('#vzr-multiple').prop('disabled', false);
+                }
+            });
+            if (isSchengen) {
                 $('.order-vzr-schengen').addClass('visible');
             } else {
                 $('.order-vzr-schengen').removeClass('visible');
             }
-
-            if (typeof (curOption.attr('data-docs')) != 'undefined') {
-                $('.order-vzr-docs').addClass('visible');
-                $('#vzr-date-docs').addClass('required');
-            } else {
-                $('.order-vzr-docs').removeClass('visible');
-                $('#vzr-date-docs').val('').trigger('change');
-                $('#vzr-date-docs').parent().removeClass('focus')
-                $('#vzr-date-docs').data('datepicker').clear();
-                $('#vzr-date-docs').removeClass('required');
-            }
-
-            if (typeof (curOption.attr('data-rus')) != 'undefined') {
+            if (isRus) {
                 $('#vzr-multiple').prop('checked', false).prop('disabled', true).trigger('change');
             } else {
                 $('#vzr-multiple').prop('disabled', false);
             }
+        } else {
+            $('.order-vzr-schengen').removeClass('visible');
+            $('#vzr-multiple').prop('disabled', false);
         }
     });
 
@@ -2002,21 +2008,36 @@ function getDateString(curDate) {
 function initVZR() {
 
     $('#vzr-country-select').each(function() {
-        var curOption = $(this).find('option:selected');
-        if (curOption.length == 1) {
-            if (typeof (curOption.attr('data-schengen')) != 'undefined') {
+        var curOptions = $(this).find('option:selected');
+        if (curOptions.length > 0) {
+            var isSchengen = false;
+            var isRus = false;
+            curOptions.each(function() {
+                var curOption = $(this);
+                if (typeof (curOption.attr('data-schengen')) != 'undefined') {
+                    isSchengen = true;
+                } else {
+                }
+
+                if (typeof (curOption.attr('data-rus')) != 'undefined') {
+                    isRus = true;
+                } else {
+                    $('#vzr-multiple').prop('disabled', false);
+                }
+            });
+            if (isSchengen) {
                 $('.order-vzr-schengen').addClass('visible');
             } else {
                 $('.order-vzr-schengen').removeClass('visible');
             }
-
-            if (typeof (curOption.attr('data-docs')) != 'undefined') {
-                $('.order-vzr-docs').addClass('visible');
-                $('#vzr-date-docs').addClass('required');
+            if (isRus) {
+                $('#vzr-multiple').prop('checked', false).prop('disabled', true).trigger('change');
             } else {
-                $('.order-vzr-docs').removeClass('visible');
-                $('#vzr-date-docs').removeClass('required');
+                $('#vzr-multiple').prop('disabled', false);
             }
+        } else {
+            $('.order-vzr-schengen').removeClass('visible');
+            $('#vzr-multiple').prop('disabled', false);
         }
     });
 
@@ -2039,13 +2060,6 @@ function initVZR() {
         });
         $('#vzr-date-start').attr('min', getDateString(tommorow));
         $('#vzr-date-start').attr('max', getDateString(selfyear));
-
-        $('#vzr-date-docs').data('datepicker').update({
-            minDate: tommorow,
-            maxDate: selfyear
-        });
-        $('#vzr-date-docs').attr('min', getDateString(tommorow));
-        $('#vzr-date-docs').attr('max', getDateString(selfyear));
 
         if ($('#vzr-multiple').prop('checked')) {
             var curDate = $('#vzr-date-start').data('datepicker').selectedDates[0];
