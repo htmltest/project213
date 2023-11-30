@@ -251,7 +251,7 @@ $(document).ready(function() {
         }
     });
 
-    $('body').on('click', '.window-close', function(e) {
+    $('body').on('click', '.window-close, .window-close-btn', function(e) {
         windowClose();
         e.preventDefault();
     });
@@ -523,6 +523,10 @@ $(window).on('load resize scroll', function() {
             $('.main-up').css({'margin-bottom': 0});
         }
     }
+
+    $('.contacts-new').each(function() {
+        $('.contacts-new').css({'height': (windowHeight - $('header').outerHeight()) + 'px'});
+    });
 });
 
 $(window).on('load', function() {
@@ -543,3 +547,163 @@ $(window).on('load', function() {
         }, 3000);
     });
 });
+
+$(document).ready(function() {
+
+    $('.contacts-new').each(function() {
+        $('body').addClass('page-contacts-new');
+
+        var newHTML = '';
+        for (var i = 0; i < contactsData.length; i++) {
+            var curItem = contactsData[i];
+            newHTML +=  '<div class="contacts-new-left-list-item">' +
+                            '<div class="contacts-new-left-list-item-title">' + curItem.title + '</div>' +
+                            '<div class="contacts-new-left-list-item-offices">';
+            for (var j = 0; j < curItem.offices.length; j++) {
+                var curOffice = curItem.offices[j];
+                newHTML +=      '<div class="contacts-new-left-list-item-office">' +
+                                    '<div class="contacts-new-left-list-item-office-address">' + curOffice.address + '</div>' +
+                                    '<div class="contacts-new-left-list-item-office-link"><a href="#" data-item="' + i + '" data-office="' + j + '">' + contactsTexts.detail + '</a></div>' +
+                                '</div>';
+            }
+            newHTML +=      '</div>' +
+                        '</div>';
+        }
+        $('.contacts-new-left-list-inner').html(newHTML);
+    });
+
+    $('body').on('click', '.contacts-new-left-list-item-office-link a', function(e) {
+        var curItem = contactsData[Number($(this).attr('data-item'))];
+        var curOffice = curItem.offices[Number($(this).attr('data-office'))];
+
+        $('.contacts-new-right-title').html(curItem.title);
+        $('.contacts-new-right-address').html(curOffice.address);
+        $('.contacts-new-right-yandex a').attr('href', 'https://yandex.ru/maps/?rtext=~' + curOffice.coords);
+        var newHTML = '';
+        if (typeof(curOffice.phones) != 'undefined') {
+            newHTML +=  '<div class="contacts-new-right-info-item">' +
+                            '<div class="contacts-new-right-info-item-title">' + contactsTexts.phones + '</div>' +
+                            '<div class="contacts-new-right-info-item-value">' + curOffice.phones + '</div>' +
+                        '</div>';
+        }
+        if (typeof(curOffice.email) != 'undefined') {
+            newHTML +=  '<div class="contacts-new-right-info-item">' +
+                            '<div class="contacts-new-right-info-item-title">' + contactsTexts.email + '</div>' +
+                            '<div class="contacts-new-right-info-item-value">' + curOffice.email + '</div>' +
+                        '</div>';
+        }
+        if (typeof(curOffice.schedule) != 'undefined') {
+            newHTML +=  '<div class="contacts-new-right-info-item">' +
+                            '<div class="contacts-new-right-info-item-title">' + contactsTexts.schedule + '</div>' +
+                            '<div class="contacts-new-right-info-item-value">' + curOffice.schedule + '</div>' +
+                        '</div>';
+        }
+        if (typeof(curOffice.director) != 'undefined') {
+            newHTML +=  '<div class="contacts-new-right-info-item">' +
+                            '<div class="contacts-new-right-info-item-title">' + contactsTexts.director + '</div>' +
+                            '<div class="contacts-new-right-info-item-value">' + curOffice.director + '</div>' +
+                        '</div>';
+        }
+        $('.contacts-new-right-info').html(newHTML);
+
+        var curIndex = $('.contacts-new-left-list-item-office').index($(this).parent().parent());
+        for (var i = 0; i < myPlacemarks.length; i++) {
+            var curPlacemark = myPlacemarks[i];
+            if (i == curIndex) {
+                curPlacemark.options.set('iconImageHref', contactsMapIcon.active);
+            } else {
+                curPlacemark.options.set('iconImageHref', contactsMapIcon.default);
+            }
+        }
+        myMap.panTo(curOffice.coords);
+
+        $('.contacts-new').addClass('detail-open');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.contacts-new-right-close', function(e) {
+        $('.contacts-new').removeClass('detail-open');
+        e.preventDefault();
+    });
+
+    $('.contacts-new-left-mobile-menu a').click(function(e) {
+        if (!$('.contacts-new-left').hasClass('open')) {
+            $('.contacts-new-left').addClass('open');
+        } else {
+            if ($('.contacts-new').hasClass('detail-open')) {
+                $('.contacts-new').removeClass('detail-open')
+            } else {
+                $('.contacts-new-left').removeClass('open');
+            }
+        }
+        e.preventDefault();
+    });
+
+    $('.contacts-new-left-mobile-close a').click(function(e) {
+        $('.contacts-new-left').removeClass('open');
+        e.preventDefault();
+    });
+
+    $('.contacts-new-left-mobile-view a').click(function(e) {
+        $('.contacts-new-left').removeClass('open');
+        e.preventDefault();
+    });
+
+    $('.contacts-new-right-mobile-close a').click(function(e) {
+        $('.contacts-new').removeClass('detail-open');
+        e.preventDefault();
+    });
+
+    $('.contacts-new-left-btn-search a').click(function(e) {
+        if (typeof(ymaps) != 'undefined') {
+            ymaps.geolocation.get({
+                provider: 'auto',
+                mapStateAutoApply: true
+            }).then(function (result) {
+                myMap.geoObjects.add(result.geoObjects);
+            });
+        }
+        e.preventDefault();
+    });
+
+    $('.contacts-new-right-mobile-view a').click(function(e) {
+        $('.contacts-new-left').removeClass('open');
+        $('.contacts-new').removeClass('detail-open');
+        e.preventDefault();
+    });
+
+    $('.polis-price-item-tariff').click(function() {
+        $(this).parents().filter('.polis-price-item').toggleClass('open');
+    });
+
+});
+
+function updateContactsMap() {
+    myCollections = new ymaps.GeoObjectCollection();
+
+    for (var i = 0; i < contactsData.length; i++) {
+        var curItem = contactsData[i];
+        for (var j = 0; j < curItem.offices.length; j++) {
+            var curOffice = curItem.offices[j];
+            var myPlacemark = new ymaps.Placemark(curOffice.coords, {
+                hintContent: curItem.title,
+                item: i,
+                office: j
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: contactsMapIcon.default,
+                iconImageSize: [contactsMapIcon.width, contactsMapIcon.height],
+                iconImageOffset: [contactsMapIcon.offsetX, contactsMapIcon.offsetY]
+            });
+
+            myPlacemark.events.add('click', function(e) {
+                var curPlacemark = e.get('target');
+
+                $('.contacts-new-left-list-item').eq(Number(curPlacemark.properties.get('item'))).find('.contacts-new-left-list-item-office').eq(Number(curPlacemark.properties.get('office'))).find('.contacts-new-left-list-item-office-link a').trigger('click');
+            });
+
+            myPlacemarks.push(myPlacemark);
+            myMap.geoObjects.add(myPlacemark);
+        }
+    }
+}
