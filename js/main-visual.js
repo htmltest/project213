@@ -672,10 +672,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.polis-price-item-tariff').click(function() {
-        $(this).parents().filter('.polis-price-item').toggleClass('open');
-    });
-
 });
 
 function updateContactsMap() {

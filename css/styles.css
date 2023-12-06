@@ -1432,20 +1432,15 @@ h1+.page-menu {margin-top:-17px}
     .polis-price-item-summ-value {font-size:22px; line-height:29px; order:1}
     .polis-price-item-summ-value span {font-size:15px}
     .polis-price-item-insurance-title {margin:16px 0 0 0; font-size:11px; line-height:15px; order:2}
-    .polis-price-item-insurance-value {font-size:17px; line-height:22px; order:3}
+    .polis-price-item-insurance-value {font-size:17px; line-height:22px; order:3; border-bottom:1px solid #E6E6EF; padding-bottom:16px; margin-bottom:16px}
     .polis-price-item-insurance-value span {font-size:13px}
-    .polis-price-item-inner-info {order:5; border-top:none; display:none; padding:0; margin:16px 0 0 0}
-    .polis-price-item.open .polis-price-item-inner-info {display:block}
+    .polis-price-item-inner-info {order:5; border-top:none; display:block; padding:0; margin:0}
     .polis-price-item-inner-info-inner {display:block}
     .polis-price-item-inner-info-row {display:block; margin:12px 0 0 0}
     .polis-price-item-inner-info-row:first-child {margin:0}
     .polis-price-item-inner-info-label {display:block; padding:0}
     .polis-price-item-inner-info-value {display:block; padding:4px 0 0 0; white-space:normal; text-align:left}
-    .polis-price-item-tariff {order:4; cursor:pointer; position:relative; font-size:15px; line-height:23px; letter-spacing:0; text-align:left; transition:color 0.2s}
-    .polis-price-item.open .polis-price-item-tariff {color:#E86630}
-    .polis-price-item-tariff span {border-bottom:1px dashed #E86630}
-    .polis-price-item-tariff svg {display:block; width:16px; height:16px; fill:#E86630; position:absolute; right:0; top:19px; transition:transform 0.2s}
-    .polis-price-item.open .polis-price-item-tariff svg {transform:rotate(-180deg)}
+    .polis-price-item-tariff {order:4; position:relative; font-size:15px; line-height:23px; letter-spacing:0; text-align:left; transition:color 0.2s; border-top:none; padding:0; margin:0 0 16px 0}
     .polis-price-item-btn {order:6}
     .polis-price-item-btn .btn-orange {padding:12px 0}
 }
