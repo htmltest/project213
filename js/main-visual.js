@@ -43,17 +43,24 @@ $(document).ready(function() {
     });
 
     $('.nav-add-link').click(function(e) {
+        var curWidth = $(window).width();
+        if (curWidth < 375) {
+            curWidth = 375;
+        }
+
         var curScroll = $(window).scrollTop();
         $('.wrapper').css({'top': -curScroll});
         $('.wrapper').data('curScroll', curScroll);
 
         $('html').addClass('nav-add-open');
+        $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
 
         e.preventDefault();
     });
 
     $('.nav-add-close a').click(function(e) {
         $('html').removeClass('nav-add-open');
+        $('meta[name="viewport"]').attr('content', 'width=device-width');
 
         $('.wrapper').css({'top': 0});
         $(window).scrollTop($('.wrapper').data('curScroll'));
