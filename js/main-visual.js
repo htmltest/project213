@@ -710,3 +710,14 @@ function updateContactsMap() {
         }
     }
 }
+
+$(document).ready(function() {
+
+    $('.main-alert-close').click(function(e) {
+        $('.main-alert').slideUp(function() {
+            $('.main-alert').remove();
+        });
+        e.preventDefault();
+    });
+
+});

@@ -3144,3 +3144,16 @@ label.error+label.error {display:none !important}
     .contacts-new-right-mobile-view {min-width:100%; max-width:100%; order:0}
     .contacts-new-right-mobile-ctrl a {height:40px}
 }
+
+.main-alert {background:#FFDBCC; padding:16px 0}
+.main-alert .header-container {padding-top:0; padding-bottom:0}
+.main-alert-header {display:flex; align-items:flex-start; justify-content:space-between}
+.main-alert-title {font-weight:600; font-size:20px; line-height:26px; color:#3E3E59}
+.main-alert-close {min-width:26px; max-width:26px; margin:0 0 0 10px}
+.main-alert-close svg {width:26px; height:26px; fill:#3E3E59; transition:fill 0.2s}
+.main-alert-close:hover svg {fill:#E86630}
+.main-alert-text {margin:8px 0 0 0; font-size:15px; line-height:21px; color:#3E3E59}
+.main-alert-text strong {font-weight:bold; white-space:nowrap}
+.main-alert-text strong a {color:#3E3E59}
+
+.main-alert+header {position:relative}
