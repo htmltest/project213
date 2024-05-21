@@ -3157,3 +3157,133 @@ label.error+label.error {display:none !important}
 .main-alert-text strong a {color:#3E3E59}
 
 .main-alert+header {position:relative}
+
+.instructions-header {display:flex; justify-content:space-between; align-items:flex-start; margin:120px 0 0 0}
+.instructions-header-menu {max-width:50%; font-weight:500; font-size:15px; line-height:19px; letter-spacing:0.01em}
+.instructions-header-menu-inner ol {margin:0}
+.instructions-header-menu-inner ol li {margin:20px 0 0 0; padding:0 0 0 30px}
+.instructions-header-menu-inner ol li:first-child {margin:0}
+.instructions-header-menu-inner ol li::before {color:#3E3E59}
+.instructions-header-menu-inner ol li a {border-bottom:1px dashed #E86630; transition:color 0.3s, border-color 0.3s}
+@media screen and (min-width:1200px) {
+    .instructions-header-menu-inner ol li a:hover {border-bottom-color:transparent}
+}
+.instructions-header-menu-more {display:none}
+.instructions-header-qr {display:flex; align-items:center; justify-content:space-between; min-width:580px; max-width:580px; padding:20px 46px 20px 66px; background:#F8F8FC; border-radius:4px}
+.instructions-header-qr-text {min-width:246px; max-width:246px; font-weight:600; font-size:20px; line-height:26px; color:#3E3E59}
+.instructions-header-qr-img {min-width:182px; max-width:182px}
+.instructions-header-qr-img img {display:block; width:100%}
+
+@media screen and (max-width:1440px) {
+    .instructions-header {margin:60px 0 0 0}
+    .instructions-header-qr {min-width:528px; max-width:528px; padding:20px 20px 20px 40px}
+}
+
+@media screen and (max-width:1199px) {
+    .instructions-header-menu {max-width:none}
+    .instructions-header-qr {min-width:245px; max-width:245px; display:block}
+    .instructions-header-qr-text {min-width:0; max-width:none; font-size:17px; line-height:22px}
+    .instructions-header-qr-img {margin:20px 0 0 0; min-width:149px; max-width:149px}
+}
+
+@media screen and (max-width:767px) {
+    .instructions-header {display:block}
+    .instructions-header-menu {max-height:113px; position:relative; overflow:hidden; transition:max-height 0.3s}
+    .instructions-header-menu.open {max-height:999px}
+    .instructions-header-menu.with-more::after {content:""; position:absolute; left:0; bottom:0; right:0; height:30px; background:linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%); pointer-events:none; transition:opacity 0.3s}
+    .instructions-header-menu.with-more.open::after {opacity:0}
+    .instructions-header-menu-inner ol li {margin:16px 0 0 0}
+    .instructions-header-menu-more {margin:20px 0 0 0; font-size:13px; line-height:17px; letter-spacing:0.01em}
+    .instructions-header-menu.with-more+.instructions-header-menu-more {display:flex}
+    .instructions-header-menu-more a {display:flex; align-items:center; color:#3E3E59}
+    .instructions-header-menu-more a span {border-bottom:1px dashed #3E3E59}
+    .instructions-header-menu-more a span:nth-child(2) {display:none}
+    .instructions-header-menu.open+.instructions-header-menu-more a span:nth-child(1) {display:none}
+    .instructions-header-menu.open+.instructions-header-menu-more a span:nth-child(2) {display:block}
+    .instructions-header-menu-more a svg {width:16px; height:16px; margin:0 0 0 6px; fill:#3E3E59; transition:transform 0.3s}
+    .instructions-header-menu.open+.instructions-header-menu-more a svg {transform:rotate(-180deg)}
+    .instructions-header-qr {min-width:0; max-width:none; margin:40px 0 0 0; padding:20px 48px; text-align:center}
+    .instructions-header-qr-text {font-size:20px; line-height:26px}
+    .instructions-header-qr-img {margin:20px auto 0 auto; min-width:182px; max-width:182px}
+}
+
+.instructions-sections {counter-reset:instructions-point}
+.instructions-section {margin:100px 0 0 0; position:relative}
+.instructions-section-header {padding:2px 120px 2px 56px; position:relative; font-weight:600; font-size:30px; line-height:36px; color:#3E3E59}
+.instructions-section-header::before {content:counter(instructions-point); counter-increment:instructions-point 1; position:absolute; left:0; top:2px; display:flex; width:36px; height:36px; padding:2px 0 0 0; align-items:center; justify-content:center; color:#FFFFFF; background:#E86630; border-radius:50%; font-size:20px; line-height:24px}
+.instructions-section-container {display:flex; margin:40px 0 0 0; align-items:flex-start; justify-content:space-between}
+.instructions-section-text {min-width:calc(50% - 20px); max-width:calc(50% - 20px)}
+.instructions-section-container-reverse .instructions-section-text {order:1}
+.instructions-section-text h4 {margin:40px 0 0 0}
+.instructions-section-text p {margin:20px 0 0 0}
+.instructions-section-text ul+p {margin:30px 0 0 0}
+.instructions-section-text ol+p {margin:30px 0 0 0}
+.instructions-section-text ul {margin:20px 0 0 0}
+.instructions-section-text p+ul {margin:10px 0 0 0}
+.instructions-section-text ul li {margin:13px 0 0 0; padding:0 0 0 24px}
+.instructions-section-text ul li::before {width:11px; height:1px; background:rgba(62, 62, 89, 0.5); top:11px}
+.instructions-section-text ol {margin:20px 0 0 0}
+.instructions-section-text p+ol {margin:10px 0 0 0}
+.instructions-section-text ol li {margin:13px 0 0 0; padding:0 0 0 30px}
+.instructions-text-icon {margin:0 0 40px 0}
+.instructions-text-icon img {display:block}
+.instructions-section-text *:first-child {margin-top:0}
+.instructions-section-text *:last-child {margin-bottom:0}
+.instructions-section-text-qr-anonce {margin:30px 0 0 0; font-weight:600; line-height:20px; color:#3E3E59; max-width:368px}
+.instructions-section-text-qr {margin:18px 0 30px 0; width:153px}
+.instructions-section-text-qr img {display:block; width:100%}
+.instructions-babyup {margin:20px 0 0 0; display:flex; align-items:center}
+.instructions-babyup-icon {min-width:83px; max-width:83px; margin:0 20px 0 0}
+.instructions-babyup-icon img {display:block; width:100%}
+.instructions-babyup-text {width:100%}
+.instructions-section-notice {margin:40px 0 0 0; padding:24px 24px 24px 90px; position:relative; background:#FFFFFF; box-shadow:0px 0px 24px rgba(188, 63, 70, 0.2); border-radius:8px; line-height:21px; min-height:90px}
+.instructions-section-notice svg {position:absolute; left:24px; top:24px; width:42px; height:42px}
+.instructions-section-notice.warning svg {fill:#A41517}
+.instructions-section-notice.info svg {fill:#37AE35}
+.instructions-section-screen {min-width:calc(50% - 20px); max-width:calc(50% - 20px)}
+.instructions-section-screen img {display:block; width:100%; border-radius:8px}
+.instructions-section-screen img+img {margin:40px 0 0 0}
+.instructions-section-screen-anonce {margin:0 0 20px 0}
+.instructions-section-screen-wide {margin:40px 0 0 0}
+.instructions-section-screen-wide img {display:block; width:100%; border-radius:8px}
+.instructions-section-screen-wide-2 {margin:40px 0 0 0; display:flex; align-items:flex-start; justify-content:space-between}
+.instructions-section-screen-wide-2 img {display:block; min-width:calc(50% - 10px); max-width:calc(50% - 10px); border-radius:8px}
+.instructions-section-top-link {position:absolute; right:0; top:0; width:120px; height:40px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(141, 141, 166, 0.5); border-radius:4px; font-weight:600; font-size:11px; line-height:11px; letter-spacing:0.09em; text-transform:uppercase; color:#3E3E59; transition:border-color 0.3s, color 0.3s}
+@media screen and (min-width:1200px) {
+    .instructions-section-top-link:hover {border-color:#3E3E59; color:#3E3E59}
+}
+.instructions-section-top-link svg {min-width:24px; max-width:24px; height:24px; margin:0 10px 0 0; fill:#E86630}
+
+@media screen and (max-width:1199px) {
+    .instructions-section {margin:60px 0 0 0}
+    .instructions-section-text {min-width:calc(50% - 15px); max-width:calc(50% - 15px)}
+    .instructions-section-screen {min-width:calc(50% - 15px); max-width:calc(50% - 15px)}
+    .instructions-section-text .instructions-section-notice {padding:90px 24px 24px 24px}
+    .instructions-section-screen img+img {margin:20px 0 0 0}
+}
+
+@media screen and (max-width:767px) {
+    .instructions-section {padding:0 0 70px 0}
+    .instructions-section-header {padding:0 0 0 30px; font-size:22px; line-height:26px}
+    .instructions-section-header::before {top:3px; width:20px; height:20px; font-size:13px; line-height:16px; padding:4px 0 0 0}
+    .instructions-section-container {display:block; margin:30px 0 0 0}
+    .instructions-section-text {min-width:0; max-width:none}
+    .instructions-section-text+.instructions-section-text {margin:30px 0 0 0}
+    .instructions-section-text h4 {margin:30px 0 0 0; font-size:17px; line-height:22px}
+    .instructions-section-text ul+p {margin:20px 0 0 0}
+    .instructions-section-text ol+p {margin:20px 0 0 0}
+    .instructions-section-text ul li::before {top:8px}
+    .instructions-text-icon {margin:0 0 20px 0}
+    .instructions-section-text-qr-anonce {margin:20px 0 0 0; font-size:13px; line-height:17px; max-width:none}
+    .instructions-section-text-qr {margin:18px 0 20px 0; width:153px}
+    .instructions-section-notice,
+    .instructions-section-text .instructions-section-notice {margin:30px 0 0 0; padding:72px 15px 15px 15px; line-height:18px}
+    .instructions-section-notice svg {left:15px; top:15px}
+    .instructions-section-screen {min-width:0; max-width:none; margin:30px 0 0 0}
+    .instructions-section-screen img {border-radius:4px}
+    .instructions-section-screen img+img {margin:10px 0 0 0}
+    .instructions-section-screen-anonce {margin:0 0 10px 0}
+    .instructions-section-screen-wide-2 {margin:30px 0 0 0; display:block}
+    .instructions-section-screen-wide-2 img {min-width:100%; max-width:100%; border-radius:4px; margin:10px 0 0 0}
+    .instructions-section-top-link {top:auto; bottom:0}
+}
