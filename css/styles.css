@@ -3169,21 +3169,30 @@ label.error+label.error {display:none !important}
     .instructions-header-menu-inner ol li a:hover {border-bottom-color:transparent}
 }
 .instructions-header-menu-more {display:none}
-.instructions-header-qr {display:flex; align-items:center; justify-content:space-between; min-width:580px; max-width:580px; padding:20px 46px 20px 66px; background:#F8F8FC; border-radius:4px}
+.instructions-header-side {min-width:580px; max-width:580px}
+.instructions-header-qr {display:flex; align-items:center; justify-content:space-between; padding:20px 46px 20px 66px; background:#F8F8FC; border-radius:4px}
 .instructions-header-qr-text {min-width:246px; max-width:246px; font-weight:600; font-size:20px; line-height:26px; color:#3E3E59}
 .instructions-header-qr-img {min-width:182px; max-width:182px}
 .instructions-header-qr-img img {display:block; width:100%}
+.instructions-header-rustore {display:flex; align-items:center; justify-content:center; margin:20px 0 0 0; padding:15px 0; font-size:12px; line-height:17px; font-weight:500; color:#5C5C73; letter-spacing:0.1em}
+.instructions-header-rustore img {min-width:119px; max-width:119px; height:30px}
+.instructions-header-rustore span {min-width:1px; max-width:1px; height:22px; margin:0 20px; background:#E6E6EF}
+.instructions-header-rustore em {font-style:normal}
 
 @media screen and (max-width:1440px) {
     .instructions-header {margin:60px 0 0 0}
-    .instructions-header-qr {min-width:528px; max-width:528px; padding:20px 20px 20px 40px}
+    .instructions-header-side {min-width:528px; max-width:528px}
+    .instructions-header-qr {padding:20px 20px 20px 40px}
 }
 
 @media screen and (max-width:1199px) {
     .instructions-header-menu {max-width:none}
-    .instructions-header-qr {min-width:245px; max-width:245px; display:block}
+    .instructions-header-side {min-width:245px; max-width:245px}
+    .instructions-header-qr {display:block}
     .instructions-header-qr-text {min-width:0; max-width:none; font-size:17px; line-height:22px}
     .instructions-header-qr-img {margin:20px 0 0 0; min-width:149px; max-width:149px}
+    .instructions-header-rustore span {display:none}
+    .instructions-header-rustore em {display:none}
 }
 
 @media screen and (max-width:767px) {
@@ -3202,9 +3211,11 @@ label.error+label.error {display:none !important}
     .instructions-header-menu.open+.instructions-header-menu-more a span:nth-child(2) {display:block}
     .instructions-header-menu-more a svg {width:16px; height:16px; margin:0 0 0 6px; fill:#3E3E59; transition:transform 0.3s}
     .instructions-header-menu.open+.instructions-header-menu-more a svg {transform:rotate(-180deg)}
-    .instructions-header-qr {min-width:0; max-width:none; margin:40px 0 0 0; padding:20px 48px; text-align:center}
+    .instructions-header-side {min-width:0; max-width:none; margin:40px 0 0 0}
+    .instructions-header-qr {padding:20px 48px; text-align:center}
     .instructions-header-qr-text {font-size:20px; line-height:26px}
     .instructions-header-qr-img {margin:20px auto 0 auto; min-width:182px; max-width:182px}
+    .instructions-header-rustore {margin:24px 0 0 0}
 }
 
 .instructions-sections {counter-reset:instructions-point}
@@ -3212,6 +3223,7 @@ label.error+label.error {display:none !important}
 .instructions-section-header {padding:2px 120px 2px 56px; position:relative; font-weight:600; font-size:30px; line-height:36px; color:#3E3E59}
 .instructions-section-header::before {content:counter(instructions-point); counter-increment:instructions-point 1; position:absolute; left:0; top:2px; display:flex; width:36px; height:36px; padding:2px 0 0 0; align-items:center; justify-content:center; color:#FFFFFF; background:#E86630; border-radius:50%; font-size:20px; line-height:24px}
 .instructions-section-container {display:flex; margin:40px 0 0 0; align-items:flex-start; justify-content:space-between}
+.instructions-section-container-guarantee {align-items:center}
 .instructions-section-text {min-width:calc(50% - 20px); max-width:calc(50% - 20px)}
 .instructions-section-container-reverse .instructions-section-text {order:1}
 .instructions-section-text h4 {margin:40px 0 0 0}
@@ -3256,6 +3268,7 @@ label.error+label.error {display:none !important}
 
 @media screen and (max-width:1199px) {
     .instructions-section {margin:60px 0 0 0}
+    .instructions-section-container-guarantee {align-items:flex-start}
     .instructions-section-text {min-width:calc(50% - 15px); max-width:calc(50% - 15px)}
     .instructions-section-screen {min-width:calc(50% - 15px); max-width:calc(50% - 15px)}
     .instructions-section-text .instructions-section-notice {padding:90px 24px 24px 24px}
