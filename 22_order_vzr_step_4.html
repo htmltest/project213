@@ -4,7 +4,14 @@
         <meta charset="utf-8" />
         <title>ПСБ Страхование</title>
 
-        <link rel="stylesheet" href="css/styles.css?sid=001" />
+        <script>
+            var ua = window.navigator.userAgent.toLowerCase();
+            if ((/trident/gi).test(ua) || (/msie/gi).test(ua)) {
+                window.location.href = '14_old_browser.html';
+            }
+        </script>
+
+        <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
         <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
@@ -14,6 +21,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <meta name="viewport" content="width=device-width" />
+
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
     </head>
 
     <body>
@@ -25,50 +35,38 @@
                 <header>
                     <div class="header-container">
                         <div class="header-top">
-                            <div class="header-top-container">
-                                <div class="header-top-logo"><a href="#"><img src="images/logo.svg" alt="" /></a></div>
-                                <div class="header-menu">
-                                    <ul>
-                                        <li class="active"><a href="#">Частным клиентам</a></li>
-                                        <li><a href="#">Корпоративным клиентам</a></li>
-                                        <li><a href="#">Действующим клиентам</a></li>
-                                    </ul>
-                                </div>
+                            <div class="header-menu">
+                                <ul>
+                                    <li class="active"><a href="#">Частным клиентам</a></li>
+                                    <li><a href="#">Корпоративным клиентам</a></li>
+                                    <li><a href="#">Действующим клиентам</a></li>
+                                </ul>
+                            </div>
 
+                            <div class="header-phone">
+                                <div class="header-phone-number"><a href="tel:+78005558565"><svg><use xlink:href="images/sprite.svg#header-phone"></use></svg>8 (800) 555-85-65</a></div>
+                                <div class="header-phone-notice">Звонок по РФ бесплатный</div>
+                            </div>
+
+                            <div class="header-top-right">
+                                <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search-link"></use></svg></a>
+                                <a href="#" class="header-view-link"><svg><use xlink:href="images/sprite.svg#header-view-link"></use></svg></a>
                                 <a href="#" class="nav-add-link"><svg><use xlink:href="images/sprite.svg#nav-add-link"></use></svg></a>
-
-                                <div class="header-user">
-                                    <a href="#" class="header-user-link"><svg><use xlink:href="images/sprite.svg#header-user-link"></use></svg>Войти</a>
-                                </div>
-
-                                <div class="header-view">
-                                    <a href="#" class="header-view-link"><svg><use xlink:href="images/sprite.svg#header-view-link"></use></svg></a>
-                                </div>
-
-                                <div class="header-search">
-                                    <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search-link"></use></svg></a>
-                                </div>
-
-                                <div class="header-phone">
-                                    <div class="header-phone-number"><a href="tel:8 (800) 555-85-65">8 (800) 555-85-65</a></div>
-                                    <div class="header-phone-notice">Звонок по РФ бесплатный</div>
-                                </div>
                             </div>
                         </div>
 
                         <div class="header-middle">
-                            <div class="logo"><a href="#"><img src="images/logo.svg" alt="" /></a></div>
+                            <div class="logo"><a href="#"><img src="images/logo.svg" alt=""></a></div>
                             <div class="nav-main">
                                 <ul>
-                                    <li><a href="#">Путешествия</a></li>
-                                    <li><a href="#">Несчастный случай</a></li>
+                                    <li><a href="#">Ипотека</a></li>
                                     <li><a href="#">Имущество</a></li>
-                                    <li><a href="#">Здоровье</a></li>
-                                    <li><a href="#">Животные</a></li>
+                                    <li><a href="#">Защита от клеща</a></li>
+                                    <li><a href="#">Несчастный случай</a></li>
                                 </ul>
                             </div>
+                            <div class="nav-btn nav-btn-lk"><a href="#"><svg><use xlink:href="images/sprite.svg#header-user-link"></use></svg><span>Личный кабинет ДМС</span></a></div>
                             <div class="nav-btn"><a href="#">Сообщить о страховом случае</a></div>
-                            <div class="nav-btn"><a href="#"><svg><use xlink:href="images/sprite.svg#nav-btn-activation"></use></svg>Активировать полис</a></div>
                         </div>
                     </div>
 
@@ -562,7 +560,7 @@
                 <!-- footer top -->
                 <div class="footer-top">
                     <div class="footer-left">
-                        <div class="footer-logo"><img src="images/logo.svg" alt="" /></div>
+                        <div class="footer-logo"><img src="images/logo-footer.svg" alt="" /></div>
                     </div>
                     <div class="footer-menu-mobile-link"><a href="#"><span>Открыть меню</span><span>Скрыть</span></a></div>
                     <div class="footer-menu">
@@ -595,7 +593,7 @@
                             <div class="footer-phone"><a href="tel:+78005558565">8 (800) 555-85-65</a></div>
                             <div class="footer-phone-hint">Звонок по РФ бесплатный</div>
                         </div>
-                        <div class="footer-hotline"><a href="#"><svg><use xlink:href="images/sprite.svg#footer-hotline"></use></svg>Обратиться на горячую линию</a></div>
+                        <div class="footer-hotline"><a href="windows/feedback.html" class="window-link"><svg><use xlink:href="images/sprite.svg#footer-hotline-email"></use></svg>Обратная связь</a></div>
                     </div>
                     <div class="footer-social">
                         <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#footer-social-vk"></use></svg></a>
@@ -636,7 +634,7 @@
         <script src="js/wnumb/wNumb.js"></script>
         <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/f-main.js"></script>
-        <script src="js/main-visual.js?sid=001"></script>
+        <script src="js/main-visual.js"></script>
         <script src="js/f-logic.js"></script>
 
     </body>

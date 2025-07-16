@@ -711,6 +711,19 @@ function updateContactsMap() {
     }
 }
 
+$(window).on('load resize', function() {
+
+    $('.order-form-tablet').each(function() {
+        if ($(window).width() > 767 && $(window).width() < 1200) {
+            var headerHeight = $('.order-form-tablet .order-form-fields h3').height();
+            $('.order-form-tablet .order-form-results').css({'margin-top': headerHeight});
+        } else {
+            $('.order-form-tablet .order-form-results').css({'margin-top': 0});
+        }
+    });
+
+});
+
 $(document).ready(function() {
 
     $('.main-alert-close').click(function(e) {
