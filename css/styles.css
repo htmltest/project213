@@ -510,8 +510,9 @@ fieldset {margin:20px 0; padding:0; border:0}
 .nav-main ul li:first-child {margin:0}
 .nav-main ul li::before {display:none}
 .nav-main ul li a {color:#3E3E59; position:relative}
+.nav-main ul li a::before {content:""; width:0; height:1px; background:#E86630; position:absolute; left:0; bottom:-5px; z-index:2; transition:width 0.3s ease-out}
 @media screen and (min-width:1200px) {
-    .nav-main ul li a:hover {color:#ED885E}
+    .nav-main ul li a:hover::before {width:100%}
 }
 
 @media screen and (max-width:1359px) {
