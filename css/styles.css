@@ -3381,6 +3381,10 @@ label.error+label.error {display:none !important}
 .main-alert-text strong {font-weight:bold; white-space:nowrap}
 .main-alert-text strong a {color:#3E3E59}
 
+@media screen and (max-width:1199px) {
+    .main-alert .header-container {height:auto; display:block}
+}
+
 .main-alert+header {position:relative}
 
 .instructions-header {display:flex; justify-content:space-between; align-items:flex-start; margin:120px 0 0 0}
