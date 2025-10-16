@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>ПСБ Страхование</title>
+
+        <script>
+            var ua = window.navigator.userAgent.toLowerCase();
+            if ((/trident/gi).test(ua) || (/msie/gi).test(ua)) {
+                window.location.href = '14_old_browser.html';
+            }
+        </script>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+        <link rel="stylesheet" href="js/nouislider/nouislider.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="viewport" content="width=device-width" />
+
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="header-container">
+                        <div class="header-top">
+                            <div class="header-menu">
+                                <ul>
+                                    <li><a href="#">Частным клиентам</a></li>
+                                    <li><a href="#">Корпоративным клиентам</a></li>
+                                    <li><a href="#">Действующим клиентам</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="header-phone">
+                                <div class="header-phone-number"><a href="tel:+78005558565"><svg><use xlink:href="images/sprite.svg#header-phone"></use></svg>8 (800) 555-85-65</a></div>
+                                <div class="header-phone-notice">Звонок по РФ бесплатный</div>
+                            </div>
+
+                            <div class="header-top-right">
+                                <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search-link"></use></svg></a>
+                                <a href="#" class="header-view-link"><svg><use xlink:href="images/sprite.svg#header-view-link"></use></svg></a>
+                                <a href="#" class="nav-add-link"><svg><use xlink:href="images/sprite.svg#nav-add-link"></use></svg></a>
+                            </div>
+                        </div>
+
+                        <div class="header-middle">
+                            <div class="logo"><a href="#"><img src="images/logo.svg" alt=""></a></div>
+                            <div class="nav-main">
+                                <ul>
+                                    <li><a href="#">Ипотека</a></li>
+                                    <li><a href="#">Имущество</a></li>
+                                    <li><a href="#">Защита от клеща</a></li>
+                                    <li><a href="#">Несчастный случай</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-btn nav-btn-lk"><a href="#"><svg><use xlink:href="images/sprite.svg#header-user-link"></use></svg><span>Личный кабинет ДМС</span></a></div>
+                            <div class="nav-btn"><a href="#">Сообщить о страховом случае</a></div>
+                        </div>
+                    </div>
+
+                    <div class="header-page header-page-app">
+                        <div class="container">
+                            <div class="header-page-app-container">
+                                <div class="breadcrumbs"><a href="#">Частным клиентам</a><svg><use xlink:href="images/sprite.svg#breadcrumbs"></use></svg>Мобильное прилoжeниe</div>
+                                <h1>Мобильное прилoжeниe &laquo;ПСБ&nbsp;Страхование&raquo;</h1>
+                                <div class="header-page-anonce">Все полисы на&nbsp;экране вашего телефона в&nbsp;Личном кабинете клиента.<br> Устанавливайте приложение или используйте веб-версию.</div>
+                                <div class="header-page-apps">
+                                    <div class="header-page-apps-item"><a href="https://www.rustore.ru/catalog/app/ru.psbins.dms" target="_blank"><img src="images/header-page-app-rustore.svg" alt="">для андроид</a></div>
+                                    <div class="header-page-apps-item"><a href="#app-ios" target="_blank" class="btn-appios"><img src="images/header-page-app-appstore.svg" alt="">для ios</a></div>
+                                </div>
+                            </div>
+                            <div class="header-page-service-img"><img src="files/header-page-app.png" alt=""></div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- nav -->
+                <div class="nav">
+                    <div class="nav-container">
+                        <div class="nav-add-close"><a href="#"><svg><use xlink:href="images/sprite.svg#nav-add-close"></use></svg></a></div>
+                        <div class="container">
+                            <div class="nav-add-title-mobile">Меню</div>
+                            <div class="nav-add-list">
+                                <div class="nav-add-item">
+                                    <div class="nav-add-item-group">
+                                        <div class="nav-add-item-title"><a href="#">Частным клиентам</a></div>
+                                        <div class="nav-add-item-list">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Путешествия</a>
+                                                    <ul>
+                                                        <li><a href="#">За рубеж и РФ<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                        <li><a href="#">Шенген<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                        <li><a href="#">Турция<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                        <li><a href="#">Европа<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                        <li><a href="#">Германия<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                        <li>Страхование путешественников</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Здоровье</a>
+                                                    <ul>
+                                                        <li><a href="#">ДМС для студентов</a></li>
+                                                        <li><a href="#">ДМС трудовых мигрантов</a></li>
+                                                        <li><a href="#">Формула здоровья<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                        <li><a href="#">Здоровый образ жизни</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Несчастные случаи</a>
+                                                    <ul>
+                                                        <li><a href="#">Особый случай<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                        <li><a href="#">Моя защита</a></li>
+                                                        <li><a href="#">Будь спокоен</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Финансовая защита</a>
+                                                    <ul>
+                                                        <li><a href="#">Парашют</a></li>
+                                                        <li><a href="#">Сохрани доход</a></li>
+                                                        <li><a href="#">Финансовая защита</a></li>
+                                                        <li><a href="#">Страхование заемщиков</a></li>
+                                                        <li><a href="#">Защита банковских карт</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Недвижимость / имущество</a>
+                                                    <ul>
+                                                        <li><a href="#">Защита квартиры<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                        <li><a href="#">Ипотека (имущество, титул, ГО)</a></li>
+                                                        <li><a href="#">Всё просто!</a></li>
+                                                        <li><a href="#">Мой дом</a></li>
+                                                        <li><a href="#">Лапки в порядке<svg><use xlink:href="images/sprite.svg#cart-icon"></use></svg></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nav-add-item">
+                                    <div class="nav-add-item-group">
+                                        <div class="nav-add-item-title"><a href="#">Корпоративным клиентам</a></div>
+                                        <div class="nav-add-item-list">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Транспорт</a>
+                                                    <ul>
+                                                        <li><a href="#">КАСКО</a></li>
+                                                        <li><a href="#">Железнодорожный транспорт</a></li>
+                                                        <li><a href="#">Водный транспорт</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Имущество</a>
+                                                    <ul>
+                                                        <li><a href="#">Здания</a></li>
+                                                        <li><a href="#">Помещения</a></li>
+                                                        <li><a href="#">Земельные участки</a></li>
+                                                        <li><a href="#">Оборудование</a></li>
+                                                        <li><a href="#">Грузоперевозки</a></li>
+                                                        <li><a href="#">Строительство (СМР)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Корпоративный ДМС</a>
+                                                    <ul>
+                                                        <li><a href="#">ДМС</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Несчастный случай</a>
+                                                    <ul>
+                                                        <li><a href="#">Несчастный случай</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Ответственность</a>
+                                                    <ul>
+                                                        <li><a href="#">Грузоперевозки</a></li>
+                                                        <li><a href="#">Строительство (СМР)</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Бизнес</a>
+                                                    <ul>
+                                                        <li><a href="#">Бизнес под защитой</a></li>
+                                                        <li><a href="#">Бизнес без потерь</a></li>
+                                                        <li><a href="#">Успешный бизнес</a></li>
+                                                        <li><a href="#">Защита бизнеса</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nav-add-item">
+                                    <div class="nav-add-item-group">
+                                        <div class="nav-add-item-title"><a href="#">Действующим клиентам</a></div>
+                                        <div class="nav-add-item-list">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Сообщить о страховом случае</a>
+                                                    <ul>
+                                                        <li><a href="#">Путешествие</a></li>
+                                                        <li><a href="#">Медицинская помощь</a></li>
+                                                        <li><a href="#">Несчастный случай</a></li>
+                                                        <li><a href="#">Имущество</a></li>
+                                                        <li><a href="#">Продлить полис</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="nav-add-item-group">
+                                        <div class="nav-add-item-title"><a href="#">Партнерам</a></div>
+                                    </div>
+
+                                    <div class="nav-add-item-group">
+                                        <div class="nav-add-item-title"><a href="#">Компания</a></div>
+                                        <div class="nav-add-item-list">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">О компании</a>
+                                                    <ul>
+                                                        <li><a href="#">О компании</a></li>
+                                                        <li><a href="#">Руководство</a></li>
+                                                        <li><a href="#">Наша команда</a></li>
+                                                        <li><a href="#">Партнеры СТОА</a></li>
+                                                        <li><a href="#">Реквизиты</a></li>
+                                                        <li><a href="#">Контакты</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Карьера</a>
+                                                    <ul>
+                                                        <li><a href="#">Вакансии</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Пресс-центр</a>
+                                                    <ul>
+                                                        <li><a href="#">Новости</a></li>
+                                                        <li><a href="#">Публикации</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Раскрытие информации</a>
+                                                    <ul>
+                                                        <li><a href="#">Лицензии</a></li>
+                                                        <li><a href="#">Правоустанавливающие документы</a></li>
+                                                        <li><a href="#">Отчетность</a></li>
+                                                        <li><a href="#">Агенты и Брокеры</a></li>
+                                                        <li><a href="#">Перестрахование общая информация</a></li>
+                                                        <li><a href="#">Информация по Базовым стандартам</a></li>
+                                                        <li><a href="#">Документы</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="nav-add-mobile-view"><a href="#">Версия для слабовидящих<svg><use xlink:href="images/sprite.svg#header-view-link"></use></svg></a></div>
+                            <div class="nav-add-mobile-btn"><a href="#"><svg><use xlink:href="images/sprite.svg#nav-btn-activation"></use></svg>Активировать полис</a></div>
+                            <div class="nav-add-mobile-btn"><a href="#">Сообщить о страховом случае</a></div>
+                            <div class="nav-add-phone">
+                                <div class="nav-add-phone-number"><a href="tel:8 (800) 555-85-65">8 (800) 555-85-65</a></div>
+                                <div class="nav-add-phone-notice">Звонок по РФ бесплатный</div>
+                            </div>
+
+                            <!-- product contacts -->
+                            <div class="product-contacts">
+                                <div class="product-contacts-general">
+                                    <div class="product-contacts-general-img"><img src="images/carier-header.png" alt=""></div>
+                                    <div class="product-contacts-general-content">
+                                        <div class="product-contacts-general-phone-title">Общий телефон сервисной компании</div>
+                                        <div class="product-contacts-general-phone-value"><a href="tel:+78005558565">8 (800) 555-85-65</a></div>
+                                        <div class="product-contacts-general-social">
+                                            <div class="product-contacts-general-social-item">
+                                                <div class="product-contacts-general-social-item-title">Skype:</div>
+                                                <div class="product-contacts-general-social-item-value"><a href="skype:savitar.ops">savitar.ops</a></div>
+                                            </div>
+                                            <div class="product-contacts-general-social-item">
+                                                <div class="product-contacts-general-social-item-title">Почта:</div>
+                                                <div class="product-contacts-general-social-item-value"><a href="mailto:inform@psbins.ru">inform@psbins.ru</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- product contacts END -->
+                        </div>
+                    </div>
+                </div>
+                <!-- nav END -->
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="app-section">
+                        <div class="app-section-title">Установите приложение &laquo;ПСБ _С. Территория страхования&raquo; из&nbsp;RuStore или&nbsp;используйте версию для iOS</div>
+                        <div class="app-cards">
+                            <div class="app-card">
+                                <div class="app-card-logo"><img src="images/app-rustore.svg" alt=""></div>
+                                <div class="app-card-title">Для Android</div>
+                                <div class="app-card-link"><a href="https://www.rustore.ru/catalog/app/ru.psbins.dms" class="btn-orange" target="_blank">Установить</a></div>
+                            </div>
+                            <div class="app-card">
+                                <div class="app-card-logo"><img src="images/logo.svg" alt=""></div>
+                                <div class="app-card-title">Подходит для iOS</div>
+                                <div class="app-card-link"><a href="#app-ios" class="btn-orange btn-appios" target="_blank">Установить</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-section" id="app-ios">
+                        <div class="app-section-title">Установка приложения на&nbsp;устройства с&nbsp;платформой iOS</div>
+                        <div class="app-ios-steps">
+                            <div class="app-ios-step">
+                                <div class="app-ios-step-title">Шаг 1</div>
+                                <div class="app-ios-step-preview"><img src="images/app-ios-step-1.png" alt=""></div>
+                                <div class="app-ios-step-text">Зайдите на&nbsp;страницу <a href="https://dms.psbins.ru" target="_blank">Личного кабинета</a> с&nbsp;мобильного телефона через браузер Safari.</div>
+                            </div>
+                            <div class="app-ios-step">
+                                <div class="app-ios-step-title">Шаг 2</div>
+                                <div class="app-ios-step-preview"><img src="images/app-ios-step-2.png" alt=""></div>
+                                <div class="app-ios-step-text">Выполните вход в&nbsp;Личный кабинет по&nbsp;номеру телефона или адресу электронной почты. Если вы&nbsp;входите в&nbsp;Личный кабинет впервые&nbsp;&mdash; зарегистрируйтесь, используя мобильный номер телефона или адрес электронной почты.</div>
+                            </div>
+                            <div class="app-ios-step">
+                                <div class="app-ios-step-title">Шаг 3</div>
+                                <div class="app-ios-step-preview"><img src="images/app-ios-step-3.png" alt=""></div>
+                                <div class="app-ios-step-text">Нажмите на&nbsp;иконку &laquo;Поделиться&raquo; в&nbsp;нижнем меню cмартфона.</div>
+                            </div>
+                            <div class="app-ios-step">
+                                <div class="app-ios-step-title">Шаг 4</div>
+                                <div class="app-ios-step-preview"><img src="images/app-ios-step-4.png" alt=""></div>
+                                <div class="app-ios-step-text">Выберите &laquo;На&nbsp;экран Домой&raquo;.</div>
+                            </div>
+                            <div class="app-ios-step">
+                                <div class="app-ios-step-title">Шаг 5</div>
+                                <div class="app-ios-step-preview"><img src="images/app-ios-step-5.png" alt=""></div>
+                                <div class="app-ios-step-text">Нажмите &laquo;Добавить&raquo;. Если раздел &laquo;На&nbsp;экран Домой&raquo; не&nbsp;появился, скорее всего вы&nbsp;открыли не&nbsp;в&nbsp;браузере Safari.</div>
+                            </div>
+                            <div class="app-ios-step">
+                                <div class="app-ios-step-title">Шаг 6</div>
+                                <div class="app-ios-step-preview"><img src="images/app-ios-step-6.png" alt=""></div>
+                                <div class="app-ios-step-text">Иконка мобильного приложения появится на&nbsp;экране смартфона.<br> Всё, пользуйтесь! Теперь приложение &laquo;ПСБ&nbsp;Страхование&raquo; на&nbsp;экране вашего телефона.</div>
+                            </div>
+                        </div>
+                        <div class="instructions-section-top">
+                            <a href="#" class="instructions-section-top-link"><svg><use xlink:href="images/sprite.svg#instructions-section-top-link"></use></svg>наверх</a>
+                        </div>
+                    </div>
+
+                    <div class="app-section">
+                        <div class="app-section-title">Использование кабинета в&nbsp;WEB&nbsp;браузере</div>
+                        <div class="app-section-anonce">Быстрый и&nbsp;удобный доступ к&nbsp;страховому полису ДМС всего по&nbsp;одному клику в&nbsp;комфортное для тебя время.</div>
+                        <div class="app-prefs">
+                            <div class="app-prefs-item">
+                                <div class="app-prefs-item-icon"><img src="images/app-prefs.svg" alt=""></div>
+                                <div class="app-prefs-item-title">Вся информация в&nbsp;одном месте</div>
+                                <div class="app-prefs-item-text">Данные о&nbsp;полисе, список доступных клиник и&nbsp;условия страхования</div>
+                            </div>
+                            <div class="app-prefs-item">
+                                <div class="app-prefs-item-icon"><img src="images/app-prefs.svg" alt=""></div>
+                                <div class="app-prefs-item-title">Оперативная поддержка</div>
+                                <div class="app-prefs-item-text">Связь со&nbsp;специалистами &laquo;ПСБ&nbsp;Страхование&raquo; прямо из&nbsp;приложения.</div>
+                            </div>
+                            <div class="app-prefs-item">
+                                <div class="app-prefs-item-icon"><img src="images/app-prefs.svg" alt=""></div>
+                                <div class="app-prefs-item-title">Телемедицина</div>
+                                <div class="app-prefs-item-text">Круглосуточные консультации врачей онлайн без&nbsp;визита в&nbsp;клинику</div>
+                            </div>
+                            <div class="app-prefs-item">
+                                <div class="app-prefs-item-icon"><img src="images/app-prefs.svg" alt=""></div>
+                                <div class="app-prefs-item-title">Забота о&nbsp;семье</div>
+                                <div class="app-prefs-item-text">Сервис &laquo;Заботливый родитель&raquo; для&nbsp;сотрудников с&nbsp;детьми</div>
+                            </div>
+                            <div class="app-prefs-item">
+                                <div class="app-prefs-item-icon"><img src="images/app-prefs.svg" alt=""></div>
+                                <div class="app-prefs-item-title">Гибкость</div>
+                                <div class="app-prefs-item-text">Возможность оформить полис для&nbsp;поездок за&nbsp;границу</div>
+                            </div>
+                            <a href="https://dms.psbins.ru" target="_blank" class="app-prefs-link">
+                                <div class="app-prefs-link-icon"><img src="images/app-prefs-link.svg" alt=""></div>
+                                <div class="app-prefs-link-title">Перейти в&nbsp;Личный кабинет<br> по&nbsp;ДМС</div>
+                            </a>
+                        </div>
+                        <div class="instructions-section-top">
+                            <a href="#" class="instructions-section-top-link"><svg><use xlink:href="images/sprite.svg#instructions-section-top-link"></use></svg>наверх</a>
+                        </div>
+                    </div>
+
+                    <div class="app-section">
+                        <div class="app-section-title">Начало использования</div>
+                        <div class="app-start">
+                            <div class="app-start-text">
+                                <div class="app-start-title">Первый вход в&nbsp;Личный кабинет по&nbsp;ДМС</div>
+                                <div class="app-start-qr-anonce">Перейдите по&nbsp;ссылке <a href="https://dms.psbins.ru" target="_blank">dms.psbins.ru</a> или&nbsp;отсканируйте&nbsp;QR код и&nbsp;пройдите регистрацию.</div>
+                                <div class="app-start-qr"><img src="images/app-qr.png" alt=""></div>
+                                <div class="app-start-link"><a href="https://www.rustore.ru/catalog/app/ru.psbins.dms" class="btn-border"><img src="images/app-start-link.svg" alt="">Скачать приложение из Rustore</a></div>
+                                <p>При регистрации укажите:</p>
+                                <ul>
+                                    <li>номер мобильного телефона</li>
+                                    <li>код из&nbsp;СМС, отправленный на&nbsp;указанный номер</li>
+                                    <li>ФИО полностью</li>
+                                    <li>номер полиса ДМС</li>
+                                    <li>дату рождения</li>
+                                    <li>электронную почту</li>
+                                </ul>
+                                <p>Укажите свой актуальный номер телефона т.к. дальнейшая авторизация будет происходить через СМС-код.</p>
+                            </div>
+                            <div class="app-start-screen">
+                                <img src="images/app-reg.png" alt="">
+                                <img src="images/app-reg-tablet.png" alt="">
+                                <img src="images/app-reg-mobile.png" alt="">
+                            </div>
+                        </div>
+                        <div class="instructions-section-top">
+                            <a href="#" class="instructions-section-top-link"><svg><use xlink:href="images/sprite.svg#instructions-section-top-link"></use></svg>наверх</a>
+                        </div>
+                    </div>
+
+                    <div class="app-section">
+                        <div class="app-section-title">Семейный доступ</div>
+                        <div class="app-start app-start-family">
+                            <div class="app-start-text">
+                                <p>У&nbsp;вас есть возможность создать учётную запись и&nbsp;получить доступ к&nbsp;данным только если, вы&nbsp;являетесь законным представителем несовершеннолетнего лица.</p>
+                                <h4>Заполните все поля</h4>
+                                <p>При регистрации укажите:</p>
+                                <ul>
+                                    <li>ФИО</li>
+                                    <li>Номер страхового полиса</li>
+                                    <li>Поставьте галочки &laquo;Я&nbsp;являюсь представителем ребенка&raquo; и&nbsp;&laquo;Выражаю свое согласие на&nbsp;обработку персональных данных&raquo;</li>
+                                    <li>Нажмите &laquo;Добавить&raquo;</li>
+                                    <li>Подтвердите через СМС</li>
+                                </ul>
+                            </div>
+                            <div class="app-start-screen-add">
+                                <div class="app-start-screen-add-text">На&nbsp;рабочем столе нажмите &laquo;Добавить ребенка&raquo;</div>
+                                <div class="app-start-screen-add-img"><img src="images/app-add.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="instructions-section-top">
+                            <a href="#" class="instructions-section-top-link"><svg><use xlink:href="images/sprite.svg#instructions-section-top-link"></use></svg>наверх</a>
+                        </div>
+                    </div>
+
+                    <div class="app-section">
+                        <div class="app-section-title">Частые вопросы</div>
+                        <div class="app-faq">
+                            <div class="vacancy">
+                                <a href="#" class="vacancy-title">Приложение не скачивается, что можно сделать?<svg><use xlink:href="images/sprite.svg#vacancy-title"></use></svg></a>
+                                <div class="vacancy-content">
+                                    <div class="vacancy-content-inner">
+                                        Полис вступает в&nbsp;силу на&nbsp;15&nbsp;календарный день, следующий за&nbsp;датой оплаты страховой премии и&nbsp;период страхования составляет 1&nbsp;год. При этом общий период действия полиса (1&nbsp;год с&nbsp;даты начала действия полиса) не&nbsp;увеличится.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vacancy">
+                                <a href="#" class="vacancy-title">Если при установке возникают системные сообщения.<svg><use xlink:href="images/sprite.svg#vacancy-title"></use></svg></a>
+                                <div class="vacancy-content">
+                                    <div class="vacancy-content-inner">
+                                        Полис вступает в&nbsp;силу на&nbsp;15&nbsp;календарный день, следующий за&nbsp;датой оплаты страховой премии и&nbsp;период страхования составляет 1&nbsp;год. При этом общий период действия полиса (1&nbsp;год с&nbsp;даты начала действия полиса) не&nbsp;увеличится.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vacancy">
+                                <a href="#" class="vacancy-title">Как зарегистрироваться?<svg><use xlink:href="images/sprite.svg#vacancy-title"></use></svg></a>
+                                <div class="vacancy-content">
+                                    <div class="vacancy-content-inner">
+                                        Полис вступает в&nbsp;силу на&nbsp;15&nbsp;календарный день, следующий за&nbsp;датой оплаты страховой премии и&nbsp;период страхования составляет 1&nbsp;год. При этом общий период действия полиса (1&nbsp;год с&nbsp;даты начала действия полиса) не&nbsp;увеличится.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vacancy">
+                                <a href="#" class="vacancy-title">Через какие браузеры доступна веб-версия мобильного приложения.<svg><use xlink:href="images/sprite.svg#vacancy-title"></use></svg></a>
+                                <div class="vacancy-content">
+                                    <div class="vacancy-content-inner">
+                                        Полис вступает в&nbsp;силу на&nbsp;15&nbsp;календарный день, следующий за&nbsp;датой оплаты страховой премии и&nbsp;период страхования составляет 1&nbsp;год. При этом общий период действия полиса (1&nbsp;год с&nbsp;даты начала действия полиса) не&nbsp;увеличится.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="instructions-section-top">
+                            <a href="#" class="instructions-section-top-link"><svg><use xlink:href="images/sprite.svg#instructions-section-top-link"></use></svg>наверх</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="container">
+
+                <!-- footer top -->
+                <div class="footer-top">
+                    <div class="footer-left">
+                        <div class="footer-logo"><img src="images/logo-footer.svg" alt="" /></div>
+                    </div>
+                    <div class="footer-menu-mobile-link"><a href="#"><span>Открыть меню</span><span>Скрыть</span></a></div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Руководство</a></li>
+                            <li><a href="#">Наша команда</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Реквизиты</a></li>
+                            <li><a href="#">Пресс-центр</a></li>
+                            <li><a href="#">Раскрытие информации</a></li>
+                            <li><a href="#">Внутренние документы</a></li>
+                            <li><a href="#">Отчетность</a></li>
+                            <li><a href="#">Правила страхования</a></li>
+                            <li><a href="#">Лицензии</a></li>
+                            <li><a href="#">Карьера</a></li>
+                            <li><a href="#">Партнерам</a></li>
+                            <li><a href="#">Несчастный случай</a></li>
+                            <li><a href="#">Финансовая защита</a></li>
+                            <li><a href="#">Бизнес под защитой</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-right-links">
+                            <div class="footer-right-link"><a href="#"><svg><use xlink:href="images/sprite.svg#header-view-link"></use></svg>Версия для слабовидящих</a></div>
+                            <div class="footer-right-link"><a href="#">Карта сайта</a></div>
+                            <div class="footer-right-link"><a href="#">Политика обработки персональных данных</a></div>
+                        </div>
+                        <div class="footer-phone-wrap">
+                            <div class="footer-phone"><a href="tel:+78005558565">8 (800) 555-85-65</a></div>
+                            <div class="footer-phone-hint">Звонок по РФ бесплатный</div>
+                        </div>
+                        <div class="footer-hotline"><a href="windows/feedback.html" class="window-link"><svg><use xlink:href="images/sprite.svg#footer-hotline-email"></use></svg>Обратная связь</a></div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#footer-social-vk"></use></svg></a>
+                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#footer-social-dzen"></use></svg></a>
+                        <a href="#" target="_blank"><svg><use xlink:href="images/sprite.svg#footer-social-rustore"></use></svg></a>
+                    </div>
+                </div>
+                <!-- footer top END -->
+
+                <div class="footer-bottom">
+                    <div class="footer-copyrights">© 2022, ООО «ПСБ Страхование»</div>
+                    <div class="footer-time">Страница изменена 21.03.2022, 14:23.</div>
+                    <div class="footer-info">Вся информация носит справочный характер и не является публичной офертой.</div>
+                </div>
+
+            </div>
+        </footer>
+
+        <a href="#" class="main-up"></a>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/mask/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <script src="js/nouislider/nouislider.min.js"></script>
+        <script src="js/wnumb/wNumb.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
+        <script src="js/f-main.js"></script>
+        <script src="js/main-visual.js"></script>
+
+    </body>
+</html>

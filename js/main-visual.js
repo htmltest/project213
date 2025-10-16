@@ -765,6 +765,14 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.btn-appios').click(function(e) {
+        var curBlock = $($(this).attr('href'));
+        if (curBlock.length == 1) {
+            $('html, body').animate({'scrollTop': curBlock.offset().top});
+        }
+        e.preventDefault();
+    });
+
 });
 
 
