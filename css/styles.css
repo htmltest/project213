@@ -3723,3 +3723,7 @@ a.app-prefs-link {display:flex; min-width:calc(33.33% - 20px); max-width:calc(33
     .app-faq {margin:30px 0 0 0}
     .app-faq .vacancy {margin:16px 0}
 }
+
+.cards-docs .card-news-content {min-height:0}
+.cards-docs .card-news-content::before,
+.cards-docs .card-news-content::after {display:none}
