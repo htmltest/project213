@@ -2215,3 +2215,55 @@ $(document).ready(function() {
     });
 
 });
+
+$(document).ready(function() {
+
+    $('body').on('change', '.window-feedback-start .form-select select', function() {
+        $('.window-feedback-start').addClass('active');
+        const curValue = $(this).val();
+        $('.window-feedback-theme.active').removeClass('active');
+        $('.window-feedback-theme[data-id="' + curValue + '"]').addClass('active');
+        $('.window-feedback-theme[data-id="' + curValue + '"]').find('.window-feedback-tabs-menu-item').eq(0).trigger('click');
+        $(window).trigger('resize');
+    });
+
+    $('body').on('change', '.window-feedback .form-select select', function() {
+        $(this).select2('close');
+    });
+
+    $('body').on('click', '.window-feedback-tabs-menu-item', function() {
+        const curItem = $(this);
+        const curTabs = curItem.parents().filter('.window-feedback-tabs');
+        curTabs.find('.window-feedback-tabs-menu-item.active').removeClass('active');
+        curItem.addClass('active');
+        const curIndex = curItem.index();
+        curTabs.find('.window-feedback-tabs-content.active').removeClass('active');
+        curTabs.find('.window-feedback-tabs-content').eq(curIndex).addClass('active');
+    });
+
+    $('body').on('change', '.window-feedback-form-select-type select', function() {
+        const curValue = $(this).val();
+        const bankInput = $('.window-feedback-form-input-bank');
+        if (bankInput.attr('data-id') == curValue) {
+            bankInput.addClass('visible');
+        } else {
+            bankInput.removeClass('visible');
+        }
+    });
+
+    $('body').on('change', '.window-feedback-form-ctrl .form-checkbox input', function() {
+        const curInput = $(this);
+        const curForm = curInput.parents().filter('form');
+        if (curInput.prop('checked')) {
+            curForm.find('.form-submit input').prop('disabled', false);
+        } else {
+            curForm.find('.form-submit input').prop('disabled', true);
+        }
+    });
+
+    $('body').on('click', '.window-feedback-theme-notice-phone-number-clipboard', function() {
+        navigator.clipboard.writeText($(this).attr('data-clipboard-text'));
+        alert($(this).attr('data-clipboard-success'));
+    });
+
+});

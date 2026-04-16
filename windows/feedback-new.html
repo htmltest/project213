@@ -1,0 +1,480 @@
+<div class="window-feedback">
+    <h2>Обратная связь</h2>
+    <form action="windows/success.html" method="post" class="window-feedback-start">
+        <div class="window-feedback-title">Обращение</div>
+        <div class="form-select">
+            <select name="theme" data-placeholder="Повод обращения" class="required">
+                <option value=""></option>
+                <option value="1">Оформить/продлить полис</option>
+                <option value="2">Произошло страховое событие</option>
+                <option value="3">Внесение изменений</option>
+                <option value="4">Расторжение договора</option>
+            </select>
+        </div>
+        <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled></div>
+    </form>
+
+    <div class="window-feedback-themes">
+        <div class="window-feedback-theme" data-id="1">
+            <div class="window-feedback-tabs">
+                <div class="window-feedback-tabs-menu">
+                    <div class="window-feedback-tabs-menu-inner">
+                        <div class="window-feedback-tabs-menu-item">Страхование Физических лиц</div>
+                        <div class="window-feedback-tabs-menu-item">Страхование Юридических лиц</div>
+                        <div class="window-feedback-tabs-menu-item">Иное</div>
+                    </div>
+                </div>
+                <div class="window-feedback-tabs-container">
+                    <div class="window-feedback-tabs-content">
+                        <div class="window-feedback-content-form">
+                            <form action="windows/error-new.html" method="post" class="ajax-form">
+                                <div class="window-feedback-form-fields">
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Вид страхования</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-select window-feedback-form-select-type">
+                                                <select name="type" data-placeholder="Вид страхования">
+                                                    <option value=""></option>
+                                                    <option value="1">Страхование ипотеки</option>
+                                                    <option value="2">Страхование имущества</option>
+                                                    <option value="3">Страхование от несчастных случаев (жизнь,травмы)</option>
+                                                    <option value="4">Страхование для лагеря или спортивной секции</option>
+                                                    <option value="5">Страхование от укуса клеща</option>
+                                                    <option value="6">Иное</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-input window-feedback-form-input-bank" data-id="1"><span class="form-input-label">В каком банке Ипотека?</span><input type="text" name="bank" value="" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Укажите контакты для связи</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="window-feedback-form-block-row">
+                                                <div class="form-input"><span class="form-input-label">Укажите Ваше Имя Отчество<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                                <div class="form-input"><span class="form-input-label">Номер телефона<em>*</em></span><input type="text" name="phone" value="" class="phoneRU required" /></div>
+                                            </div>
+                                            <div class="form-input"><span class="form-input-label">Сообщение</span><textarea name="message" rows="1" cols="1"></textarea><div class="form-hint">Укажите данные о своих пожеланиях, нужных рисках, возрасту, полу застрахованных и т.д.</div></div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Приложите документы и скриншоты при наличии</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-files">
+                                                <div class="form-files-dropzone"><span>Выберите файлы или перетащите сюда<em>Формат файлов: pdf, jpg, png, tiff, doc</em></span></div>
+                                                <div class="form-files-input"><input type="file" name="files[]" multiple="multiple" data-uploadurl="upload/index.php" data-uploadfiles="upload/files/" data-removeurl="upload/remove.php" /></div>
+                                                <div class="form-files-list"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-required-notice"><span>*</span> Обязательные для заполнения поля</div>
+                                <div class="window-feedback-form-ctrl">
+                                    <div class="form-checkbox">
+                                        <label><input type="checkbox" name="confirm" class="required" /><span>Я даю свое согласие на обработку моих перснальных данных, в соответствии с Федеральным законом №152-Ф3 "О персональных данных", на условиях и целях, определенных в <a href="windows/policy.html" class="window-link">политике конфеденциальности</a>.</span></label>
+                                    </div>
+                                    <div class="feedback-recaptcha">
+                                        <div class="captcha-container"></div>
+                                    </div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled /></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="window-feedback-tabs-content">
+                        <div class="window-feedback-content-form">
+                            <form action="windows/success-new.html" method="post" class="ajax-form">
+                                <div class="window-feedback-form-fields">
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Вид страхования</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-select">
+                                                <select name="type" data-placeholder="Вид страхования">
+                                                    <option value=""></option>
+                                                    <option value="1">Транспорт</option>
+                                                    <option value="2">Имущество</option>
+                                                    <option value="3">Корпоративный ДМС</option>
+                                                    <option value="4">Несчастный случай</option>
+                                                    <option value="5">Бизнес/Иное</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Укажите контакты для связи</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-input"><span class="form-input-label">Укажите Ваше Имя Отчество<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                            <div class="window-feedback-form-block-row">
+                                                <div class="form-input"><span class="form-input-label">Номер телефона<em>*</em></span><input type="text" name="phone" value="" class="phoneRU required" /></div>
+                                                <div class="form-input"><span class="form-input-label">E-mail</span><input type="text" name="email" value="" class="email" /></div>
+                                            </div>
+                                            <div class="form-input"><span class="form-input-label">Сообщение</span><textarea name="message" rows="1" cols="1"></textarea><div class="form-hint">Укажите данные о своих пожеланиях, нужных рисках, возрасту, полу застрахованных и т.д.</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-required-notice"><span>*</span> Обязательные для заполнения поля</div>
+                                <div class="window-feedback-form-ctrl">
+                                    <div class="form-checkbox">
+                                        <label><input type="checkbox" name="confirm" class="required" /><span>Я даю свое согласие на обработку моих перснальных данных, в соответствии с Федеральным законом №152-Ф3 "О персональных данных", на условиях и целях, определенных в <a href="windows/policy.html" class="window-link">политике конфеденциальности</a>.</span></label>
+                                    </div>
+                                    <div class="feedback-recaptcha">
+                                        <div class="captcha-container"></div>
+                                    </div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled /></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="window-feedback-tabs-content">
+                        <div class="window-feedback-content-form">
+                            <form action="windows/success-new.html" method="post" class="ajax-form">
+                                <div class="window-feedback-form-fields">
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Вид страхования</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-select">
+                                                <select name="type" data-placeholder="Вид страхования" disabled>
+                                                    <option value=""></option>
+                                                    <option value="1" selected>Иное</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Укажите контакты для связи</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-input"><span class="form-input-label">Укажите Ваше Имя Отчество<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                            <div class="window-feedback-form-block-row">
+                                                <div class="form-input"><span class="form-input-label">Номер телефона<em>*</em></span><input type="text" name="phone" value="" class="phoneRU required" /></div>
+                                                <div class="form-input"><span class="form-input-label">E-mail</span><input type="text" name="email" value="" class="email" /></div>
+                                            </div>
+                                            <div class="form-input"><span class="form-input-label">Сообщение</span><textarea name="message" rows="1" cols="1"></textarea><div class="form-hint">Укажите данные о своих пожеланиях, нужных рисках, возрасту, полу застрахованных и т.д.</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-required-notice"><span>*</span> Обязательные для заполнения поля</div>
+                                <div class="window-feedback-form-ctrl">
+                                    <div class="form-checkbox">
+                                        <label><input type="checkbox" name="confirm" class="required" /><span>Я даю свое согласие на обработку моих перснальных данных, в соответствии с Федеральным законом №152-Ф3 "О персональных данных", на условиях и целях, определенных в <a href="windows/policy.html" class="window-link">политике конфеденциальности</a>.</span></label>
+                                    </div>
+                                    <div class="feedback-recaptcha">
+                                        <div class="captcha-container"></div>
+                                    </div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled /></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window-feedback-theme" data-id="2">
+            <div class="window-feedback-theme-notice">
+                <p>При наступлении события позвоните в&nbsp;наш контакт-центр по&nbsp;номеру телефона <span class="window-feedback-theme-notice-phone-number"><span class="window-feedback-theme-notice-phone-number-clipboard" data-clipboard-text="8 (800) 555-85-65" data-clipboard-success="Телефон скопирован в буфер"><svg><use xlink:href="images/sprite.svg#icon-copy"></use></svg></span><a href="tel:+78005558565">8 (800) 555-85-65</a></span></p>
+                <p>Специалисты подскажут, что делать в&nbsp;вашем случае.<br> Если у&nbsp;Вас вопрос по&nbsp;документам, заполните форму и&nbsp;ответим вам.</p>
+                <p>Если хотите отправить документы по&nbsp;страховому событию, прикрепите их к&nbsp;форме.</p>
+            </div>
+            <div class="window-feedback-tabs">
+                <div class="window-feedback-tabs-menu">
+                    <div class="window-feedback-tabs-menu-inner">
+                        <div class="window-feedback-tabs-menu-item">Отправить документы</div>
+                        <div class="window-feedback-tabs-menu-item">Задать вопрос</div>
+                    </div>
+                </div>
+                <div class="window-feedback-tabs-container">
+                    <div class="window-feedback-tabs-content">
+                        <div class="window-feedback-content-form">
+                            <form action="windows/success-new.html" method="post" class="ajax-form">
+                                <div class="window-feedback-form-fields">
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Укажите контакты для связи</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-input"><span class="form-input-label">Укажите Ваше Имя Отчество<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                            <div class="window-feedback-form-block-row">
+                                                <div class="form-input"><span class="form-input-label">Номер телефона<em>*</em></span><input type="text" name="phone" value="" class="phoneRU required" /></div>
+                                                <div class="form-input"><span class="form-input-label">E-mail</span><input type="text" name="email" value="" class="email" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Данные страховки</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-select">
+                                                <select name="type" data-placeholder="Вид страхования">
+                                                    <option value=""></option>
+                                                    <option value="1">КАСКО</option>
+                                                    <option value="2">Страхование имущества</option>
+                                                    <option value="3">Ипотечное страхование</option>
+                                                    <option value="4">Страхование от несчастных случаев (жизнь,травмы)</option>
+                                                    <option value="5">Другое</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-input"><span class="form-input-label">Серия и номер полиса<em>*</em></span><input type="text" name="polis" value="" /><div class="form-hint">Укажите номер Вашего страхового полиса для более оперативного рассмотрения</div></div>
+                                            <div class="form-input"><span class="form-input-label">Сообщение</span><textarea name="message" rows="1" cols="1"></textarea><div class="form-hint">Опишите подробно Вашу ситуацию</div></div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Приложите документы и скриншоты при наличии</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-files">
+                                                <div class="form-files-dropzone"><span>Выберите файлы или перетащите сюда<em>Формат файлов: pdf, jpg, png, tiff, doc</em></span></div>
+                                                <div class="form-files-input"><input type="file" name="files[]" multiple="multiple" data-uploadurl="upload/index.php" data-uploadfiles="upload/files/" data-removeurl="upload/remove.php" /></div>
+                                                <div class="form-files-list"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-required-notice"><span>*</span> Обязательные для заполнения поля</div>
+                                <div class="window-feedback-form-ctrl">
+                                    <div class="form-checkbox">
+                                        <label><input type="checkbox" name="confirm" class="required" /><span>Я даю свое согласие на обработку моих перснальных данных, в соответствии с Федеральным законом №152-Ф3 "О персональных данных", на условиях и целях, определенных в <a href="windows/policy.html" class="window-link">политике конфеденциальности</a>.</span></label>
+                                    </div>
+                                    <div class="feedback-recaptcha">
+                                        <div class="captcha-container"></div>
+                                    </div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled /></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="window-feedback-tabs-content">
+                        <div class="window-feedback-content-form">
+                            <form action="windows/success-new.html" method="post" class="ajax-form">
+                                <div class="window-feedback-form-fields">
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Укажите контакты для связи</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-input"><span class="form-input-label">Укажите Ваше Имя Отчество<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                            <div class="window-feedback-form-block-row">
+                                                <div class="form-input"><span class="form-input-label">Номер телефона<em>*</em></span><input type="text" name="phone" value="" class="phoneRU required" /></div>
+                                                <div class="form-input"><span class="form-input-label">E-mail</span><input type="text" name="email" value="" class="email" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Данные страховки</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-select">
+                                                <select name="type" data-placeholder="Вид страхования">
+                                                    <option value=""></option>
+                                                    <option value="1">КАСКО</option>
+                                                    <option value="2">Страхование имущества</option>
+                                                    <option value="3">Ипотечное страхование</option>
+                                                    <option value="4">Страхование от несчастных случаев (жизнь,травмы)</option>
+                                                    <option value="5">Другое</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-input"><span class="form-input-label">Серия и номер полиса<em>*</em></span><input type="text" name="polis" value="" /><div class="form-hint">Укажите номер Вашего страхового полиса для более оперативного рассмотрения</div></div>
+                                            <div class="form-input"><span class="form-input-label">Номер страхового случая</span><input type="text" name="number" value="" /><div class="form-hint">Если вопрос касается урегулирования страхового случая, укажите номер для более оперативного рассмотрения</div></div>
+                                            <div class="form-input"><span class="form-input-label">Сообщение</span><textarea name="message" rows="1" cols="1"></textarea><div class="form-hint">Опишите подробно Вашу ситуацию</div></div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Приложите документы и скриншоты при наличии</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-files">
+                                                <div class="form-files-dropzone"><span>Выберите файлы или перетащите сюда<em>Формат файлов: pdf, jpg, png, tiff, doc</em></span></div>
+                                                <div class="form-files-input"><input type="file" name="files[]" multiple="multiple" data-uploadurl="upload/index.php" data-uploadfiles="upload/files/" data-removeurl="upload/remove.php" /></div>
+                                                <div class="form-files-list"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-select">
+                                                <select name="hwo" data-placeholder="Какой стороной по договору страхования Вы являетесь">
+                                                    <option value=""></option>
+                                                    <option value="1">Страхователь</option>
+                                                    <option value="2">Выгодоприобретатель</option>
+                                                    <option value="3">Застрахванное лицо</option>
+                                                    <option value="4">Представитель Страхователя</option>
+                                                    <option value="5">Представитель Выгодоприобретеля</option>
+                                                    <option value="6">Представитель Застрахованного лица</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-required-notice"><span>*</span> Обязательные для заполнения поля</div>
+                                <div class="window-feedback-form-ctrl">
+                                    <div class="form-checkbox">
+                                        <label><input type="checkbox" name="confirm" class="required" /><span>Я даю свое согласие на обработку моих перснальных данных, в соответствии с Федеральным законом №152-Ф3 "О персональных данных", на условиях и целях, определенных в <a href="windows/policy.html" class="window-link">политике конфеденциальности</a>.</span></label>
+                                    </div>
+                                    <div class="feedback-recaptcha">
+                                        <div class="captcha-container"></div>
+                                    </div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled /></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window-feedback-theme" data-id="3">
+            <div class="window-feedback-theme-notice">
+                <p>Если необходимо внести изменения: ФИО (смена фамилии, опечатка) или адрес объекта страхования по&nbsp;договору Моя&nbsp;территория, заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами</p>
+            </div>
+            <div class="window-feedback-content-form-one">
+                <form action="windows/success-new.html" method="post" class="ajax-form">
+                    <div class="window-feedback-form-fields">
+                        <div class="window-feedback-form-block">
+                            <div class="window-feedback-form-block-title">Укажите контакты для связи</div>
+                            <div class="window-feedback-form-block-content">
+                                <div class="form-input"><span class="form-input-label">Укажите Ваше Имя Отчество<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                <div class="window-feedback-form-block-row">
+                                    <div class="form-input"><span class="form-input-label">Номер телефона<em>*</em></span><input type="text" name="phone" value="" class="phoneRU required" /></div>
+                                    <div class="form-input"><span class="form-input-label">E-mail</span><input type="text" name="email" value="" class="email" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="window-feedback-form-block">
+                            <div class="window-feedback-form-block-title">Данные страховки</div>
+                            <div class="window-feedback-form-block-content">
+                                <div class="form-input"><span class="form-input-label">Серия и номер полиса<em>*</em></span><input type="text" name="polis" value="" /><div class="form-hint">Укажите номер Вашего страхового полиса для более оперативного рассмотрения</div></div>
+                                <div class="form-input"><span class="form-input-label">Расскажите, что необходимо изменить<em>*</em></span><input type="text" name="what" value="" /></div>
+                            </div>
+                        </div>
+                        <div class="window-feedback-form-block">
+                            <div class="window-feedback-form-block-title">Приложите документы и скриншоты при наличии</div>
+                            <div class="form-hint">Заявление на&nbsp;изменение ПД (свободная форма), скан-копии паспорта (2-5&nbsp;страница).<br> Документ подтверждающий смену Фамилии.</div>
+                            <div class="window-feedback-form-block-content">
+                                <div class="form-files">
+                                    <div class="form-files-dropzone"><span>Выберите файлы или перетащите сюда<em>Формат файлов: pdf, jpg, png, tiff, doc</em></span></div>
+                                    <div class="form-files-input"><input type="file" name="files[]" multiple="multiple" data-uploadurl="upload/index.php" data-uploadfiles="upload/files/" data-removeurl="upload/remove.php" /></div>
+                                    <div class="form-files-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-required-notice"><span>*</span> Обязательные для заполнения поля</div>
+                    <div class="window-feedback-form-ctrl">
+                        <div class="form-checkbox">
+                            <label><input type="checkbox" name="confirm" class="required" /><span>Я даю свое согласие на обработку моих перснальных данных, в соответствии с Федеральным законом №152-Ф3 "О персональных данных", на условиях и целях, определенных в <a href="windows/policy.html" class="window-link">политике конфеденциальности</a>.</span></label>
+                        </div>
+                        <div class="feedback-recaptcha">
+                            <div class="captcha-container"></div>
+                        </div>
+                        <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled /></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="window-feedback-theme" data-id="4">
+            <div class="window-feedback-theme-notice">
+                Для расторжения договора потребуется: <a href="https://www.psbins.ru/about/disclosure/document/?sphrase_id=36707" target="_blank">скачать</a> и&nbsp;заполнить шаблон заявления.<br> Распечатать и&nbsp;подписать заполненное заявление.<br> Прикрепить его к&nbsp;форме или&nbsp;направить на&nbsp;почту <a href="mailto:help@psbins.ru">help@psbins.ru</a>.
+            </div>
+            <div class="window-feedback-tabs">
+                <div class="window-feedback-tabs-menu">
+                    <div class="window-feedback-tabs-menu-inner">
+                        <div class="window-feedback-tabs-menu-item">Ипотечное страхование</div>
+                        <div class="window-feedback-tabs-menu-item">Иной договор</div>
+                    </div>
+                </div>
+                <div class="window-feedback-tabs-container">
+                    <div class="window-feedback-tabs-content">
+                        <div class="window-feedback-content-form">
+                            <form action="windows/success-new.html" method="post" class="ajax-form">
+                                <div class="window-feedback-form-fields">
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Укажите контакты для связи</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-input"><span class="form-input-label">Укажите Ваше Имя Отчество<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                            <div class="window-feedback-form-block-row">
+                                                <div class="form-input"><span class="form-input-label">Номер телефона<em>*</em></span><input type="text" name="phone" value="" class="phoneRU required" /></div>
+                                                <div class="form-input"><span class="form-input-label">E-mail</span><input type="text" name="email" value="" class="email" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-input"><span class="form-input-label">Серия и номер полиса<em>*</em></span><input type="text" name="polis" value="" /><div class="form-hint">Укажите номер Вашего страхового полиса для более оперативного рассмотрения</div></div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Приложите документы и скриншоты при наличии</div>
+                                        <div class="form-hint">Заявление на&nbsp;расторжение (по&nbsp;шаблону на&nbsp;сайте <a href="https://www.psbins.ru/about/disclosure/document/?sphrase_id=36707" target="_blank">www.psbins.ru</a> или в&nbsp;свободной форме).<br> Сотрудником могут быть запрошены дополнительные документы для расторжения Вашего договора</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-files">
+                                                <div class="form-files-dropzone"><span>Выберите файлы или перетащите сюда<em>Формат файлов: pdf, jpg, png, tiff, doc</em></span></div>
+                                                <div class="form-files-input"><input type="file" name="files[]" multiple="multiple" data-uploadurl="upload/index.php" data-uploadfiles="upload/files/" data-removeurl="upload/remove.php" /></div>
+                                                <div class="form-files-list"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="window-feedback-theme-notice">
+                                    Возврат полной страховой премии возможен, если не&nbsp;прошло 14&nbsp;дней с&nbsp;даты заключения договора страхования (оплаты) и&nbsp;не&nbsp;было заявлено страховых событий. Условия расторжения в&nbsp;иных случая, указаны в&nbsp;Памятке, приложенной к&nbsp;вашему договору.
+                                </div>
+                                <div class="form-required-notice"><span>*</span> Обязательные для заполнения поля</div>
+                                <div class="window-feedback-form-ctrl">
+                                    <div class="form-checkbox">
+                                        <label><input type="checkbox" name="confirm" class="required" /><span>Я даю свое согласие на обработку моих перснальных данных, в соответствии с Федеральным законом №152-Ф3 "О персональных данных", на условиях и целях, определенных в <a href="windows/policy.html" class="window-link">политике конфеденциальности</a>.</span></label>
+                                    </div>
+                                    <div class="feedback-recaptcha">
+                                        <div class="captcha-container"></div>
+                                    </div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled /></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="window-feedback-tabs-content">
+                        <div class="window-feedback-content-form">
+                            <form action="windows/success-new.html" method="post" class="ajax-form">
+                                <div class="window-feedback-form-fields">
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Укажите контакты для связи</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-input"><span class="form-input-label">Укажите Ваше Имя Отчество<em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                            <div class="window-feedback-form-block-row">
+                                                <div class="form-input"><span class="form-input-label">Номер телефона<em>*</em></span><input type="text" name="phone" value="" class="phoneRU required" /></div>
+                                                <div class="form-input"><span class="form-input-label">E-mail</span><input type="text" name="email" value="" class="email" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-input"><span class="form-input-label">Серия и номер полиса<em>*</em></span><input type="text" name="polis" value="" /><div class="form-hint">Укажите номер Вашего страхового полиса для более оперативного рассмотрения</div></div>
+                                        </div>
+                                    </div>
+                                    <div class="window-feedback-form-block">
+                                        <div class="window-feedback-form-block-title">Приложите документы и скриншоты при наличии</div>
+                                        <div class="form-hint">Заявление на&nbsp;расторжение (по&nbsp;шаблону на&nbsp;сайте <a href="https://www.psbins.ru/about/disclosure/document/?sphrase_id=36707" target="_blank">www.psbins.ru</a> или в&nbsp;свободной форме).<br> Сотрудником могут быть запрошены дополнительные документы для расторжения Вашего договора</div>
+                                        <div class="window-feedback-form-block-content">
+                                            <div class="form-files">
+                                                <div class="form-files-dropzone"><span>Выберите файлы или перетащите сюда<em>Формат файлов: pdf, jpg, png, tiff, doc</em></span></div>
+                                                <div class="form-files-input"><input type="file" name="files[]" multiple="multiple" data-uploadurl="upload/index.php" data-uploadfiles="upload/files/" data-removeurl="upload/remove.php" /></div>
+                                                <div class="form-files-list"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="window-feedback-theme-notice">
+                                    Возврат полной страховой премии возможен, если не&nbsp;прошло 14&nbsp;дней с&nbsp;даты заключения договора страхования (оплаты) и&nbsp;не&nbsp;было заявлено страховых событий. Условия расторжения в&nbsp;иных случая, указаны в&nbsp;Памятке, приложенной к&nbsp;вашему договору.
+                                </div>
+                                <div class="form-required-notice"><span>*</span> Обязательные для заполнения поля</div>
+                                <div class="window-feedback-form-ctrl">
+                                    <div class="form-checkbox">
+                                        <label><input type="checkbox" name="confirm" class="required" /><span>Я даю свое согласие на обработку моих перснальных данных, в соответствии с Федеральным законом №152-Ф3 "О персональных данных", на условиях и целях, определенных в <a href="windows/policy.html" class="window-link">политике конфеденциальности</a>.</span></label>
+                                    </div>
+                                    <div class="feedback-recaptcha">
+                                        <div class="captcha-container"></div>
+                                    </div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn-orange" disabled /></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -486,6 +486,10 @@ function windowOpen(linkWindow, addWindow, dataWindow, callbackWindow) {
         $('.window:last form').each(function() {
             initForm($(this));
         });
+        
+        $('.window-feedback').each(function() {
+            $(this).parents().filter('.window').addClass('window-feedback-parent');
+        });
     });
 }
 
