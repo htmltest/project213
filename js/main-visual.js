@@ -486,7 +486,7 @@ function windowOpen(linkWindow, addWindow, dataWindow, callbackWindow) {
         $('.window:last form').each(function() {
             initForm($(this));
         });
-        
+
         $('.window-feedback').each(function() {
             $(this).parents().filter('.window').addClass('window-feedback-parent');
         });
@@ -506,10 +506,23 @@ function windowPosition() {
 
 function windowClose() {
     if ($('.window').length > 0) {
-        $('.window:last').remove();
-        if ($('.window').length == 0) {
-            $('html').removeClass('window-open');
-            $('body').css({'margin-right': 0});
+        var isEmptyForm = true;
+        $('.window:last .form-input input, .window:last .form-input textarea, .window:last .form-select select').each(function() {
+            if ($(this).val() != '') {
+                isEmptyForm = false;
+            }
+        });
+        if (isEmptyForm) {
+            $('.window:last').remove();
+            if ($('.window').length == 0) {
+                $('html').removeClass('window-open');
+                $('body').css({'margin-right': 0});
+            }
+        } else {
+            if (confirm('Закрыть форму?')) {
+                $('.window:last .form-input input, .window:last .form-input textarea, .window:last .form-select select').val('');
+                windowClose();
+            }
         }
     }
 }

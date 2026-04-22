@@ -244,6 +244,9 @@ function initForm(curForm) {
             $(e.delegateTarget).parent().find('.select2-container').addClass('select2-container--full');
             $(e.delegateTarget).parent().find('.select2-search--inline input').val('').trigger('input.search').trigger('focus');
             $(e.delegateTarget).parent().find('.select2-search--inline input').attr('placeholder', curSelect.attr('data-searchplaceholder'));
+            curSelect.parent().find('select.error').removeClass('error');
+            curSelect.parent().find('label.error').remove();
+            curSelect.parent().find('select').addClass('valid');
         });
         curSelect.on('select2:unselect', function(e) {
             if (curSelect.find('option:selected').length == 0) {
